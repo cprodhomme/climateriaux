@@ -1,0 +1,182 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-title-section {
+  color: #1c1833;
+  font-size: 40px;
+}
+.home-p-section {
+  color: #1c1833;
+  font-size: 16px;
+}
+
+.grey-bar-title {
+  background-color: #c9c9c9;
+  height: 3px;
+  width: 30px;
+  margin: 28px auto 45px auto;
+}
+
+.slider-home {
+  position: relative;
+
+  #owl-slider-prev, #owl-slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    color: #fff;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    padding: 2px 5px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  #owl-slider-next {
+    right: 0;
+  }
+
+  .owl-item .item div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+
+    .title-slider {
+      font-size: 40px;
+    }
+
+    .content-slider {
+      font-size: 14px;
+    }
+  }
+}
+
+.categories-home {
+  padding: 90px 0 60px 0;
+}
+
+.tutoriels-home {
+  padding: 70px 0;
+
+  #owl-tutoriels {
+    padding: 90px 0 100px 0;
+  }
+
+  .tutoriel {
+    padding: 40px 20px 65px 20px;
+    background-color: #f6f6f6;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f6f6+0,f6f6f6+50,f2f0f1+50,f2f0f1+100 */
+    background: #f6f6f6; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f6f6f6 0%, #f6f6f6 50%, #f2f0f1 50%, #f2f0f1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #f6f6f6 0%,#f6f6f6 50%,#f2f0f1 50%,#f2f0f1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #f6f6f6 0%,#f6f6f6 50%,#f2f0f1 50%,#f2f0f1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#f2f0f1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 35px 0;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .lien-plus {
+      font-size: 50px;
+      font-weight: 300;
+      height: 70px;
+      width: 70px;
+      border: 5px solid #c9c9c9;
+      border-radius: 50%;
+    }
+  }
+}
+
+.articles-home {
+  padding: 70px 0;
+  background-color: $grey-background;
+
+  #owl-articles {
+    padding: 90px 0 70px 0;
+  }
+
+  .article {
+    border: 1px solid #e3e3e3;
+
+    img {
+      width: 100%;
+    }
+
+    .info-article {
+      padding: 20px 20px 30px 20px;
+
+      h2 {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0 0 30px 0;
+        text-transform: capitalize;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0 0 30px 0;
+      }
+
+      span {
+        font-size: 14px;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+.certification {
+  background-image: url('img/certification-back.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+
+  .paiement p, .source p, .retour p, .livraison p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .image-paiement {
+    background-image: url('img/paypal.png');
+    height: 107px;
+    width: 107px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .image-source {
+    background-image: url('img/source.png');
+    height: 107px;
+    width: 107px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .image-retour {
+    background-image: url('img/retour.png');
+    height: 107px;
+    width: 107px;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .image-livraison {
+    background-image: url('img/livraison.png');
+    height: 107px;
+    width: 107px;
+    margin: auto;
+    margin-bottom: 30px;
+  } 
+}
