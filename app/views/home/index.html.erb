@@ -109,90 +109,20 @@
     </div>
   </div>
   <div id="owl-articles" class="owl-carousel row">
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+    <% (0..6).each do |i| %>
+      <div class="col-md-24">
+        <div class="article text-left">
+          <%= image_tag("img-article-default.png") %>
+          <div class="info-article">
+            <h2>titre article</h2>
+            <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <div>
+              <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+            </div>
           </div>
         </div>
       </div>
-    </div> 
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-24">
-      <div class="article text-left">
-        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
-        <div class="info-article">
-          <h2>titre article</h2>
-          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-          <div>
-            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
   <div class="row">
     <div class="col-md-24">

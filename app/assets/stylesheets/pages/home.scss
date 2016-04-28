@@ -140,7 +140,7 @@
 }
 
 .certification {
-  background-image: url('img/certification-back.jpg');
+  background-image: url('/assets/certification/certification-back.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center;
@@ -152,28 +152,28 @@
     font-weight: bold;
   }
   .image-paiement {
-    background-image: url('img/paypal.png');
+    background-image: url('/assets/certification/paypal.png');
     height: 107px;
     width: 107px;
     margin: auto;
     margin-bottom: 30px;
   }
   .image-source {
-    background-image: url('img/source.png');
+    background-image: url('/assets/certification/source.png');
     height: 107px;
     width: 107px;
     margin: auto;
     margin-bottom: 30px;
   }
   .image-retour {
-    background-image: url('img/retour.png');
+    background-image: url('/assets/certification/retour.png');
     height: 107px;
     width: 107px;
     margin: auto;
     margin-bottom: 30px;
   }
   .image-livraison {
-    background-image: url('img/livraison.png');
+    background-image: url('/assets/certification/livraison.png');
     height: 107px;
     width: 107px;
     margin: auto;
