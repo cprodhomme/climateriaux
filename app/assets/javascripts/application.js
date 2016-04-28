@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap/bootstrap.min
+
+$( document ).ready(function() {
+  menu();
+  searchbar();
+  slider();
+});
