@@ -1,1 +1,224 @@
-index.html.erb
+
+<section class="slider-home hidden-xs">
+  <div class="owl-controls clickable">
+    <span id="owl-slider-prev"><i class="fa fa-arrow-left"></i></span>
+    <span id="owl-slider-next"><i class="fa fa-arrow-right"></i></span>
+  </div>
+  <div id="owl-slider" class="owl-carousel">
+    <div class="item">
+      <img src="<?php bloginfo('template_url'); ?>/img/slider.png" alt="slider">
+      <div>
+        <p class="title-slider">Slider</p>
+        <p class="content-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="<?php bloginfo('template_url'); ?>/img/slider.png" alt="slider">
+      <div>
+        <p class="title-slider">Slider</p>
+        <p class="content-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="categories-home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-24 hidden-xs">
+        <!-- SVG catégories -->
+        <?php include_once('svg/categories.svg.php'); ?>
+      </div>
+      <div class="visible-xs-24 visible-xs-block">
+        <div class="row">
+          <div class="col-xs-8 peintures-colles">
+            <div class="icon-peintures-colles"></div>
+            <p>Peintures & colles</p>
+          </div>
+          <div class="col-xs-8 enduits">
+            <div class="icon-enduits"></div>
+            <p>Enduits</p>
+          </div>
+          <div class="col-xs-8 economie-energie">
+            <div class="icon-economie-energie"></div>
+            <p>Economie d'énergie</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 bois">
+            <div class="icon-bois"></div>
+            <p>Bois</p>
+          </div>
+          <div class="col-xs-8 portes-fenetres">
+            <div class="icon-portes-fenetres"></div>
+            <p>Portes & fenêtres</p>
+          </div>
+          <div class="col-xs-8 production-energie-verte">
+            <div class="icon-production-energie-verte"></div>
+            <p>Production d'énergie verte</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 gros-oeuvre">
+            <div class="icon-gros-oeuvre"></div>
+            <p>Gros oeuvres</p>
+          </div>
+          <div class="col-xs-8 chauffage">
+            <div class="icon-chauffage"></div>
+            <p>Chauffage</p>
+          </div>
+          <div class="col-xs-8 isolation">
+            <div class="icon-isolation"></div>
+            <p>Isolation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="tutoriels-home hidden container-fluid text-center">
+  <div class="row">
+    <div class="col-md-24">
+      <h1 class="home-title-section">Tutoriels</h1>
+      <div class="grey-bar-title"></div>
+      <p class="home-p-section">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-24">
+      <div id="owl-tutoriels" class="owl-carousel row">
+        <div class="col-md-24">
+          <div class="tutoriel">
+            <h2>Titre tutoriel</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="lien-plus">
+              +
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="" class="btn-default">Tous les tutoriels</a>
+    </div>
+  </div>
+</section>
+<section class="articles-home container-fluid text-center">
+  <div class="row">
+    <div class="col-md-24">
+      <h1 class="home-title-section">Articles</h1>
+      <div class="grey-bar-title"></div>
+      <p class="home-p-section">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+    </div>
+  </div>
+  <div id="owl-articles" class="owl-carousel row">
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-24">
+      <div class="article text-left">
+        <img src="<?php bloginfo('template_url'); ?>/img/img-article-default.png">
+        <div class="info-article">
+          <h2>titre article</h2>
+          <p class="text-justify">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+          <div>
+            <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-24">
+      <a href="http://blog.climateriaux.fr" class="btn-default">Tous les articles</a>
+    </div>
+  </div>
+</section>
+<section class="certification">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-xs-12 paiement">
+        <div class="image-paiement"></div>
+        <p>Paiement sécurisé assuré<br>par Paypal</p>
+      </div>
+      <div class="col-md-6 col-xs-12 livraison">
+        <div class="image-livraison"></div>
+        <p>Livraison à l’adresse<br>de votre choix</p>
+      </div>
+      <div class="col-md-6 col-xs-12 retour">
+        <div class="image-retour"></div>
+        <p>Retour gratuit sous 15 jours</p>
+      </div>
+      <div class="col-md-6 col-xs-12 source">
+        <div class="image-source"></div>
+        <p>Matériaux de sources vérifiées</p>
+      </div>
+    </div>
+  </div>
+</section>
