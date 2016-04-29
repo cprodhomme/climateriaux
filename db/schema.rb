@@ -13,15 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20160429142917) do
 
-  create_table "ar_internal_metadata", primary_key: "key", force: :cascade do |t|
-    t.string   "value",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
   create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.integer  "parent_id",   limit: 4
+    t.string   "image",       limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end

@@ -14,9 +14,9 @@
                 </li>       
             </ul>
             <div class="navbar-header col-md-6">
-                <a href="<?php echo home_url('/'); ?>" class="navbar-brand">
-                    <%= image_tag("logo.png", :id => 'logo') %>
-                </a>
+              <%= link_to root_path, class: 'navbar-brand' do %>
+                <%= image_tag("logo.png", :id => 'logo') %>
+              <% end %>
             </div>
             <ul class="nav navbar-nav col-md-13">       
                 <li class="block-user">
