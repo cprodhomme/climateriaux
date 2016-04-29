@@ -825,7 +825,7 @@ select {
   font-weight: bold;
   color: #898989;
   font-size: 11px;
-  background: url(img/arrow-select-bw.png) no-repeat 90%;
+  background: url(/assets/arrow-select-bw.png) no-repeat 90%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3663,7 +3663,7 @@ body.page-template-page-visualcomposer-notitle #content {
 .shop-content-top .catalog-order-wrap .woocommerce-ordering select {
   border-color: #eb8e7a;
   color: #eb8e7a;
-  background-image: url(img/arrow-select.png);
+  background-image: url(/assets/arrow-select.png);
 }
 .shop-content-top .pagination {
   padding: 5px 0;

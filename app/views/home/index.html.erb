@@ -1,24 +1,18 @@
-
 <section class="slider-home hidden-xs">
   <div class="owl-controls clickable">
     <span id="owl-slider-prev"><i class="fa fa-arrow-left"></i></span>
     <span id="owl-slider-next"><i class="fa fa-arrow-right"></i></span>
   </div>
   <div id="owl-slider" class="owl-carousel">
-    <div class="item">
-      <%= image_tag("slider.png") %>
-      <div>
-        <p class="title-slider">Slider</p>
-        <p class="content-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    <% (0..1).each do |i| %>
+      <div class="item">
+        <%= image_tag("slider.png") %>
+        <div>
+          <p class="title-slider">Slider</p>
+          <p class="content-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img src="<?php bloginfo('template_url'); ?>/img/slider.png" alt="slider">
-      <div>
-        <p class="title-slider">Slider</p>
-        <p class="content-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-      </div>
-    </div>
+    <% end %>
   </div>
 </section>
 <section class="categories-home">
@@ -26,7 +20,7 @@
     <div class="row">
       <div class="col-md-24 hidden-xs">
         <!-- SVG catégories -->
-        <?php include_once('svg/categories.svg.php'); ?>
+        <%= render 'svg'%>
       </div>
       <div class="visible-xs-24 visible-xs-block">
         <div class="row">
