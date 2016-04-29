@@ -1,1 +1,130 @@
-_header.html.erb
+<header class="container-fluid clearfix noselect">
+    <nav class="navbar-custom navbar-fixed-top">
+        <div class="">
+            <ul class="nav navbar-nav col-md-5">
+                <li id="menu">
+                    <a >
+                        <div class="menu-icon">
+                          <span></span>
+                        </div>
+                        <div>
+                            menu
+                        </div>
+                    </a>
+                </li>       
+            </ul>
+            <div class="navbar-header col-md-6">
+                <a href="<?php echo home_url('/'); ?>" class="navbar-brand">
+                    <%= image_tag("logo.png", :id => 'logo') %>
+                </a>
+            </div>
+            <ul class="nav navbar-nav col-md-13">       
+                <li class="block-user">
+                    <a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fa fa-user"></i> Mon compte</a>
+                </li>
+                <?php if ( ! of_get_option( 'tokopress_wc_disable_mini_cart' ) ) : ?>
+                    <?php if( class_exists( 'woocommerce' ) ) : ?>
+                        <li class="block-cart">
+                            <a href="<?php echo WC()->cart->get_cart_url(); ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                                Mon panier
+                                <span >
+                                    <!--<?php echo WC()->cart->get_cart_subtotal(); ?>-->
+                                </span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                <?php endif; ?>
+                <?php if ( ! of_get_option( 'tokopress_wc_disable_search' ) ) : ?>                
+                    <li class="searchbar">
+                        <form class="searchbox">
+                            <input type="search" placeholder="Rechercher un produit, un tutoriel, ..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+                            <button type="submit" class="searchbox-submit"><i class="fa fa-search"></i></button>
+                            <span class="searchbox-icon"><i class="fa fa-search"></i></span>
+                        </form>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </nav>
+    <div class="menu-categories">
+        <!-- primary-categories -->
+        <div class="primary-categories">
+            <div class="primary-category peinture-colle">
+              <%= image_tag("icones/peinture-colle.png") %>
+              <span>Peintures et colles</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="primary-category enduit">
+              <%= image_tag("icones/enduit.png") %>
+              <span>Enduits</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="primary-category gros-oeuvre">
+              <%= image_tag("icones/gros-oeuvre.png") %>
+              <span>Gros oeuvre</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+        </div>
+        <!-- secondary-categories -->
+        <div class="secondary-categories">
+            <div class="secondary-category peinture-colle">
+                <div class="current-category">
+                  <i class="fa fa-chevron-left"></i>
+                  <%= image_tag("icones/peinture-colle.png") %>
+                  <span>Peinture et colles</span>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/peinture-colle/finition-decorative/">Finitions décoratives</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/peinture-colle/peinture-ludique/">Peintures ludiques</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/peinture-colle/peinture-naturelle/">Peintures naturelles</a>
+                </div>
+            </div>
+            <div class="secondary-category enduit">
+                <div class="current-category">
+                  <i class="fa fa-chevron-left"></i>
+                  <%= image_tag("icones/enduit.png") %>
+                  <span>Enduits</span>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/enduit/charge-colorant/">Charges et colorants pour enduits</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/enduit/enduit-finition/">Enduits de finitions</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/enduit/enduit-exterieur/">Enduits exterieurs</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/enduit/enduit-interieur/">Enduits intérieurs</a>
+                </div>
+            </div>
+            <div class="secondary-category gros-oeuvre">
+                <div class="current-category">
+                  <i class="fa fa-chevron-left"></i>
+                  <%= image_tag("icones/gros-oeuvre.png") %>
+                  <span>Gros oeuvre</span>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/brique-bloc/">Briques et blocs</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/charpente/">Charpentes</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/chaux-terre-argile/">Chaux, terres et argiles</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/plaque-panneau/">Plaques et panneaux</a>
+                </div>
+                <div>
+                  <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/preparation-appret/">Préparation des supports</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</header>
