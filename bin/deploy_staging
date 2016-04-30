@@ -1,0 +1,2 @@
+#!/usr/bin/env sh -ex
+git push heroku develop:master
