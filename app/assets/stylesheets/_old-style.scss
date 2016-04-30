@@ -432,7 +432,7 @@ html.sb-static .sb-slidebar,
 
 /* mouse grab icon */
 .grabbing {
-  cursor: url(img/grabbing.png) 8 8, move;
+  cursor: image_url('grabbing.png') 8 8, move;
 }
 
 /* fix */
@@ -825,7 +825,7 @@ select {
   font-weight: bold;
   color: #898989;
   font-size: 11px;
-  background: url(/assets/arrow-select-bw.png) no-repeat 90%;
+  background: image_url('arrow-select-bw.png') no-repeat 90%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3663,7 +3663,7 @@ body.page-template-page-visualcomposer-notitle #content {
 .shop-content-top .catalog-order-wrap .woocommerce-ordering select {
   border-color: #eb8e7a;
   color: #eb8e7a;
-  background-image: url(/assets/arrow-select.png);
+  background-image: image_url('arrow-select.png');
 }
 .shop-content-top .pagination {
   padding: 5px 0;
@@ -6105,23 +6105,23 @@ form.mc4wp-form,
 }
 
 .yith-wcwl-share li a.facebook {
-  background-image: url(../images/facebook.png);
+  background-image: image_url('facebook.png');
 }
 
 .yith-wcwl-share li a.twitter {
-  background-image: url(../images/twitter.png);
+  background-image: image_url('twitter.png');
 }
 
 .yith-wcwl-share li a.pinterest {
-  background-image: url(../images/pinterest.jpg);
+  background-image: image_url('pinterest.jpg');
 }
 
 .yith-wcwl-share li a.googleplus {
-  background-image: url(../images/googleplus.jpg);
+  background-image: image_url('googleplus.jpg');
 }
 
 .yith-wcwl-share li a.email {
-  background-image: url(../images/email.jpg);
+  background-image: image_url('email.jpg');
 }
 
 /* AJAX loading gif */
