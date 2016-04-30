@@ -105,6 +105,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
+    puma (3.4.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -198,13 +199,13 @@ DEPENDENCIES
   byebug
   capybara
   carrierwave
-  coffee-rails (~> 4.1.0)
   devise
   factory_girl_rails
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   mysql2 (>= 0.3.13, < 0.5)
+  puma
   rails (= 4.2.6)
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
