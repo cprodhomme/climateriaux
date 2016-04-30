@@ -7,7 +7,10 @@ Nous voulons créer une plateforme d’achat dédiée à la fois aux particulier
 professionnels, afin de faciliter la transition énergétique et d’aider les foyers à faire
 des économies énergétiques et financières.
 
-##Getting started
+## Getting started
+[Voir wiki pour plus de détails](https://github.com/cle61/climateriaux/wiki/Getting-started)
+
+## Commandes
 
 | Command | Description |
 | --- | --- |
