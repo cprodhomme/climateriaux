@@ -14,9 +14,8 @@ des économies énergétiques et financières.
 
 | Command | Description |
 | --- | --- |
-| `./bin/build` | Initialise le projet : installe les modules node nécéssaire au projet et compile une première fois. |
-| `./bin/grunt` | Permet d'executer Grunt (compilation du sass, concaténation du javascript) en continue. |
-| `./bin/grunt prod` | Permet d'executer Grunt avec la compilation et la minification des fichiers. |
+| `./bin/build` | Initialise le projet |
+| `./bin/deploy_staging` | Déploie la branche développement sur la staging d'Heroku |
 
 
 ##Technologies
@@ -29,6 +28,3 @@ des économies énergétiques et financières.
 ##Normes
 [Voir wiki pour plus de détails](https://github.com/cle61/climateriaux/wiki/Normes)
 
-##Screenshots
-
-![alt text](screenshot.png "Screenshot")
