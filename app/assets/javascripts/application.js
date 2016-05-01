@@ -12,12 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
 //= require bootstrap/bootstrap.min
+//= require marketica
+//= require modernizr
+//= require html5
+//= require menu
+//= require searchbar
+//= require slider
 
-$( document ).ready(function() {
+
+(function() {
   menu();
   searchbar();
   slider();
-});
+}());

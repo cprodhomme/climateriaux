@@ -26,6 +26,10 @@
 
 @import "pages/home";
 
+body {
+  padding-top: 60px;
+}
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
