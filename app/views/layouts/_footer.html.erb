@@ -1,51 +1,71 @@
 <footer id="footer" class="container-fluid">
-    <div class="row footer-container">
-        <div class="col-md-offset-2 col-md-12 hidden-xs">
-            <div class="row">
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('6'); ?> 
-                </div>
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('7'); ?>
-                </div>
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('8'); ?>  
-                </div>
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('10'); ?>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('11'); ?>   
-                </div>
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('13'); ?>
-                </div>
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('12'); ?> 
-                </div>
-                <div class="col-md-6">
-                    <?php woocommerce_subcats_from_parentcat_by_ID('14'); ?>
-                </div>
-            </div>
+  <div class="row footer-container">
+    <div class="col-md-offset-2 col-md-12 hidden-xs">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>
+            <%= link_to category_path('peinture-colles') do %>
+              Peinture et Colles
+            <% end %>
+          </h5>
+          <p>
+            <%= link_to category_path('finitions-decoratives') do %>
+              Finitions décoratives
+            <% end %>
+          </p>
+          <p>
+            <%= link_to category_path('peintures-ludiques') do %>
+              Peintures ludiques
+            <% end %>
+          </p>
+          <p>
+            <%= link_to category_path('peintures-naturelles') do %>
+              Peintures naturelles
+            <% end %>
+          </p>
+          <?php woocommerce_subcats_from_parentcat_by_ID('6'); ?> 
         </div>
-        <div class="col-md-3 col-md-offset-1 hidden-xs">
-            <?php woocommerce_subcats_from_parentcat_by_ID('9'); ?>
-        </div> 
-        <div class="col-md-6 col-xs-24 footer-social">
-            <p class="bold">Suivez nous :</p>
-            <a href="https://twitter.com/climateriaux" target="_blank" rel="nofollow" class="footer-social-twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://fr-fr.facebook.com/climateriaux/" target="_blank" rel="nofollow" class="footer-social-facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/climat%C3%A9riaux" target="_blank" rel="nofollow" class="footer-social-linkedin">
-                <i class="fa fa-linkedin"></i>
-            </a>
+        <div class="col-md-6">
+          <?php woocommerce_subcats_from_parentcat_by_ID('7'); ?>
         </div>
-    </div>
+        <div class="col-md-6">
+          <?php woocommerce_subcats_from_parentcat_by_ID('8'); ?>  
+        </div>
+        <div class="col-md-6">
+          <?php woocommerce_subcats_from_parentcat_by_ID('10'); ?>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <?php woocommerce_subcats_from_parentcat_by_ID('11'); ?>   
+          </div>
+          <div class="col-md-6">
+            <?php woocommerce_subcats_from_parentcat_by_ID('13'); ?>
+          </div>
+          <div class="col-md-6">
+            <?php woocommerce_subcats_from_parentcat_by_ID('12'); ?> 
+          </div>
+          <div class="col-md-6">
+            <?php woocommerce_subcats_from_parentcat_by_ID('14'); ?>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-md-offset-1 hidden-xs">
+        <?php woocommerce_subcats_from_parentcat_by_ID('9'); ?>
+      </div> 
+      <div class="col-md-6 col-xs-24 footer-social">
+        <p class="bold">Suivez nous :</p>
+        <a href="https://twitter.com/climateriaux" target="_blank" rel="nofollow" class="footer-social-twitter">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://fr-fr.facebook.com/climateriaux/" target="_blank" rel="nofollow" class="footer-social-facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/climat%C3%A9riaux" target="_blank" rel="nofollow" class="footer-social-linkedin">
+          <i class="fa fa-linkedin"></i>
+        </a>
+      </div>
+  </div>
 </footer>
 <div class="footer-credits container-fluid">
   <div class="row">
