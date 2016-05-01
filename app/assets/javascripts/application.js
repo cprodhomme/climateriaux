@@ -14,8 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap/bootstrap.min
 //= require marketica
-//= require modernizr
-//= require html5
 //= require menu
 //= require searchbar
 //= require slider
