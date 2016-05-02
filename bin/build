@@ -1,4 +1,4 @@
 #!/usr/bin/env sh -ex
 
 bundle install
-bin/init_Db
+bin/init_DB
