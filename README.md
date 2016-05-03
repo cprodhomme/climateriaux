@@ -8,7 +8,7 @@ professionnels, afin de faciliter la transition énergétique et d’aider les f
 des économies énergétiques et financières.
 
 ## Getting started
-[Voir wiki pour plus de détails](https://github.com/cle61/climateriaux/wiki/Getting-started)
+[Voir wiki pour plus de détails](https://github.com/cle61/climateriaux/wiki/Installation)
 
 ## Commandes
 
