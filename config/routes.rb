@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   resources :categories, param: :slug, only: [:index, :show]
-  resource :products, param: :slug, only: [:show]
+  resources :products, param: :slug, only: [:show]
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
 
