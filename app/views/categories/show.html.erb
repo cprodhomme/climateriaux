@@ -1,9 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6 col-md-4">
-      <%= @products.count %>
+    <div class="col-xs-12 col-md-12">
       <% @products.each do |product| %>
-        <p>test</p>
         <%= render "product_row", product: product, order_item: @order_item %>
       <% end %>
     </div>
