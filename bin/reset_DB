@@ -1,0 +1,3 @@
+#! /bin/bash -ex
+rake db:drop
+bin/init_DB
