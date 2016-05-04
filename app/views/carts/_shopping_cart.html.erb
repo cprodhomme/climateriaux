@@ -7,9 +7,9 @@
     </ul>
   </div>
 <% end %>
-<% if @order_items.size == 0 || @order_items == nil %>
+<% if @order_items.nil? %>
   <p class="text-center">
-    There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+    Il n'y a aucun produit dans votre panier. <%= link_to 'Retour sur la home', root_path %>
   </p>
 <% else %>
   <% @order_items.each do |order_item| %>
