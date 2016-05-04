@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :categories, param: :slug, only: [:index, :show]
   resources :products, param: :slug, only: [:show]
-  resources :cart, only: [:show]
+  resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
 
   # Example of regular route:

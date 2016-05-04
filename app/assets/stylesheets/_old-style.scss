@@ -864,46 +864,6 @@ textarea {
   min-height: 200px;
 }
 
-.button,
-.button-primary,
-button.button,
-.btn,
-button.btn,
-#submit {
-  background: none;
-  border: none;
-  padding: 8px 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  font-family: 'Maven Pro', sans-serif;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 2.18182;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #eb8e7a;
-  box-shadow: #eb8e7a 0 0px 0px 2px inset;
-}
-.button:hover,
-.button-primary:hover,
-button.button:hover,
-.btn:hover,
-button.btn:hover,
-#submit:hover {
-  box-shadow: #eb8e7a 0 0px 0px 40px inset;
-  color: white;
-}
-
-.button-white {
-  box-shadow: white 0 0px 0px 2px inset;
-  color: white;
-}
-.button-white:hover {
-  box-shadow: white 0 0px 0px 40px inset;
-  color: #372926;
-}
-
 .cl:before, .cl:after {
   content: "";
   display: table;

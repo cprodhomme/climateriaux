@@ -19,31 +19,19 @@
               <% end %>
             </div>
             <ul class="nav navbar-nav col-md-13">       
-                <li class="block-user">
-                    <a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fa fa-user"></i> Mon compte</a>
-                </li>
-                <?php if ( ! of_get_option( 'tokopress_wc_disable_mini_cart' ) ) : ?>
-                    <?php if( class_exists( 'woocommerce' ) ) : ?>
-                        <li class="block-cart">
-                            <a href="<?php echo WC()->cart->get_cart_url(); ?>">
-                                <i class="fa fa-shopping-cart"></i>
-                                Mon panier
-                                <span >
-                                    <!--<?php echo WC()->cart->get_cart_subtotal(); ?>-->
-                                </span>
-                            </a>
-                        </li>
-                    <?php endif; ?>
-                <?php endif; ?>
-                <?php if ( ! of_get_option( 'tokopress_wc_disable_search' ) ) : ?>                
-                    <li class="searchbar">
-                        <form class="searchbox">
-                            <input type="search" placeholder="Rechercher un produit, un tutoriel, ..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
-                            <button type="submit" class="searchbox-submit"><i class="fa fa-search"></i></button>
-                            <span class="searchbox-icon"><i class="fa fa-search"></i></span>
-                        </form>
-                    </li>
-                <?php endif; ?>
+              <li class="block-user">
+                <a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fa fa-user"></i> Mon compte</a>
+              </li>
+              <li class="block-cart">
+                <%= render 'layouts/cart' %>
+              </li>                
+              <li class="searchbar">
+                  <form class="searchbox">
+                      <input type="search" placeholder="Rechercher un produit, un tutoriel, ..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+                      <button type="submit" class="searchbox-submit"><i class="fa fa-search"></i></button>
+                      <span class="searchbox-icon"><i class="fa fa-search"></i></span>
+                  </form>
+              </li>
             </ul>
         </div>
     </nav>
