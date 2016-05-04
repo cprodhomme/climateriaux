@@ -1,7 +1,8 @@
 FactoryGirl.define do
   factory :product do
-    name "MyString"
+    name "Mon produit"
     description "MyText"
+    slug "mon-produit"
     price "9.99"
     active false
     category nil
