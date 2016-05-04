@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-12">
+    <div class="col-xs-24 col-md-24">
       <% @products.each do |product| %>
         <%= render "product_row", product: product, order_item: @order_item %>
       <% end %>
