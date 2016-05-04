@@ -1,0 +1,5 @@
+#!/usr/bin/env sh -ex
+
+bundle install
+rake db:migrate
+rails s
