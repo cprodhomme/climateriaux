@@ -267,8 +267,6 @@ if OrderStatus.count == 0
   OrderStatus.create! id: 4, name: "Cancelled"
 end
 
-if Rails.env.development?
-  if Product.count == 0
-    Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel"
-  end
+if Product.count == 0
+  Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel"
 end
