@@ -7,7 +7,7 @@
     </ul>
   </div>
 <% end %>
-<% if @order_items.nil? %>
+<% if @order_items.size == 0 %>
   <p class="text-center">
     Il n'y a aucun produit dans votre panier. <%= link_to 'Retour sur la home', root_path %>
   </p>
