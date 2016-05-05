@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503221748) do
+ActiveRecord::Schema.define(version: 20160505104520) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 20160503221748) do
     t.datetime "updated_at",                null: false
     t.string   "slug",        limit: 255
   end
+
+  create_table "category_to_categories", force: :cascade do |t|
+    t.integer "category_id", limit: 4
+  end
+
+  add_index "category_to_categories", ["category_id"], name: "index_category_to_categories_on_category_id", using: :btree
 
   create_table "order_items", force: :cascade do |t|
     t.integer  "product_id",  limit: 4
@@ -54,6 +60,14 @@ ActiveRecord::Schema.define(version: 20160503221748) do
 
   add_index "orders", ["order_status_id"], name: "index_orders_on_order_status_id", using: :btree
 
+  create_table "product_medias", force: :cascade do |t|
+    t.integer "product_id", limit: 4
+    t.string  "media",      limit: 255
+    t.integer "order",      limit: 4
+  end
+
+  add_index "product_medias", ["product_id"], name: "index_product_medias_on_product_id", using: :btree
+
   create_table "products", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.text     "description", limit: 65535
@@ -67,8 +81,28 @@ ActiveRecord::Schema.define(version: 20160503221748) do
 
   add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
 
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  add_foreign_key "category_to_categories", "categories"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "order_statuses"
+  add_foreign_key "product_medias", "products"
   add_foreign_key "products", "categories"
 end
