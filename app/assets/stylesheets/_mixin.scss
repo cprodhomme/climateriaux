@@ -1,8 +1,32 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 @mixin white-block() {
   background-color: #fff;
   border-bottom: #e9e9ed 2px solid;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-          border-radius: 5px;
+  @include border-radius(5px);
+}
+
+@mixin button-default($color, $color-hover) {
+  background-color: $color;
+  background-image: none;
+  text-shadow: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 0;
+  display: inline-block;
+  width: 100%;
+
+  &:hover, &:active, &:focus, &:hover:active {
+    background-color: $color-hover;
+    color: #fff;
+    text-decoration: none;
+  }
 }

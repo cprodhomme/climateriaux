@@ -33,3 +33,27 @@
   font-size: 16px;
   color: $grey-text;
 }
+
+.select-customer, .select-product {
+  @include white-block();
+  padding: 30px 35px;
+}
+
+
+.icon-choose-product {
+  border: 1px solid $text-color;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  font-size: 22px;
+  padding: 5px 5px 0 0;
+  @include border-radius(25px);
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.add-to-cart {
+  @include button-default(#f28956, #f28956);
+  margin-top: 35px;
+}
