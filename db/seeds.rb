@@ -270,6 +270,6 @@ end
 image_product = Rails.root.join("app/assets/images/image_produit.png").open
 
 if Product.count == 0
-  product = Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel"
+  product = Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel", description: "Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L'énergie, nécessaire à l'expansion du liège est issue à 95% de la biomasse et 5 % de l’électricité. Particulièrement adapté au milieu humide, le liège est imputrescible, résistant à l'écrasement, absorbant acoustique et auto extinguible. Durable, le liège conserve ses caractéristiques longtemps et il n'est pas attaqué par les insectes."
   ProductImage.create! id: 1, product: product, image: image_product, order: 0
 end

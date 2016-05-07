@@ -1,0 +1,29 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page-product {
+  background: $grey-background-2;
+
+  .breadcrumb {
+    margin-top: 20px;
+  }
+}
+
+.product-block {
+  @include white-block();
+  padding: 80px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 26px;
+  margin-bottom: 32px;
+  color: $text-color;
+}
+
+.product-description {
+  text-align: justify;
+  font-size: 18px;
+  color: $grey-text;
+}
