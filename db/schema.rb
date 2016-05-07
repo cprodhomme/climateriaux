@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505104520) do
+ActiveRecord::Schema.define(version: 20160506195605) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -22,12 +22,6 @@ ActiveRecord::Schema.define(version: 20160505104520) do
     t.datetime "updated_at",                null: false
     t.string   "slug",        limit: 255
   end
-
-  create_table "category_to_categories", force: :cascade do |t|
-    t.integer "category_id", limit: 4
-  end
-
-  add_index "category_to_categories", ["category_id"], name: "index_category_to_categories_on_category_id", using: :btree
 
   create_table "order_items", force: :cascade do |t|
     t.integer  "product_id",  limit: 4
@@ -60,13 +54,15 @@ ActiveRecord::Schema.define(version: 20160505104520) do
 
   add_index "orders", ["order_status_id"], name: "index_orders_on_order_status_id", using: :btree
 
-  create_table "product_medias", force: :cascade do |t|
-    t.integer "product_id", limit: 4
-    t.string  "media",      limit: 255
-    t.integer "order",      limit: 4
+  create_table "product_images", force: :cascade do |t|
+    t.integer  "product_id", limit: 4
+    t.string   "image",      limit: 255
+    t.integer  "order",      limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  add_index "product_medias", ["product_id"], name: "index_product_medias_on_product_id", using: :btree
+  add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -99,10 +95,9 @@ ActiveRecord::Schema.define(version: 20160505104520) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "category_to_categories", "categories"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "order_statuses"
-  add_foreign_key "product_medias", "products"
+  add_foreign_key "product_images", "products"
   add_foreign_key "products", "categories"
 end

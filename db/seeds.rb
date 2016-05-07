@@ -267,6 +267,9 @@ if OrderStatus.count == 0
   OrderStatus.create! id: 4, name: "Cancelled"
 end
 
+image_product = Rails.root.join("app/assets/images/image_produit.png").open
+
 if Product.count == 0
-  Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel"
+  product = Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel"
+  ProductImage.create! id: 1, product: product, image: image_product, order: 0
 end

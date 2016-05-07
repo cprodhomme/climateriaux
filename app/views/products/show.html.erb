@@ -1,2 +1,5 @@
 <h1>Products#show</h1>
 <p>Find me in app/views/products/show.html.erb</p>
+<% @images.each do |product_image| %>
+	<%= image_tag product_image.image %>
+<% end %>
