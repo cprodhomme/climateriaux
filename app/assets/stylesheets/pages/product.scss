@@ -16,6 +16,12 @@
   text-align: center;
 }
 
+.product-marque {
+  color: $green;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
 .product-title {
   font-size: 26px;
   margin-bottom: 32px;
@@ -24,6 +30,6 @@
 
 .product-description {
   text-align: justify;
-  font-size: 18px;
+  font-size: 16px;
   color: $grey-text;
 }
