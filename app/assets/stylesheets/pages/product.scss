@@ -37,6 +37,7 @@
 .select-customer, .select-product {
   @include white-block();
   padding: 30px 35px;
+  margin-bottom: 50px;
 }
 
 .icon-customer-product, .icon-choose-product {
@@ -79,4 +80,29 @@
 .add-to-cart {
   @include button-default(#f28956, #f28956);
   margin-top: 35px;
+}
+
+.title-detail-product {
+  padding-left: 60px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.content-detail-product {
+  @include white-block();
+  padding: 60px;
+}
+
+.title-detail {
+  font-size: 16px;
+  color: $text-color;
+  margin-bottom: 20px;
+}
+
+.text-detail {
+  font-size: 16px;
+  color: $grey-text;
+  margin-bottom: 35px;
 }
