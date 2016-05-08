@@ -3,6 +3,7 @@ class CreateProductMerchants < ActiveRecord::Migration
     create_table :product_merchants do |t|
       t.references :product, index: true, foreign_key: true
       t.references :merchant, index: true, foreign_key: true
+      t.interger   :stock
     end
   end
 end

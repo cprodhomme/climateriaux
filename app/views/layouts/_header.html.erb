@@ -20,7 +20,9 @@
             </div>
             <ul class="nav navbar-nav col-md-13">       
               <li class="block-user">
-                <a href="<?php echo get_permalink( wc_get_page_id( 'myaccount' ) ); ?>"><i class="fa fa-user"></i> Mon compte</a>
+                <%= link_to root_path do %>
+                  <i class="fa fa-user"></i> Mon compte
+                <% end %>
               </li>
               <li class="block-cart">
                 <%= render 'layouts/cart' %>
