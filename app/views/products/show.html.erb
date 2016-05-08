@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-9 col-md-offset-1 product-block">
+    <div class="col-md-8 col-lg-9 col-md-offset-1 product-block">
       <% @images.each do |product_image| %>
         <%= image_tag 'image_produit.png' %>
         <%# image_tag product_image.image %>
@@ -26,7 +26,7 @@
         <%= @product.description %>
       </p>
     </div>
-    <div class="col-md-4 col-md-offset-1">
+    <div class="col-md-5 col-lg-4 col-md-offset-1">
       <%= form_for @order_item, remote: true do |f| %>
         <div class="customer-product-block">
           <span class="icon-customer-product"></span>
