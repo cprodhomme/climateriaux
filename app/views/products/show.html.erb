@@ -5,6 +5,11 @@
         <li>
           <%= link_to 'Accueil', root_path %>
         </li>
+        <% if @product.category.parent_category %>
+          <li>
+            <%= link_to @product.category.parent_category.name, category_path(@product.category.parent_category.slug) %>
+          </li>
+        <% end %>
         <li>
           <%= link_to @product.category.name, category_path(@product.category.slug) %>
         </li>

@@ -318,6 +318,6 @@ if Product.count == 0
   TechnicalDetail.create!(technical_details_data)
 
   logo_merchant = Rails.root.join("app/assets/images/logo_merchant.png").open
-  merchant = Merchant.create! id: 1, name: "E-marchant", description: "Je suis un marchant de test", logo: logo_merchant
+  merchant = Merchant.create! id: 1, name: "Smartagro", description: "Je suis un marchant de test", logo: logo_merchant
   ProductMerchant.create! id: 1, product: product, merchant: merchant, stock: 3
 end
