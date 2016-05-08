@@ -47,9 +47,7 @@
   display: inline-block;
   text-align: center;
   @include border-radius(25px);
-  margin-top: 25px;
-  margin-bottom: 20px;
-
+  margin: 25px 15px 20px 15px;
 }
 
 .icon-customer-product {
@@ -60,7 +58,6 @@
 
 .text-customer-product {
   font-size: 18px;
-  padding-left: 15px;
   display: inline-block;
   height: 45px;
   margin: 25px 0 20px 0;
@@ -74,7 +71,6 @@
 
 .text-choose-product {
   font-size: 18px;
-  padding-left: 15px;
 }
 
 .add-to-cart {
