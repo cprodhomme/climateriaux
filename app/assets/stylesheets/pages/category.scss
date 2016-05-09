@@ -5,3 +5,8 @@
     margin-top: 20px;
   }
 }
+
+.one-product-block {
+  @include white-block();
+  padding: 20px 30px;
+}
