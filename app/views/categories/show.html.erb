@@ -1,6 +1,23 @@
-<div class="container">
+<div class="container-fluid page-category">
   <div class="row">
-    <div class="col-xs-24 col-md-24">
+    <div class="col-md-22 col-md-offset-2">
+      <ol class="breadcrumb">
+        <li>
+          <%= link_to 'Accueil', root_path %>
+        </li>
+        <% if @category.parent_category %>
+          <li>
+            <%= link_to @category.parent_category.name, category_path(@category.parent_category.slug) %>
+          </li>
+        <% end %>
+        <li class="active">
+          <%= @category.name %>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-24 col-md-12 col-md-offset-1">
       <% @products.each do |product| %>
         <%= render "product_row", product: product, order_item: @order_item %>
       <% end %>
