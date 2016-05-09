@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20160508175923) do
   create_table "product_merchants", force: :cascade do |t|
     t.integer "product_id",  limit: 4
     t.integer "merchant_id", limit: 4
+    t.integer "stock",       limit: 4
   end
 
   add_index "product_merchants", ["merchant_id"], name: "index_product_merchants_on_merchant_id", using: :btree
