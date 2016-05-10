@@ -18,6 +18,43 @@
   margin: 28px auto 45px auto;
 }
 
+.jumbotron{
+  padding-top:120px;
+  margin: 0;
+  height: 80vh;
+  background-image: image_url('slider.jpg');
+  background-size: cover;
+
+  .container{
+    text-align: center;
+
+    h1{
+      margin: 0;
+      color:#fff;
+    }
+
+    .searchBar{
+      padding-top:60px;
+
+      input{
+        height:60px;
+        width:700px;
+        background: #FFF;
+        border-radius: 5px 0 0 5px;
+        border:0;
+      }
+
+      button{
+        border-radius: 0 5px 5px 0;
+        height: 60px;
+        width: 60px;
+        vertical-align: top;
+        margin-left: -2px;
+      }
+    }
+  }
+}
+
 .slider-home {
   position: relative;
 
@@ -59,7 +96,9 @@
 }
 
 .categories-home {
-  padding: 90px 0 60px 0;
+  svg{
+    margin-top:-150px;
+  }
 }
 
 .tutoriels-home {
@@ -110,7 +149,8 @@
   }
 
   .article {
-    border: 1px solid #e3e3e3;
+    background: #fff;
+    box-shadow: $shadow;
 
     img {
       width: 100%;
@@ -133,7 +173,14 @@
 
       span {
         font-size: 14px;
-        padding-right: 40px;
+
+        &:first-child{
+          padding-right: 15px;
+        }
+
+        i{
+          padding-right:5px;
+        }
       }
     }
   }
