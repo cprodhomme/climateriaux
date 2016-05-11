@@ -31,6 +31,7 @@ gem 'carrierwave'
 
 gem "binding_of_caller"
 
+gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
 # Use ActiveModel has_secure_password
