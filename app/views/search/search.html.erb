@@ -1,0 +1,15 @@
+<%= form_for search_path, method: :get do |f| %>
+  <%= f.label "rechercher un produit" %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <h3>
+        <%= product.name %>
+      </h3>
+    </li>
+  <% end %>
+</ul>
