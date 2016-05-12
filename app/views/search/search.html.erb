@@ -1,9 +1,9 @@
-<div class="container-fluid page-category">
+<div class="container-fluid page-search">
   <div class="row">
-    <div class="col-md-23 col-md-offset-1">
-      <%= form_for search_path, url: search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
+    <div class="col-md-23 col-md-offset-1 ">
+      <%= form_for search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
         <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Recherche' %>
-        <%= submit_tag "rechercher", name: nil, :class => 'btn btn-default search-button' %>
+        <%= submit_tag "", name: nil, :class => 'btn btn-default search-button' %>
       <% end %>
     </div>
   </div>
