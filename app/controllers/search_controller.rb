@@ -3,9 +3,8 @@ class SearchController < ApplicationController
     if params[:search].nil?
       @products = []
     else
-      puts 'reussi'
-      @products = Product.where("name LIKE ? ", "%#{params[:search]}%")  
-      p @products
+      @products = Product.where("name LIKE ? ", "%#{params[:search]}%")
+      @order_item = current_order.order_items.new
     end
 
   end

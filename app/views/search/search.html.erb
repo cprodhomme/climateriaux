@@ -1,15 +1,19 @@
-<%= form_for search_path, method: :get do |f| %>
-  <%= f.label "rechercher un produit" %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag "Search", name: nil %>
-<% end %>
-
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <h3>
-        <%= product.name %>
-      </h3>
-    </li>
-  <% end %>
-</ul>
+<div class="container-fluid page-category">
+  <div class="row">
+    <div class="col-md-23 col-md-offset-1">
+      <%= form_for search_path, url: search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
+        <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Recherche' %>
+        <%= submit_tag "rechercher", name: nil, :class => 'btn btn-default search-button' %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-24 col-md-23 col-md-offset-1">
+      <% @products.each do |product| %>
+        <div class="col-md-6 col-xs-24">
+          <%= render "categories/product_row", product: product, order_item: @order_item %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
