@@ -60,7 +60,8 @@
 
   img{
     position: absolute;
-    left: 42%;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 15px;
   }
 }
