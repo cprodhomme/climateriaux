@@ -17,12 +17,13 @@
 </section>-->
 <section class="jumbotron">
   <div class="container">
-      <h1>Baseline</h1>
+    <h1>Baseline</h1>
       <form class="searchBar">
         <input type="text" class="" placeholder="Recherche">
-        <button class="btn btn-default search-button" type="button"></button>
+        <button class="btn btn-default search-button" type="button">
+          <i class="fa fa-search"></i>
+        </button>
       </form>
-    
   </div>
 </section>
 <section class="categories-home">
@@ -30,7 +31,7 @@
     <div class="row">
       <div class="col-md-24 hidden-xs">
         <!-- SVG catégories -->
-        <%= render 'svg'%>
+        <%= render 'svg2'%>
       </div>
       <div class="visible-xs-24 visible-xs-block">
         <div class="row">
@@ -79,10 +80,18 @@
     </div>
   </div>
 </section>
-<section class="tutoriels-home hidden container-fluid text-center">
+<section class="materials-home">
+  <div class="container">
+    <h2 class="home-title-section">Matériaux de sources vérifiés</h2>
+    <div class="grey-bar-title"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non turpis vitae magna commodo sodales. Aenean vitae dignissim urna, et tincidunt magna. Pellentesque facilisis sem ac felis mollis, eget luctus odio facilisis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Donec risus mauris,</p> 
+  </div>
+  <%= image_tag("materials.svg") %>
+</section>
+<section class="tutoriels-home container-fluid text-center">
   <div class="row">
     <div class="col-md-24">
-      <h1 class="home-title-section">Tutoriels</h1>
+      <h2 class="home-title-section">Tutoriels</h2>
       <div class="grey-bar-title"></div>
       <p class="home-p-section">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
     </div>
@@ -90,24 +99,28 @@
   <div class="row">
     <div class="col-md-24">
       <div id="owl-tutoriels" class="owl-carousel row">
-        <div class="col-md-24">
-          <div class="tutoriel">
-            <h2>Titre tutoriel</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="lien-plus">
-              +
+        <% (0..3).each do |i| %>
+          <div class="col-md-24">
+            <div class="tutoriel">
+              <h3>Titre tutoriel</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <a href="#" class="lien-plus">
+                  <span>voir tous le tuto</span>
+              </a>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <a href="" class="btn-default">Tous les tutoriels</a>
     </div>
   </div>
 </section>
+<section class="howItWork-home">
+</section>
 <section class="articles-home container-fluid text-center">
   <div class="row">
     <div class="col-md-24">
-      <h1 class="home-title-section">Articles</h1>
+      <h2 class="home-title-section">Articles</h2>
       <div class="grey-bar-title"></div>
       <p class="home-p-section">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
     </div>
@@ -118,7 +131,7 @@
         <div class="article text-left">
           <%= image_tag("img-article-default.png") %>
           <div class="info-article">
-            <h2>titre article</h2>
+            <h3>titre article</h3>
             <p class="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
             <div>
               <span class="date"><i class="fa fa-clock-o"></i> 6 octobre 2015</span> <span class="author"><i class="fa fa-user"></i> Climatériaux</span>

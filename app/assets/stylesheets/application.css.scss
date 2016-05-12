@@ -29,9 +29,6 @@
 @import "pages/category";
 @import "pages/product";
 
-body {
-  padding-top: 60px;
-}
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -41,6 +38,33 @@ body {
   -ms-user-select: none;       /* IE/Edge */
   user-select: none;           /* non-prefixed version, currently
                                   not supported by any browser */
+}
+
+/*********************
+        BODY
+**********************/
+body{
+  padding-top: 60px;
+  color: #1c1833;
+
+  h1{
+    font-size:60px;
+    font-weight:300;
+  }
+
+  h2{
+    font-size:40px;
+    font-weight:300;
+  }
+
+  h3{
+    font-size:16px;
+    font-weight:600;
+  }
+
+  p, a, span{
+    font-size:16px;
+  }
 }
 
 /*********************
@@ -70,3 +94,4 @@ body {
   background-color: $green;
   border: none;
 }
+
