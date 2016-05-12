@@ -31,10 +31,10 @@
       color:#fff;
     }
 
-    .searchBar{
+    .search-bar{
       padding-top:60px;
 
-      input{
+      .search-field {
         height:60px;
         width:700px;
         background: #FFF;
@@ -42,7 +42,7 @@
         border:0;
       }
 
-      button{
+      .search-button {
         border-radius: 0 5px 5px 0;
         height: 60px;
         width: 60px;

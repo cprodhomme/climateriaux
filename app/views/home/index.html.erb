@@ -1,29 +1,10 @@
-<!--<section class="slider-home hidden-xs">
-  <div class="owl-controls clickable">
-    <span id="owl-slider-prev"><i class="fa fa-arrow-left"></i></span>
-    <span id="owl-slider-next"><i class="fa fa-arrow-right"></i></span>
-  </div>
-  <div id="owl-slider" class="owl-carousel">
-    <% (0..1).each do |i| %>
-      <div class="item">
-        <%= image_tag("slider.png") %>
-        <div>
-          <p class="title-slider">Slider</p>
-          <p class="content-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</section>-->
 <section class="jumbotron">
   <div class="container">
     <h1>Baseline</h1>
-      <form class="searchBar">
-        <input type="text" class="" placeholder="Recherche">
-        <button class="btn btn-default search-button" type="button">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
+    <%= form_for search_path, url: search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
+      <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Recherche' %>
+      <%= submit_tag "", name: nil, :class => 'btn btn-default search-button' %>
+    <% end %>
   </div>
 </section>
 <section class="categories-home">
