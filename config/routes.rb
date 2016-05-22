@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :products, param: :slug, only: [:show]
   resource  :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
-  resources :tutorials, only: [:index, :show]
+  resources :tutorials, param: :slug, only: [:index, :show]
   get 'search', to: 'search#search'
 
   # Example of regular route:

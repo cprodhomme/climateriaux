@@ -6,4 +6,10 @@ describe 'Tutorial', type: :feature do
     visit tutorials_path
     expect(page).to have_content "titre de mon tuto"
   end
+
+  scenario "j'accède à la page d'un tutoriel" do
+  	tutorial = create :tutorial, slug: "tuto"
+    visit tutorial_path(slug: "tuto")
+    expect(page).to have_content "titre de mon tuto"
+  end
 end

@@ -5,6 +5,6 @@ class TutorialsController < ApplicationController
   end
 
   def show
-
+  	@tutorial = Tutorial.where(slug: params[:slug]).first
   end
 end
