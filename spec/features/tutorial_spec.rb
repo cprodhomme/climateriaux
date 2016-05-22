@@ -1,0 +1,9 @@
+require 'rails_helper'
+
+describe 'Tutorial', type: :feature do
+  scenario "j'accède à la page index des tutoriels" do
+  	tutorial = create :tutorial
+    visit tutorials_path
+    expect(page).to have_content "titre de mon tuto"
+  end
+end

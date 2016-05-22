@@ -106,12 +106,12 @@ ActiveRecord::Schema.define(version: 20160522141818) do
   add_index "technical_details", ["product_id"], name: "index_technical_details_on_product_id", using: :btree
 
   create_table "tutorials", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
-    t.integer  "user_id",     limit: 4
-    t.string   "image",       limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "title",      limit: 255
+    t.text     "content",    limit: 65535
+    t.integer  "user_id",    limit: 4
+    t.string   "image",      limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   add_index "tutorials", ["user_id"], name: "index_tutorials_on_user_id", using: :btree
