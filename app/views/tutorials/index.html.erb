@@ -1,7 +1,7 @@
 index.html.erb
 <% @tutorials.each do |tutorial| %>
 	<p>
-		<% link_to tutorial_path(tutorial.slug) do %>
+		<%= link_to tutorial_path(tutorial.slug) do %>
 			<%= tutorial.title %>
 		<% end %>
 	</p>
