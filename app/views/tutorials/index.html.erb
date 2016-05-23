@@ -1,8 +1,15 @@
-index.html.erb
-<% @tutorials.each do |tutorial| %>
-	<p>
-		<%= link_to tutorial_path(tutorial.slug) do %>
-			<%= tutorial.title %>
-		<% end %>
-	</p>
-<% end %>
+<div class="container-fluid page-tutorial">
+  <div class="row">
+	  <div class="col-md-8">
+			<%= render "shared/tutorial_block" %>
+			<% @tutorials.each do |tutorial| %>
+				<%= render "shared/tutorial_block" %>
+				<p>
+					<%= link_to tutorial_path(tutorial.slug) do %>
+						<%= tutorial.title %>
+					<% end %>
+				</p>
+			<% end %>
+		</div>
+	</div>
+</div>
