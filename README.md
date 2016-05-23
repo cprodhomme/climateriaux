@@ -18,6 +18,8 @@ des économies énergétiques et financières.
 | `rails s` | Lance le serveur local Rails |
 | `rake db:migrate` | Met à jour la base de donnée |
 
+[Voir plus de commandes sur le wiki](https://github.com/cle61/climateriaux/wiki/Commandes-utiles)
+
 
 ##Technologies
 - HTML5 / CSS3
