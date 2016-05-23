@@ -17,7 +17,6 @@ des économies énergétiques et financières.
 | `./bin/build` | Initialise le projet |
 | `rails s` | Lance le serveur local Rails |
 | `rake db:migrate` | Met à jour la base de donnée |
-| `./bin/deploy_staging` | Déploie la branche développement sur la staging d'Heroku |
 
 
 ##Technologies
