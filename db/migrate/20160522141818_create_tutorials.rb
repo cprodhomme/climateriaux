@@ -5,7 +5,7 @@ class CreateTutorials < ActiveRecord::Migration
       t.text        :content
       t.references  :user, index: true, foreign_key: true
       t.string      :image
-      t.string		:slug
+      t.string		  :slug
 
       t.timestamps null: false
     end

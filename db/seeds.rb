@@ -76,3 +76,16 @@ if Product.count == 0
   merchant = Merchant.create! id: 1, name: "Smartagro", description: "Je suis un marchant de test", logo: logo_merchant
   ProductMerchant.create! id: 1, product: product, merchant: merchant, stock: 3
 end
+
+if Tutorial.count == 0
+  tutorialsJSON = ActiveSupport::JSON.decode(File.read('db/seeds/tutorials.json'))
+  tutorialsJSON.each do |t|
+    $i = 0
+    $num = 8
+
+    while $i < $num do
+      Tutorial.create!(title: t['title'], resume: t['resume'], content: t['content'], slug: $i)
+      $i +=1
+    end
+  end
+end

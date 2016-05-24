@@ -18,6 +18,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#FDFDFD',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	box-shadow: $shadow;
 	text-align: center;
+	position: relative;
+	margin-bottom: 50px;
 
 	h3{
 	  font-size: 18px;

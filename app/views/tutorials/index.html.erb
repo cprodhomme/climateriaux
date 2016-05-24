@@ -1,15 +1,9 @@
 <div class="container-fluid page-tutorial">
   <div class="row">
-	  <div class="col-md-8">
-			<%= render "shared/tutorial_block" %>
-			<% @tutorials.each do |tutorial| %>
+		<% @tutorials.each do |tutorial| %>
+	  	<div class="col-md-8 tutorial-item">
 				<%= render "shared/tutorial_block" %>
-				<p>
-					<%= link_to tutorial_path(tutorial.slug) do %>
-						<%= tutorial.title %>
-					<% end %>
-				</p>
-			<% end %>
-		</div>
+			</div>
+		<% end %>
 	</div>
 </div>
