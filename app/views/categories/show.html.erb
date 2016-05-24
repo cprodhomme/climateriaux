@@ -5,7 +5,7 @@
         <li>
           <%= link_to 'Accueil', root_path %>
         </li>
-        <% if @category.parent_category %>
+        <% if @category.parent_category.present? %>
           <li>
             <%= link_to @category.parent_category.name, category_path(@category.parent_category.slug) %>
           </li>
