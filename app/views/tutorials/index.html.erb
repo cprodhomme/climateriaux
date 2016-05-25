@@ -2,7 +2,7 @@
   <div class="row">
 		<% @tutorials.each do |tutorial| %>
 	  	<div class="col-md-8 tutorial-item">
-				<%= render "shared/tutorial_block" %>
+				<%= render "shared/tutorial_block", tutorial: tutorial %>
 			</div>
 		<% end %>
 	</div>
