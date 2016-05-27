@@ -47,6 +47,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (8.2.5)
+    cancancan (1.14.0)
     capybara (2.7.0)
       addressable
       mime-types (>= 1.16)
@@ -243,6 +244,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
+  cancancan
   capybara
   carrierwave
   devise

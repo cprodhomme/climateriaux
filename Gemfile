@@ -33,6 +33,8 @@ gem 'binding_of_caller'
 
 gem 'kaminari'
 
+gem 'cancancan'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
