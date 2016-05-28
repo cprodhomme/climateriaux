@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # role : customer, delivery, adviser, merchant, admin
-  validates :role, presence: true, :default => "customer"
+  validates :role, presence: true
 end
