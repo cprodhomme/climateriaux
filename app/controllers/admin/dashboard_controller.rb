@@ -9,6 +9,11 @@ class Admin::DashboardController < ApplicationController
 
   private
   def verify_admin
-    #redirect_to root_url unless current_user.try(:admin?)
+    if !current_user
+      redirect_to new_user_session_path
+    elsif current_user.role == "admin" || current_user.role == "merchant"
+    else
+      redirect_to root_url
+    end
   end
 end
