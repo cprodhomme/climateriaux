@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Tutorial', type: :feature do
+describe 'tutorial', type: :feature do
   scenario "j'accède à la page index des tutoriels" do
   	tutorial = create :tutorial, title: "Titre tutoriel"
     visit tutorials_path

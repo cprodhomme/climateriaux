@@ -1,7 +1,11 @@
-class Admin::TutorialsController < ApplicationController
+class Admin::TutorialsController < Admin::DashboardController
 
 	def index
-		@tutorials = Tutorial.where(user_id: current_user)
+		if current_user.role == 'admin'
+			@tutorials = Tutorial.all
+		elsif current_user.role == 'merchant'
+			@tutorials = Tutorial.where(user: current_user)
+		end
 	end
 
 	def show

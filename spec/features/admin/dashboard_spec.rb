@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Dashboard', type: :feature, focus: true do
+describe 'Dashboard', type: :feature do
 
   context "en tant qu'Admin" do
     let!(:user) { create :user, email: "admin@climateriaux.fr", role: "admin" }
@@ -9,7 +9,7 @@ describe 'Dashboard', type: :feature, focus: true do
       create_user_and_log_in user
     end
 
-    scenario "je peux accède au dashboard du Back-office" do
+    scenario "je peux accèder au dashboard du Back-office" do
       visit admin_path
       expect(page).to have_content "Dashboard"
     end
@@ -22,7 +22,7 @@ describe 'Dashboard', type: :feature, focus: true do
       create_user_and_log_in user
     end
 
-    scenario "je peux accède au dashboard du Back-office" do
+    scenario "je peux accèder au dashboard du Back-office" do
       visit admin_path
       expect(page).to have_content "Dashboard"
     end
