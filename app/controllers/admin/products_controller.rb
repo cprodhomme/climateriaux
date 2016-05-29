@@ -4,16 +4,25 @@ class Admin::ProductsController < Admin::DashboardController
 		@products = Product.all
 	end
 
-	def show
-		@products = Product.where(slug: params[:slug]).first
+	def create
 	end
 
-	def create
+	def edit
+		@product = Product.where(slug: params[:slug], user: current_user).first
 	end
 
 	def update
 	end
 
-	def delete
+	def destroy
+		@product = Product.where(slug: params[:slug], user: current_user).first
+		authorize! :destroy, @product
 	end
+
+	private
+
+  def tutorial_params
+  	params.require(:product).permit(:name, :description)
+  end
+
 end
