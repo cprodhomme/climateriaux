@@ -16,3 +16,4 @@ log
 tmp
 .env
 public/uploads
+vendor
