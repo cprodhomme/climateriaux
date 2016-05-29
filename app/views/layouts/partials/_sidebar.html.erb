@@ -28,29 +28,22 @@
             <span>Main Navigation</span>
          </li>
          <li class="<%= 'active' if controller.controller_name == 'dashboard' %>">
-            <a href="#dashboard" title="Dashboard" data-toggle="collapse">
-               <div class="label label-info pull-right">3</div>
-               <em class="icon-speedometer"></em>
-               <span data-localize="sidebar.nav.DASHBOARD">Dashboard</span>
-            </a>
-            <ul id="dashboard" class="nav sidebar-subnav collapse">
-               <li class="sidebar-subnav-header">Dashboard</li>
-               <li class="<%= 'active' if controller.controller_name == 'dashboard' && controller.action_name == 'dashboard_v1' %>">
-                  <a href="/dashboard/dashboard_v1" title="Dashboard v1">
-                     <span>Dashboard v1</span>
-                  </a>
-               </li>
-               <li class="<%= 'active' if controller.controller_name == 'dashboard' && controller.action_name == 'dashboard_v2' %>">
-                  <a href="/dashboard/dashboard_v2" title="Dashboard v2">
-                     <span>Dashboard v2</span>
-                  </a>
-               </li>
-               <li class="<%= 'active' if controller.controller_name == 'dashboard' && controller.action_name == 'dashboard_v3' %>">
-                  <a href="/dashboard/dashboard_v3" title="Dashboard v3">
-                     <span>Dashboard v3</span>
-                  </a>
-               </li>
-            </ul>
+            <%= link_to admin_path do %>
+              <em class="icon-speedometer"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Dashboard</span>
+            <% end %>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'products' %>">
+            <%= link_to admin_products_path do %>
+              <em class="fa fa-cube"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Produits</span>
+            <% end %>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'tutorials' %>">
+            <%= link_to admin_tutorials_path do %>
+              <em class="icon-book-open"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Tutoriels</span>
+            <% end %>
          </li>
          <li class="<%= 'active' if controller.controller_name == 'widgets' && controller.action_name == 'index' %>">
             <a href="/widgets" title="Widgets">
