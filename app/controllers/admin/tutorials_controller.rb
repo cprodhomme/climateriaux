@@ -8,17 +8,25 @@ class Admin::TutorialsController < Admin::DashboardController
 		end
 	end
 
-	def show
-		@tutorial = Tutorial.where(slug: params[:slug], user_id: current_user).first
+	def create
 	end
 
-	def create
+	def edit
+		@tutorial = Tutorial.where(slug: params[:slug], user: current_user).first
 	end
 
 	def update
 	end
 
-	def delete
+	def destroy
+		@tutorial = Tutorial.where(slug: params[:slug], user: current_user).first
+		authorize! :destroy, @tutorial
 	end
+
+	private
+
+  def tutorial_params
+  	params.require(:tutorial).permit(:title, :resume, :content)
+  end
 
 end
