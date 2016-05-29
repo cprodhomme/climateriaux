@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Climateriaux - Back-Office</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#75ad31">
@@ -15,12 +15,49 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
 
-  <%= stylesheet_link_tag    'admin', media: 'all' %>
-  <%= javascript_include_tag 'admin' %>
+  <!-- =============== VENDOR STYLES ===============-->
+  <%= stylesheet_link_tag 'admin/base' %>
+  <!-- =============== VIEW VENDOR STYLES ===============-->
+  <%= stylesheet_link_tag params[:controller] %>
+  <!-- =============== APP STYLES ===============-->
+  <%= stylesheet_link_tag 'admin', media: 'all', id: "maincss" %>
   <%= csrf_meta_tags %>
+
   <%= favicon_link_tag 'favicon.png' %>
 </head>
 <body class="admin">
-  <%= yield %>
+
+  <div class="wrapper">
+      <!-- top navbar-->
+      <header class="topnavbar-wrapper">
+         <%= render partial: "layouts/partials/topnavbar" %>
+      </header>
+      <!-- sidebar-->
+      <aside class="aside">
+         <%= render partial: "layouts/partials/sidebar" %>
+      </aside>
+      <!-- offsidebar-->
+      <aside class="offsidebar">
+         <%= render partial: "layouts/partials/offsidebar" %>
+      </aside>
+      <!-- Main section-->
+      <section>
+         <!-- Page content-->
+         <div class="content-wrapper">
+            <%= yield %>
+         </div>
+      </section>
+      <!-- Page footer-->
+      <footer>
+         <%= render partial: "layouts/partials/footer" %>
+      </footer>
+   </div>
+
+  <!-- =============== VENDOR SCRIPTS ===============-->
+  <%= javascript_include_tag 'admin/base' %>
+  <!-- =============== VIEW VENDOR SCRIPTS ===============-->
+  <%= javascript_include_tag params[:controller] %>
+  <!-- =============== APP SCRIPTS ===============-->
+  <%= javascript_include_tag 'admin' %>
 </body>
 </html>

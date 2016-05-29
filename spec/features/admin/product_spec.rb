@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'admin/product', type: :feature, focus: true do
+describe 'admin/product', type: :feature do
 
   context "en tant qu'Admin" do
     let!(:user) { create :user, email: "admin@climateriaux.fr", role: "admin" }

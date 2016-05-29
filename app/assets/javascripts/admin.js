@@ -12,3 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//
+//--- Angle
+//= require_tree ./admin/angle/

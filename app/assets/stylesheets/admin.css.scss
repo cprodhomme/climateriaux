@@ -12,6 +12,16 @@
  *
  *= require_self
  *= require font-awesome
+ *
+ * --- Angle Main Stylesheet
+ * 
+ *= require admin/angle/app
+ *
+ * --- Assets paths redefinition 
+ * 
+ *= require admin/fonts
+ *= require admin/vendor.assets
+ *
  */
 
  @import "admin/dashboard";

@@ -50,3 +50,9 @@ if Tutorial.count == 0
     end
   end
 end
+
+if Rails.env.development?
+  if User.count == 0
+    User.create(email: 'admin@climateriaux.fr', password: 'password', role: 'admin')
+  end
+end
