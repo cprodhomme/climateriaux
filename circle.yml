@@ -4,5 +4,7 @@ test:
 deployment:
   staging:
     branch: develop
+    commands:
+      - bundle exec rake bower:install
     heroku:
       appname: climateriaux
