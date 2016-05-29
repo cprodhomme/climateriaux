@@ -1,3 +1,6 @@
+machine:
+  pre:
+    - rake bower:install 
 deployment:
   staging:
     branch: develop
