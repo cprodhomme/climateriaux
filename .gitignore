@@ -16,5 +16,3 @@ log
 tmp
 .env
 public/uploads
-vendor
-bower_components
