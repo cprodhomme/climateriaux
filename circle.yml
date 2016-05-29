@@ -5,4 +5,9 @@ deployment:
   staging:
     branch: develop
     commands:
-      - heroku run bundle exec rake bower:install -a climateriaux
+      - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
+      - git push git@heroku.com:climateriaux.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run bundle install -a climateriaux
+      - heroku run rake bower:install -a climateriaux
+      - heroku run rake db:migrate -a climateriaux:
+          timeout: 400 # if your deploys take a long time
