@@ -16,8 +16,8 @@
                   </div>
                   <!-- Name and Job-->
                   <div class="user-block-info">
-                     <span class="user-block-name">Hello, Mike</span>
-                     <span class="user-block-role">Designer</span>
+                     <span class="user-block-name">Hello, <%= current_user.email %></span>
+                     <span class="user-block-role"><%= current_user.role %></span>
                   </div>
                </div>
             </div>
@@ -40,11 +40,11 @@
             <% end %>
          </li>
          <li class="<%= 'active' if controller.controller_name == 'orders' %>">
-            <a href="/widgets" title="Widgets">
-               <div class="label label-success pull-right">12</div>
+            <%= link_to admin_orders_path do %>
+               <div class="label label-success pull-right"><%= @number_orders %></div>
                <em class="icon-basket-loaded"></em>
                <span data-localize="sidebar.nav.WIDGETS">Commandes</span>
-            </a>
+            <% end %>
          </li>
          <li class="<%= 'active' if controller.controller_name == 'tutorials' %>">
             <%= link_to admin_tutorials_path do %>
@@ -56,10 +56,10 @@
             <span>Administration</span>
          </li>
          <li class="<%= 'active' if controller.controller_name == 'users' %>">
-            <a href="/widgets" title="Widgets">
-               <em class="icon-user"></em>
-               <span data-localize="sidebar.nav.WIDGETS">Utilisateurs</span>
-            </a>
+            <%= link_to admin_users_path do %>
+              <em class="icon-user"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Utilisateurs</span>
+            <% end %>
          </li>
          <li class="nav-heading">
             <span>Autre</span>

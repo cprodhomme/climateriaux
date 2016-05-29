@@ -1,0 +1,119 @@
+<h3>Utilisateurs</h3>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="input-group pull-right">
+          <select class="input-sm form-control">
+            <option value="0">Bulk action</option>
+            <option value="1">Delete</option>
+            <option value="2">Clone</option>
+            <option value="3">Export</option>
+          </select>
+          <span class="input-group-btn">
+            <button class="btn btn-sm btn-default">Apply</button>
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-6"></div>
+      <div class="col-lg-4">
+        <div class="input-group">
+          <input type="text" placeholder="Search" class="input-sm form-control" />
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-sm btn-default">Search</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- START table-responsive-->
+   <div class="table-responsive">
+      <table id="table-ext-1" class="table table-bordered table-hover">
+         <thead>
+            <tr>
+               <th data-check-all="data-check-all">
+                  <div data-toggle="tooltip" data-title="Check All" class="checkbox c-checkbox">
+                     <label>
+                        <input type="checkbox" />
+                        <span class="fa fa-check"></span>
+                     </label>
+                  </div>
+               </th>
+               <th>UID</th>
+               <th>Picture</th>
+               <th>Email</th>
+               <th>Role</th>
+               <th>Profile</th>
+               <th>Last Login</th>
+               <th >Action</th>
+            </tr>
+         </thead>
+         <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td>
+                  <div class="checkbox c-checkbox">
+                     <label>
+                        <input type="checkbox" />
+                        <span class="fa fa-check"></span>
+                     </label>
+                  </div>
+               </td>
+               <td><%= user.id %></td>
+               <td>
+                  <div class="media">
+                     <img src="<%= image_path('angle/user/01.jpg') %>" alt="Image" class="img-responsive img-circle" />
+                  </div>
+               </td>
+               <td><%= user.email %></td>
+               <td><%= user.role %></td>
+               <td class="text-center">
+                  <div data-label="25%" class="radial-bar radial-bar-25 radial-bar-xs"></div>
+               </td>
+               <td>1 week</td>       
+                <td class="text-center">
+                  <%= link_to edit_admin_user_path(user.id), class: 'btn btn-sm btn-default' do %>
+                      <em class="icon-pencil"></em>
+                   <% end %>
+                   <button type="button" class="btn btn-sm btn-default">
+                      <em class="icon-trash"></em>
+                   </button>
+                </td>
+            </tr>
+          <% end %>
+         </tbody>
+      </table>
+   </div>
+   <!-- END table-responsive-->
+   <div class="panel-footer">
+      <div class="row">
+         <div class="col-lg-2">
+            <div class="input-group pull-right">
+               <select class="input-sm form-control">
+                  <option value="0">Bulk action</option>
+                  <option value="1">Delete</option>
+                  <option value="2">Clone</option>
+                  <option value="3">Export</option>
+               </select>
+               <span class="input-group-btn">
+                  <button class="btn btn-sm btn-default">Apply</button>
+               </span>
+            </div>
+         </div>
+         <div class="col-lg-8"></div>
+         <div class="col-lg-2 text-right">
+            <ul class="pagination pagination-sm">
+               <li class="active"><a href="#">1</a>
+               </li>
+               <li><a href="#">2</a>
+               </li>
+               <li><a href="#">3</a>
+               </li>
+               <li><a href="#">»</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>

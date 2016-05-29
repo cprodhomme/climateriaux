@@ -1,10 +1,11 @@
 class Admin::DashboardController < ApplicationController
   before_filter :verify_admin
+  before_filter :number_orders
 
   layout 'admin'
 
   def index
-    
+    @number_products = Product.count
   end
 
   private
@@ -15,5 +16,10 @@ class Admin::DashboardController < ApplicationController
     else
       redirect_to root_url
     end
+  end
+
+  def number_orders
+    @number_orders = Order.count
+    puts Order.count
   end
 end

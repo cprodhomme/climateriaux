@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     get '', to: 'dashboard#index', as: '/'
     resources :tutorials, param: :slug
     resources :products, param: :slug
+    resources :orders
+    resources :users
   end
 
   # Example of regular route:
