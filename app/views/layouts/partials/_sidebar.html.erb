@@ -39,6 +39,13 @@
               <span data-localize="sidebar.nav.WIDGETS">Produits</span>
             <% end %>
          </li>
+         <li class="<%= 'active' if controller.controller_name == 'orders' %>">
+            <a href="/widgets" title="Widgets">
+               <div class="label label-success pull-right">12</div>
+               <em class="icon-basket-loaded"></em>
+               <span data-localize="sidebar.nav.WIDGETS">Commandes</span>
+            </a>
+         </li>
          <li class="<%= 'active' if controller.controller_name == 'tutorials' %>">
             <%= link_to admin_tutorials_path do %>
               <em class="icon-book-open"></em>
