@@ -2,9 +2,9 @@ test:
   pre:
     - bundle exec rake bower:install
 deployment:
+  commands:
+      - heroku run bundle exec rake bower:install -a climateriaux
   staging:
     branch: develop
     heroku:
       appname: climateriaux
-    commands:
-      - bundle exec rake bower:install
