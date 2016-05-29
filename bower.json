@@ -38,7 +38,7 @@
     "seiyria-bootstrap-slider": "6.0.14",
     "jquery.inputmask": "3.2.7",
     "ika.jvectormap": "*",
-    "jquery": "2.2.0",
+    "jquery": ">= 2.2.0",
     "fullcalendar": "2.6.0",
     "animate.css": "3.5.1",
     "fastclick": "1.0.6",
@@ -83,5 +83,8 @@
     "sparkline": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js",
     "select2": "4.0.1",
     "select2-bootstrap-theme": "0.1.0-beta.4"
+  },
+  "resolutions": {
+    "jquery": ">= 2.2.0"
   }
 }
