@@ -3,6 +3,11 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="row">
+      <div class="col-xs-12">
+        <%= link_to 'Ajouter un utilisateur', new_admin_user_path, class: 'mb-sm btn btn-primary' %>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-lg-2">
         <div class="input-group pull-right">
           <select class="input-sm form-control">
@@ -41,10 +46,8 @@
                   </div>
                </th>
                <th>UID</th>
-               <th>Picture</th>
                <th>Email</th>
                <th>Role</th>
-               <th>Profile</th>
                <th>Last Login</th>
                <th >Action</th>
             </tr>
@@ -61,16 +64,8 @@
                   </div>
                </td>
                <td><%= user.id %></td>
-               <td>
-                  <div class="media">
-                     <img src="<%= image_path('angle/user/01.jpg') %>" alt="Image" class="img-responsive img-circle" />
-                  </div>
-               </td>
                <td><%= user.email %></td>
                <td><%= user.role %></td>
-               <td class="text-center">
-                  <div data-label="25%" class="radial-bar radial-bar-25 radial-bar-xs"></div>
-               </td>
                <td>1 week</td>       
                 <td class="text-center">
                   <%= link_to edit_admin_user_path(user.id), class: 'btn btn-sm btn-default' do %>
