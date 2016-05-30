@@ -20,6 +20,5 @@ class Admin::DashboardController < ApplicationController
 
   def number_orders
     @number_orders = Order.count
-    puts Order.count
   end
 end

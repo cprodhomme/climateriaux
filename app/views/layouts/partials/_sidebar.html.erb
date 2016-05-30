@@ -46,11 +46,11 @@
                <span data-localize="sidebar.nav.WIDGETS">Commandes</span>
             <% end %>
          </li>
-         <li class="<%= 'active' if controller.controller_name == 'documentation' && controller.action_name == 'index' %>">
-            <a href="/documentation" title="Documentation">
+         <li class="<%= 'active' if controller.controller_name == 'inventory' %>">
+            <%= link_to admin_inventory_index_path do %>
                <em class="fa fa-cubes"></em>
-               <span data-localize="sidebar.nav.DOCUMENTATION">Stock</span>
-            </a>
+               <span data-localize="sidebar.nav.DOCUMENTATION">Inventaire</span>
+            <% end %>
          </li>
          <li class="<%= 'active' if controller.controller_name == 'tutorials' %>">
             <%= link_to admin_tutorials_path do %>
