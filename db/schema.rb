@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160508175923) do
+ActiveRecord::Schema.define(version: 20160527123142) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -72,14 +72,6 @@ ActiveRecord::Schema.define(version: 20160508175923) do
 
   add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
 
-  create_table "product_medias", force: :cascade do |t|
-    t.integer "product_id", limit: 4
-    t.string  "media",      limit: 255
-    t.integer "order",      limit: 4
-  end
-
-  add_index "product_medias", ["product_id"], name: "index_product_medias_on_product_id", using: :btree
-
   create_table "product_merchants", force: :cascade do |t|
     t.integer "product_id",  limit: 4
     t.integer "merchant_id", limit: 4
@@ -113,6 +105,19 @@ ActiveRecord::Schema.define(version: 20160508175923) do
 
   add_index "technical_details", ["product_id"], name: "index_technical_details_on_product_id", using: :btree
 
+  create_table "tutorials", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.text     "content",    limit: 65535
+    t.integer  "user_id",    limit: 4
+    t.string   "image",      limit: 255
+    t.string   "slug",       limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "resume",     limit: 255
+  end
+
+  add_index "tutorials", ["user_id"], name: "index_tutorials_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
     t.string   "encrypted_password",     limit: 255, default: "", null: false
@@ -126,6 +131,7 @@ ActiveRecord::Schema.define(version: 20160508175923) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
+    t.string   "role",                   limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -135,9 +141,9 @@ ActiveRecord::Schema.define(version: 20160508175923) do
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "order_statuses"
   add_foreign_key "product_images", "products"
-  add_foreign_key "product_medias", "products"
   add_foreign_key "product_merchants", "merchants"
   add_foreign_key "product_merchants", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "technical_details", "products"
+  add_foreign_key "tutorials", "users"
 end

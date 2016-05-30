@@ -1,306 +1,18 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-categories_data = [
-  {
-    name: 'Peinture et Colles',
-    slug: 'peinture-colles'
-  },
-  {
-    name: 'Finitions décoratives',
-    slug: 'finitions-decoratives',
-    parent_id: 0
-  },
-  {
-    name: 'Peintures ludiques',
-    slug: 'peintures-ludiques',
-    parent_id: 0
-  },
-  {
-    name: 'Peintures naturelles',
-    slug: 'peintures-naturelles',
-    parent_id: 0
-  },
-  {
-    name: 'Enduits',
-    slug: 'enduits'
-  },
-  {
-    name: 'Charges et colorants pour enduits',
-    slug: 'charges-colorants-pour-enduits',
-    parent_id: 4
-  },
-  {
-    name: 'Enduits de finitions',
-    slug: 'enduits-de-finitions',
-    parent_id: 4
-  },
-  {
-    name: 'Enduits exterieurs',
-    slug: 'enduits-exterieurs',
-    parent_id: 4
-  },
-  {
-    name: 'Enduits intérieurs',
-    slug: 'enduits-interieurs',
-    parent_id: 4
-  },
-  {
-    name: 'Gros œuvre',
-    slug: 'gros-oeuvre'
-  },
-  {
-    name: 'Briques et blocs',
-    slug: 'briques-blocs',
-    parent_id: 9
-  },
-  {
-    name: 'Charpentes',
-    slug: 'charpentes',
-    parent_id: 9
-  },
-  {
-    name: 'Chaux, terres et argiles',
-    slug: 'chaux-terres-argiles',
-    parent_id: 9
-  },
-  {
-    name: 'Plaques et panneaux',
-    slug: 'plaques-panneaux',
-    parent_id: 9
-  },
-  {
-    name: 'Préparation des supports',
-    slug: 'preparation-des-supports',
-    parent_id: 9
-  },
-  {
-    name: 'Isolation',
-    slug: 'isolation'
-  },
-  {
-    name: "Isolation à l'humidité",
-    slug: 'isolation-humidite',
-    parent_id: 15
-  },
-  {
-    name: "Isolation des cloisons",
-    slug: 'isolation-cloisons',
-    parent_id: 15
-  },
-  {
-    name: "Isolation des combles",
-    slug: 'isolation-combles',
-    parent_id: 15
-  },
-  {
-    name: "Isolation des murs",
-    slug: 'isolation-murs',
-    parent_id: 15
-  },
-  {
-    name: "Isolation du sol",
-    slug: 'isolation-sol',
-    parent_id: 15
-  },
-  {
-    name: "Isolation phonique",
-    slug: 'isolation-phonique',
-    parent_id: 15
-  },
-  {
-    name: "Portes et fenêtres",
-    slug: 'portes-fenetres'
-  },
-  {
-    name: "Fenêtres",
-    slug: 'fenetres',
-    parent_id: 22
-  },
-  {
-    name: "Portes",
-    slug: 'portes',
-    parent_id: 22
-  },
-  {
-    name: "Volets",
-    slug: 'volets',
-    parent_id: 22
-  },
-  {
-    name: "Chauffage",
-    slug: 'chauffage'
-  },
-  {
-    name: "Chauffage de l'eau",
-    slug: 'chauffage-eau',
-    parent_id: 26
-  },
-  {
-    name: "Chauffe-eaux solaires",
-    slug: 'chauffe-eaux-solaires',
-    parent_id: 26
-  },
-  {
-    name: "Diffusion de chaleur",
-    slug: 'diffusion-chaleur',
-    parent_id: 26
-  },
-  {
-    name: "Energie renouvelable",
-    slug: 'energie-renouvelable',
-    parent_id: 26
-  },
-  {
-    name: "Poêles",
-    slug: 'poeles',
-    parent_id: 26
-  },
-  {
-    name: "Pompes à chaleur",
-    slug: 'pompes-chaleur',
-    parent_id: 26
-  },
-  {
-    name: "Renouvellement de l'air",
-    slug: 'Renouvellement-air',
-    parent_id: 26
-  },
-  {
-    name: "Production d'énergie verte",
-    slug: 'production-energie-verte'
-  },
-  {
-    name: "Batteries",
-    slug: 'batteries',
-    parent_id: 34
-  },
-  {
-    name: "Eoliennes domestiques",
-    slug: 'eoliennes-domestiques',
-    parent_id: 34
-  },
-  {
-    name: "Onduleurs",
-    slug: 'onduleurs',
-    parent_id: 34
-  },
-  {
-    name: "Panneaux solaires photovoltaïques",
-    slug: 'panneaux-solaires-photovoltaiques',
-    parent_id: 34
-  },
-  {
-    name: "Régulateurs",
-    slug: 'regulateurs',
-    parent_id: 34
-  },
-  {
-    name: "Système d'économie d'énergie",
-    slug: 'systeme-economie-energie'
-  },
-  {
-    name: "Ampoules basse consommation",
-    slug: 'ampoules-basse-consommation',
-    parent_id: 40
-  },
-  {
-    name: "Programmateur de chauffe",
-    slug: 'programmateur-chauffe',
-    parent_id: 40
-  },
-  {
-    name: "Programmateurs d'éclairage",
-    slug: 'programmateur-eclairage',
-    parent_id: 40
-  },
-  {
-    name: "Thermostats",
-    slug: 'thermostats',
-    parent_id: 40
-  },
-  {
-    name: "Pour le bois",
-    slug: 'bois'
-  },
-  {
-    name: "Colles et joints",
-    slug: 'colles-joints',
-    parent_id: 45
-  },
-  {
-    name: "Diluants",
-    slug: 'diluants',
-    parent_id: 45
-  },
-  {
-    name: "Huiles et cires protectrices",
-    slug: 'huiles-cires-protectrices',
-    parent_id: 45
-  },
-  {
-    name: "Préparation et protection des supports",
-    slug: 'preparation-protection-supports',
-    parent_id: 45
-  },
-  {
-    name: "Produits pour le bois",
-    slug: 'produits-bois',
-    parent_id: 45
-  }
-]
+require 'json'
 
-technical_details_data = [
-  {
-    title: "Composition",
-    detail: "Liège expansé pur 100 %",
-    product_id: 1
-  },
-  {
-    title: "Provenance",
-    detail: "Issu du chêne liège, récolté tous les septs ans. Produit non renouvelable.",
-    product_id: 1
-  },
-  {
-    title: "Dimensions",
-    detail: "1 m x 0,50 m<br>Existe en épaisseurs : 10-20-30-40-50-60-80-100-120-150 ",
-    product_id: 1
-  },
-  {
-    title: "Conductivité thermique",
-    detail: "0,037 à 0,04 w / m°C",
-    product_id: 1
-  },
-  {
-    title: "Capacité thermique",
-    detail: "1670 J / kg°K",
-    product_id: 1
-  },
-  {
-    title: "Densité",
-    detail: "105 kg / m3",
-    product_id: 1
-  },
-  {
-    title: "Classement au feu",
-    detail: "E",
-    product_id: 1
-  },
-  {
-    title: "Affaiblissement accoustique",
-    detail: "Jusqu’à 34 dB selon la mise en oeuvre",
-    product_id: 1
-  }
-]
-
-if Category.count == 0 
+if Category.count == 0
   categories = []
-  categories << Category.create!(categories_data)
+  categoriesJSON = ActiveSupport::JSON.decode(File.read('db/seeds/categories.json'))
+  categoriesJSON.each do |c|
+    if c['parent_id']
+      categories << Category.create!(name: c['name'], slug: c['slug'], parent_id: c['parent_id'])
+    else
+      categories << Category.create!(name: c['name'], slug: c['slug'])
+    end
+  end
 end
 
 if OrderStatus.count == 0
@@ -315,9 +27,32 @@ image_product = Rails.root.join("app/assets/images/image_produit.png").open
 if Product.count == 0
   product = Product.create! id: 1, name: "Rouleau de liège naturel", price: 5.49, active: true, category_id: 1, slug: "rouleau-de-liege-naturel", marque: "ISOCOR", description: "Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L'énergie, nécessaire à l'expansion du liège est issue à 95% de la biomasse et 5 % de l’électricité. Particulièrement adapté au milieu humide, le liège est imputrescible, résistant à l'écrasement, absorbant acoustique et auto extinguible. Durable, le liège conserve ses caractéristiques longtemps et il n'est pas attaqué par les insectes."
   ProductImage.create! id: 1, product: product, image: image_product, order: 0
-  TechnicalDetail.create!(technical_details_data)
+  
+  technical_detailsJSON = ActiveSupport::JSON.decode(File.read('db/seeds/technical_details.json'))
+  technical_detailsJSON.each do |td|
+    TechnicalDetail.create!(title: td['title'], detail: td['detail'], product_id: td['product_id'])
+  end
 
   logo_merchant = Rails.root.join("app/assets/images/logo_merchant.png").open
   merchant = Merchant.create! id: 1, name: "Smartagro", description: "Je suis un marchant de test", logo: logo_merchant
   ProductMerchant.create! id: 1, product: product, merchant: merchant, stock: 3
+end
+
+if Tutorial.count == 0
+  tutorialsJSON = ActiveSupport::JSON.decode(File.read('db/seeds/tutorials.json'))
+  tutorialsJSON.each do |t|
+    $i = 0
+    $num = 8
+
+    while $i < $num do
+      Tutorial.create!(title: t['title'], resume: t['resume'], content: t['content'], slug: $i)
+      $i +=1
+    end
+  end
+end
+
+if Rails.env.development?
+  if User.count == 0
+    User.create(email: 'admin@climateriaux.fr', password: 'password', role: 'admin')
+  end
 end

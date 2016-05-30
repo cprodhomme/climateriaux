@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  namespace :admin do
+  get 'dashboard/index'
+  end
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,7 +14,17 @@ Rails.application.routes.draw do
   resources :products, param: :slug, only: [:show]
   resource  :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
+  resources :tutorials, param: :slug, only: [:index, :show]
   get 'search', to: 'search#search'
+
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+    resources :tutorials, param: :slug
+    resources :products, param: :slug
+    resources :orders
+    resources :inventory
+    resources :users
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,151 @@
+<!-- START Sidebar (left)-->
+<div class="aside-inner">
+   <nav class="sidebar" data-sidebar-anyclick-close="">
+      <!-- START sidebar nav-->
+      <ul class="nav">
+         <!-- START user info-->
+         <li class="has-user-block">
+            <div id="user-block" class="collapse">
+               <div class="item user-block">
+                  <!-- User picture-->
+                  <div class="user-block-picture">
+                     <div class="user-block-status">
+                        <img src="<%= image_path('angle/user/02.jpg') %>" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle" />
+                        <div class="circle circle-success circle-lg"></div>
+                     </div>
+                  </div>
+                  <!-- Name and Job-->
+                  <div class="user-block-info">
+                     <span class="user-block-name">Hello, <%= current_user.email %></span>
+                     <span class="user-block-role"><%= current_user.role %></span>
+                  </div>
+               </div>
+            </div>
+         </li>
+         <!-- END user info-->
+         <!-- Iterates over all sidebar items-->
+         <li class="nav-heading">
+            <span>Navigation Principale</span>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'dashboard' %>">
+            <%= link_to admin_path do %>
+              <em class="icon-speedometer"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Dashboard</span>
+            <% end %>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'products' %>">
+            <%= link_to admin_products_path do %>
+              <em class="fa fa-cube"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Produits</span>
+            <% end %>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'orders' %>">
+            <%= link_to admin_orders_path do %>
+               <div class="label label-success pull-right"><%= @number_orders %></div>
+               <em class="icon-basket-loaded"></em>
+               <span data-localize="sidebar.nav.WIDGETS">Commandes</span>
+            <% end %>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'inventory' %>">
+            <%= link_to admin_inventory_index_path do %>
+               <em class="fa fa-cubes"></em>
+               <span data-localize="sidebar.nav.DOCUMENTATION">Inventaire</span>
+            <% end %>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'tutorials' %>">
+            <%= link_to admin_tutorials_path do %>
+              <em class="icon-book-open"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Tutoriels</span>
+            <% end %>
+         </li>
+         <li class="nav-heading">
+            <span>Administration</span>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'users' %>">
+            <%= link_to admin_users_path do %>
+              <em class="icon-user"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Utilisateurs</span>
+            <% end %>
+         </li>
+         <li class="nav-heading">
+            <span>Autre</span>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'pages' %>">
+            <a href="#pages" title="Pages" data-toggle="collapse">
+               <em class="icon-doc"></em>
+               <span data-localize="sidebar.nav.pages.PAGES">Pages</span>
+            </a>
+            <ul id="pages" class="nav sidebar-subnav collapse">
+               <li class="sidebar-subnav-header">Pages</li>
+               <li class="<%= 'active' if controller.controller_name == 'pages' && controller.action_name == 'login' %>">
+                  <a href="/pages/login" title="Login">
+                     <span data-localize="sidebar.nav.pages.LOGIN">Login</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'pages' && controller.action_name == 'register' %>">
+                  <a href="/pages/register" title="Sign up">
+                     <span data-localize="sidebar.nav.pages.REGISTER">Sign up</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'pages' && controller.action_name == 'recover' %>">
+                  <a href="/pages/recover" title="Recover Password">
+                     <span data-localize="sidebar.nav.pages.RECOVER">Recover Password</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'pages' && controller.action_name == 'lock' %>">
+                  <a href="/pages/lock" title="Lock">
+                     <span data-localize="sidebar.nav.pages.LOCK">Lock</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'pages' && controller.action_name == 'template' %>">
+                  <a href="/pages/template" title="Starter Template">
+                     <span data-localize="sidebar.nav.pages.STARTER">Starter Template</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'pages' && controller.action_name == 'notfound' %>">
+                  <a href="/pages/notfound" title="notfound">
+                     <span>404</span>
+                  </a>
+               </li>
+            </ul>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'blog' %>">
+            <a href="#blog" title="Blog" data-toggle="collapse">
+               <em class="icon-notebook"></em>
+               <span>Blog</span>
+            </a>
+            <ul id="blog" class="nav sidebar-subnav collapse">
+               <li class="sidebar-subnav-header">Blog</li>
+               <li class="<%= 'active' if controller.controller_name == 'blog' && controller.action_name == 'blog' %>">
+                  <a href="/blog/blog" title="List">
+                     <span>List</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'blog' && controller.action_name == 'blog_post' %>">
+                  <a href="/blog/blog_post" title="Post">
+                     <span>Post</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'blog' && controller.action_name == 'blog_articles' %>">
+                  <a href="/blog/blog_articles" title="Articles">
+                     <span>Articles</span>
+                  </a>
+               </li>
+               <li class="<%= 'active' if controller.controller_name == 'blog' && controller.action_name == 'blog_article_view' %>">
+                  <a href="/blog/blog_article_view" title="Article View">
+                     <span>Article View</span>
+                  </a>
+               </li>
+            </ul>
+         </li>
+         <li class="<%= 'active' if controller.controller_name == 'documentation' && controller.action_name == 'index' %>">
+            <a href="/documentation" title="Documentation">
+               <em class="icon-graduation"></em>
+               <span data-localize="sidebar.nav.DOCUMENTATION">Documentation</span>
+            </a>
+         </li>
+      </ul>
+      <!-- END sidebar nav-->
+   </nav>
+</div>
+<!-- END Sidebar (left)-->

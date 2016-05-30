@@ -1,3 +1,6 @@
+test:
+  pre:
+    - bundle exec rake bower:install
 deployment:
   staging:
     branch: develop

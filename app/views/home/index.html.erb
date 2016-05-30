@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-md-24 hidden-xs">
         <!-- SVG catégories -->
-        <%= render 'svg2'%>
+        <%= render 'svg'%>
       </div>
       <div class="visible-xs-24 visible-xs-block">
         <div class="row">
@@ -80,19 +80,13 @@
   <div class="row">
     <div class="col-md-24">
       <div id="owl-tutoriels" class="owl-carousel row">
-        <% (0..3).each do |i| %>
+        <% @tutorials.each do |tutorial| %>
           <div class="col-md-24">
-            <div class="tutoriel">
-              <h3>Titre tutoriel</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <a href="#" class="lien-plus">
-                  <span>voir tous le tuto</span>
-              </a>
-            </div>
+            <%= render "shared/tutorial_block", tutorial: tutorial %>
           </div>
         <% end %>
       </div>
-      <a href="" class="btn-default">Tous les tutoriels</a>
+      <%= link_to "Tous les tutoriels", tutorials_path, class: 'btn-default' %>
     </div>
   </div>
 </section>

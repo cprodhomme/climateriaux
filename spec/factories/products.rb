@@ -4,7 +4,7 @@ FactoryGirl.define do
     description "MyText"
     slug "mon-produit"
     price "9.99"
-    active false
+    active true
     category nil
   end
 end

@@ -1,0 +1,47 @@
+// Place all the styles related to the tutorials controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.page-tutorial {
+	padding: 70px 0;
+  background: $grey-background;
+}
+
+.tutoriel {
+	padding: 40px 20px 65px 20px;
+	background-color: #f6f6f6;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f6f6+0,f6f6f6+50,f2f0f1+50,f2f0f1+100 */
+	background: #f6f6f6; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #fff 0%, #fff 50%, #FDFDFD 50%, #FDFDFD 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #fff 0%, #fff 50%, #FDFDFD 50%, #FDFDFD 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #fff 0%,#fff 50%, #FDFDFD 50%, #FDFDFD 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#FDFDFD',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	box-shadow: $shadow;
+	text-align: center;
+	position: relative;
+	margin-bottom: 50px;
+
+	h3{
+	  font-size: 18px;
+	  margin: 0 0 35px 0;
+	  text-transform: capitalize;
+	}
+
+	.lien-plus {
+	  height: 55px;
+	  width: 40%;
+	  border: 4px solid #EFEEEE;
+	  border-radius: 35px;
+	  margin: auto;
+	  position: absolute;
+	  left: 30%;
+	  bottom: -27px;
+	  display: table;
+	  background: #fff;
+
+	  span{
+	    display: table-cell;
+	    vertical-align: middle;
+	  }
+	}
+}
