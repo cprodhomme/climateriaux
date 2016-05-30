@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :orders
     resources :inventory
     resources :users
+    resources :merchants
   end
 
   # Example of regular route:

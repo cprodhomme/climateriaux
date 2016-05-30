@@ -67,6 +67,12 @@
               <span data-localize="sidebar.nav.WIDGETS">Utilisateurs</span>
             <% end %>
          </li>
+         <li class="<%= 'active' if controller.controller_name == 'merchants' %>">
+            <%= link_to admin_merchants_path do %>
+              <em class="fa fa-truck"></em>
+              <span data-localize="sidebar.nav.WIDGETS">Marchands</span>
+            <% end %>
+         </li>
          <li class="nav-heading">
             <span>Autre</span>
          </li>
