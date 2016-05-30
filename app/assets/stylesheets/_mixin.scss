@@ -5,6 +5,13 @@
           border-radius: $radius;
 }
 
+@mixin box-shadow($shadow) {
+  -webkit-border-radius: $shadow;
+     -moz-border-radius: $shadow;
+      -ms-border-radius: $shadow;
+          border-radius: $shadow;
+}
+
 @mixin white-block() {
   background-color: #fff;
   border-bottom: #e9e9ed 2px solid;

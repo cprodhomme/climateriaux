@@ -1,0 +1,39 @@
+.login{
+	background: $green-gradient;
+	height: 100vh;
+	width: 100%;
+	display: table;
+
+	.container{
+		display: table-cell;
+		vertical-align: middle;
+
+		.form-content{
+			width:430px;
+			height:420px;
+			border-radius: 10px;
+			background: #fff;
+			box-shadow: $shadow;
+			margin: auto;
+			padding:20px;
+			text-align: center;	
+
+			h2{
+				margin: 0;
+			}
+
+			input{
+				width:100%;
+				padding:15px 20px;
+			}
+
+			.actions{
+				input{
+					background: $green-gradient;
+					border-radius: 5px;
+					border: none;
+				}
+			}
+		}
+	}
+}

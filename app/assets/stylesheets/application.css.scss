@@ -29,6 +29,7 @@
 @import "pages/category";
 @import "pages/product";
 @import "pages/search";
+@import "pages/login";
 
 
 .noselect {
@@ -45,7 +46,6 @@
         BODY
 **********************/
 body{
-  padding-top: 60px;
   color: #1c1833;
 
   h1{
@@ -88,6 +88,15 @@ body{
   color: #fff;
   text-decoration: none;
 }
+
+/*********************
+        INPUT
+**********************/
+.input-default{
+  
+}
+
+
 /*********************
         NAVBAR
 **********************/
