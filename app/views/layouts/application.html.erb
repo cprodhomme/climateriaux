@@ -18,9 +18,13 @@
   <%= favicon_link_tag 'favicon.png' %>
 </head>
 <body>
-  <%= render 'layouts/header'%>
+  <% if !devise_controller? %>
+    <%= render 'layouts/header'%>
+  <% end %>
   <%= yield %>
-  <%= render 'layouts/footer'%>
+  <% if !devise_controller? %>
+    <%= render 'layouts/footer'%>
+  <% end %>
 
   <script type="text/javascript">
   (function() {
