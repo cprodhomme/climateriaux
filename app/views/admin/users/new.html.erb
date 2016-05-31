@@ -1,4 +1,4 @@
-<h3>Formulaire de création d'un nouvel utilisateur</h3>
+<h3>Création d'un nouvel utilisateur</h3>
 
 <div class="row">
    <div class="col-sm-12">
@@ -32,7 +32,8 @@
                   <br>
                 </div>
               </div>
-              <%= f.submit "Enregistrer", class: "btn btn-sm btn-default" %>
+              <%= link_to "Retour", admin_users_path, class: 'btn mb-sm btn-danger' %>
+              <%= f.submit "Enregistrer", class: "btn mb-sm btn-default" %>
             <% end %>
          </div>
       </div>

@@ -25,6 +25,13 @@ class Admin::UsersController < Admin::DashboardController
   end
 
   def update
+    @user = User.find(params[:id])
+
+    if @user.update_attributes(user_params)
+      redirect_to edit_admin_user_path(@user.id), notice: 'Utilisateur à bien été modifié'
+    else
+      render 'edit'
+    end
   end
 
   def delete
