@@ -43,8 +43,9 @@ class Admin::UsersController < Admin::DashboardController
   private
 
   def skip_password_attribute
-    if params[:password].blank? && params[:password_confirmation].blank?
-      params.except!(:password, :password_confirmation)
+    if params[:user][:password].blank?
+      params[:user].delete :password
+      params[:user].delete :password_confirmation
     end
   end
 

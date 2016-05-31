@@ -25,5 +25,20 @@ describe 'admin/user', type: :feature do
       click_button "Enregistrer"
       expect(page).to have_content "nouvel@utilisateur.fr"
     end
+
+    scenario "je peux editer un utilisateur" do
+      user_1 = create :user, email: "user1@exemple.fr"
+      visit edit_admin_user_path(user_1.id)
+      fill_in :user_email, with: "nouvel@email.fr"
+      click_button "Enregistrer"
+      expect(page).to have_content "nouvel@email.fr"
+    end
+
+    scenario "je peux supprimer un utilisateur" do
+      user_1 = create :user, email: "user1@exemple.fr"
+      visit admin_users_path
+      page.find("#delete-user-#{user_1.id}").click
+      expect(page).to_not have_content "user1@exemple.fr"
+    end
   end
 end
