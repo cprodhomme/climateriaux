@@ -2,7 +2,7 @@ class Admin::UsersController < Admin::DashboardController
   before_filter :skip_password_attribute, only: :update
 
   def index
-    if current_user.role == 'admin'
+    if current_user.role == 'Admin'
       @users = User.all
     end
   end

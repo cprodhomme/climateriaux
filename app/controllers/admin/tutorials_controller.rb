@@ -1,9 +1,9 @@
 class Admin::TutorialsController < Admin::DashboardController
 
 	def index
-		if current_user.role == 'admin'
+		if current_user.role == 'Admin'
 			@tutorials = Tutorial.all.includes(:user)
-		elsif current_user.role == 'merchant'
+		elsif current_user.role == 'Merchant'
 			@tutorials = Tutorial.where(user: current_user).includes(:user)
 		end
 	end

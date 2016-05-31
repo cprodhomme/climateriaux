@@ -52,6 +52,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem "bower-rails", "~> 0.9.2"
 
+group :test do
+  gem 'shoulda-matchers'
+end
+
 group :development, :test do
   gem 'guard-rspec', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

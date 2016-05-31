@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Dashboard', type: :feature do
 
   context "en tant qu'Admin" do
-    let!(:user) { create :user, email: "admin@climateriaux.fr", role: "admin" }
+    let!(:user) { create :user, email: "admin@climateriaux.fr", role: "Admin" }
 
     before :each do
       create_user_and_log_in user
@@ -16,7 +16,7 @@ describe 'Dashboard', type: :feature do
   end
 
   context "en tant que Merchant" do
-    let!(:user) { create :user, email: "merchant@climateriaux.fr", role: "merchant" }
+    let!(:user) { create :user, email: "merchant@climateriaux.fr", role: "Merchant" }
 
     before :each do
       create_user_and_log_in user
@@ -29,7 +29,7 @@ describe 'Dashboard', type: :feature do
   end
 
   context "en tant que Customer" do
-    let!(:user) { create :user, email: "customer@climateriaux.fr", role: "customer" }
+    let!(:user) { create :user, email: "customer@climateriaux.fr", role: "Customer" }
 
     before :each do
       create_user_and_log_in user

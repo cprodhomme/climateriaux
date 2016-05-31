@@ -12,7 +12,7 @@ class Admin::DashboardController < ApplicationController
   def verify_admin
     if !current_user
       redirect_to new_user_session_path
-    elsif current_user.role == "admin" || current_user.role == "merchant"
+    elsif current_user.role == "Admin" || current_user.role == "Merchant"
     else
       redirect_to root_url
     end

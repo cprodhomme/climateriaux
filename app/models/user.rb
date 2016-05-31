@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # role : customer, delivery, adviser, merchant, admin
-  validates :role, presence: true
+  validates_presence_of :role
+  validates_inclusion_of :role, in: ['Customer', 'Delivery', 'Adviser', 'Merchant', 'Admin']
 end

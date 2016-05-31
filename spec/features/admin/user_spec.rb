@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'admin/user', type: :feature do
 
   context "en tant qu'Admin" do
-    let!(:user) { create :user, email: "admin@climateriaux.fr", role: "admin" }
+    let!(:user) { create :user, email: "admin@climateriaux.fr", role: "Admin" }
 
     before :each do
       create_user_and_log_in user
@@ -41,4 +41,5 @@ describe 'admin/user', type: :feature do
       expect(page).to_not have_content "user1@exemple.fr"
     end
   end
+
 end
