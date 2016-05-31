@@ -16,5 +16,14 @@ describe 'admin/user', type: :feature do
       expect(page).to have_content "user1@exemple.fr"
       expect(page).to have_content "user2@exemple.fr"
     end
+
+    scenario "je peux ajouter un nouvel utilisateur" do
+      visit new_admin_user_path
+      fill_in :user_email, with: "nouvel@utilisateur.fr"
+      fill_in :user_password, with: "password"
+      fill_in :user_password_confirmation, with: "password"
+      click_button "Enregistrer"
+      expect(page).to have_content "nouvel@utilisateur.fr"
+    end
   end
 end
