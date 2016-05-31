@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::DashboardController
+  before_filter :skip_password_attribute, only: :update
 
   def index
     if current_user.role == 'admin'
@@ -27,18 +28,10 @@ class Admin::UsersController < Admin::DashboardController
   def update
     @user = User.find(params[:id])
 
-    if needs_password?(@user, user_params)
-      if @user.update_attributes(user_params)
-        redirect_to edit_admin_user_path(@user.id), notice: 'Utilisateur a bien été modifié'
-      else
-        render 'edit'
-      end
+    if @user.update_attributes(user_params)
+      redirect_to edit_admin_user_path(@user.id), notice: 'Utilisateur a bien été modifié'
     else
-      if @user.update_attributes(user_params_without_password)
-        redirect_to edit_admin_user_path(@user.id), notice: 'Utilisateur a bien été modifié'
-      else
-        render 'edit'
-      end
+      render 'edit'
     end
   end
 
@@ -49,16 +42,13 @@ class Admin::UsersController < Admin::DashboardController
 
   private
 
-  def needs_password?(user, user_params)
-    !user_params[:password].blank?
+  def skip_password_attribute
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.except!(:password, :password_confirmation)
+    end
   end
 
   def user_params
-    params.require(:user).permit(:email, :password,
-                                 :password_confirmation, :role)
-  end
-
-  def user_params_without_password
     params.require(:user).permit(:email, :password,
                                  :password_confirmation, :role)
   end
