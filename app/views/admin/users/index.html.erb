@@ -48,7 +48,6 @@
                <th>UID</th>
                <th>Email</th>
                <th>Role</th>
-               <th>Last Login</th>
                <th >Action</th>
             </tr>
          </thead>
@@ -65,8 +64,7 @@
                </td>
                <td><%= user.id %></td>
                <td><%= user.email %></td>
-               <td><%= user.role_name %></td>
-               <td>1 week</td>       
+               <td><%= user.role_name %></td>      
                 <td class="text-center">
                   <%= link_to edit_admin_user_path(user.id), class: 'btn btn-sm btn-default' do %>
                       <em class="icon-pencil"></em>
