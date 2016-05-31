@@ -53,6 +53,6 @@ end
 
 if Rails.env.development?
   if User.count == 0
-    User.create(email: 'admin@climateriaux.fr', password: 'password', role: 'admin')
+    User.create(email: 'admin@climateriaux.fr', password: 'password', role: 'Admin')
   end
 end
