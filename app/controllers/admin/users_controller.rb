@@ -1,4 +1,5 @@
 class Admin::UsersController < Admin::DashboardController
+  load_and_authorize_resource
   before_filter :skip_password_attribute, only: :update
 
   def index
