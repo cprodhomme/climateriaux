@@ -8,7 +8,10 @@ class Ability
     if user.role == 'Admin'
       can :manage, :all
     elsif user.role == 'Merchant'
-
+      can :manage, :inventory
+      can :manage, :tutorial
+      can :manage, :order
+      can :index,  :product
     else
     end
     # The first argument to `can` is the action you are giving the user
