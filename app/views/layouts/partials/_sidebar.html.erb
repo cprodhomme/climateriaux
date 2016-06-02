@@ -58,6 +58,7 @@
               <span data-localize="sidebar.nav.WIDGETS">Tutoriels</span>
             <% end %>
          </li>
+         <% if can? :index, User %>
          <li class="nav-heading">
             <span>Administration</span>
          </li>
@@ -150,6 +151,7 @@
                <span data-localize="sidebar.nav.DOCUMENTATION">Documentation</span>
             </a>
          </li>
+         <% end %>
       </ul>
       <!-- END sidebar nav-->
    </nav>
