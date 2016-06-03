@@ -1,4 +1,5 @@
 class Admin::ProductsController < Admin::DashboardController
+	load_and_authorize_resource
 
 	def index
 		@products = Product.all
@@ -8,15 +9,15 @@ class Admin::ProductsController < Admin::DashboardController
 	end
 
 	def edit
-		@product = Product.where(slug: params[:slug], user: current_user).first
+		@product = Product.where(slug: params[:slug]).first
 	end
 
 	def update
 	end
 
 	def destroy
-		@product = Product.where(slug: params[:slug], user: current_user).first
-		authorize! :destroy, @product
+		Product.where(slug: params[:slug]).first.destroy
+    redirect_to admin_users_path, notice: "L'utisateur a bien été supprimé"
 	end
 
 	private
