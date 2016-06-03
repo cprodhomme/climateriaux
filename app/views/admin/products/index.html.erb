@@ -10,7 +10,7 @@
             <th>
                <strong>IMAGE</strong>
             </th>
-            <th>
+            <th style="min-width:180px">
                <strong>NOM</strong>
             </th>
             <th>
@@ -19,7 +19,7 @@
             <th class="text-center">
                <strong>ACTIVE</strong>
             </th>
-            <th class="text-center">
+            <th class="text-center" style="width:150px">
                <strong>ACTION</strong>
             </th>
          </tr>
@@ -30,14 +30,22 @@
             <td><%= product.id %></td>
             <td></td>
             <td><%= product.name %></td>
-            <td><%= product.description.first(150) %>...</td>
+            <td><%= product.description.first(120) %>...</td>
             <td class="text-center">
                <span class="label label-success">oui</span>
             </td>
-            <td class="text-center">
-               <button type="button" class="btn btn-sm btn-default">
-                  <em class="icon-pencil"></em>
-               </button>
+            <td class="text-center" >
+               <%= link_to product_path(product.slug), class: 'btn btn-sm btn-default' do %>
+                  <em class="fa fa-search"></em>
+               <% end %>
+               <% if can? :edit, Product %>
+                  <%= link_to edit_admin_product_path(product.slug), class: 'btn btn-sm btn-default' do %>
+                     <em class="icon-pencil"></em>
+                  <% end %>
+                  <%= link_to admin_product_path(product.slug), :class => "btn btn-sm btn-default", :id => "delete-product-#{product.id}", :method => :delete,  :data => {:confirm => 'Êtes-vous sûr ?' } do %>
+                     <em class="icon-trash"></em>
+                  <% end %>
+               <% end %>
             </td>
          </tr>
          <% end %>
