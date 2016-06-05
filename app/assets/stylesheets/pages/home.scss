@@ -124,8 +124,35 @@
 }
 
 .howItWork-home{
-  height: 330px;
+  height: 500px;
   background: $green-gradient;
+  color:#fff;
+  padding:40px 100px 0 100px;
+
+  .carousel{
+    .item{
+      img{
+        float: left;
+      }
+
+      .item-description{
+        text-align: left;
+        padding-left: 20px;
+      }
+    }
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        z-index: 15;
+        width: auto;
+        margin-left: 0;
+        padding-left: 0;
+        list-style: none;
+        text-align: right; 
+        bottom:150px;
+    }
+  }
 }
 
 .articles-home {
