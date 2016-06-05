@@ -17,6 +17,22 @@ describe 'admin/tutorial', type: :feature do
       expect(page).to have_content "tuto admin"
       expect(page).to have_content "tuto merchant"
     end
+
+    scenario "je peux supprimer un tutoriel" do
+      tutorial = create :tutorial, title: "tuto a supprimer", user_id: user
+      visit admin_tutorials_path
+      page.find("#delete-tutorial-#{tutorial.id}").click
+      expect(page).to_not have_content "tuto a supprimer"
+    end
+
+    xscenario "je peux ajouter un nouveau tutoriel" do
+      visit new_admin_tutorial_path
+      fill_in :tutorial_title, with: "Mon nouveau tutoriel"
+      fill_in :tutorial_content, with: "description de mon tuto"
+      fill_in :tutorial_resume, with: "le resumé"
+      click_button "Enregistrer"
+      expect(page).to have_content "Mon nouveau tutoriel"
+    end
   end
 
   context "en tant que Merchant" do

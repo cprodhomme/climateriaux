@@ -46,7 +46,9 @@
             </div>
           </th>
           <th>Description</th>
-          <th>Action</th>
+          <% if can? :edit, Tutorial %>
+            <th>Action</th>
+          <% end %>
         </tr>
       </thead>
       <tbody>
@@ -69,14 +71,16 @@
                 </div>
               </div>
             </td>
-            <td class="text-center">
-              <%= link_to edit_admin_tutorial_path(tutorial.slug), class: 'btn btn-sm btn-default' do %>
-                <em class="icon-pencil"></em>
-              <% end %>
-              <%= link_to admin_tutorial_path(tutorial.slug), :class => "btn btn-sm btn-default", :id => "delete-tutorial-#{tutorial.id}", :method => :delete,  :data => {:confirm => 'Êtes-vous sûr ?' } do %>
-                <em class="icon-trash"></em>
-              <% end %>
-            </td>
+            <% if can? :edit, Tutorial %>
+              <td class="text-center">
+                <%= link_to edit_admin_tutorial_path(tutorial.slug), class: 'btn btn-sm btn-default' do %>
+                  <em class="icon-pencil"></em>
+                <% end %>
+                <%= link_to admin_tutorial_path(tutorial.slug), :class => "btn btn-sm btn-default", :id => "delete-tutorial-#{tutorial.id}", :method => :delete,  :data => {:confirm => 'Êtes-vous sûr ?' } do %>
+                  <em class="icon-trash"></em>
+                <% end %>
+              </td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>

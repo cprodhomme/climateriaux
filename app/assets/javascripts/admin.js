@@ -15,3 +15,4 @@
 //
 //--- Angle
 //= require_tree ./admin/angle/
+//= require_tree ./admin/
