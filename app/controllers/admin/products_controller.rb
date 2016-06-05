@@ -1,5 +1,5 @@
 class Admin::ProductsController < Admin::DashboardController
-	load_and_authorize_resource
+  load_and_authorize_resource
 
 	def index
 		@products = Product.all

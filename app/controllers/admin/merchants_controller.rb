@@ -1,4 +1,5 @@
 class Admin::MerchantsController < Admin::DashboardController
+  load_and_authorize_resource
 
   def index
     @merchants = Merchant.all

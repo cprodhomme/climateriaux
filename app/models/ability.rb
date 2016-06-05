@@ -9,9 +9,10 @@ class Ability
       can :manage, :all
     elsif user.role == 'Merchant'
       can :manage, :inventory
-      can :manage, :tutorial
-      can :manage, :order
-      can :index,  :product
+      can :index,  Tutorial
+      can :new,    Tutorial
+      can :manage, Order
+      can :index,  Product
     else
     end
     # The first argument to `can` is the action you are giving the user
