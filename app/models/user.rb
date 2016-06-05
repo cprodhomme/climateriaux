@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   validates_presence_of :role
   validates_inclusion_of :role, in: ['Customer', 'Delivery', 'Adviser', 'Merchant', 'Admin']
 
+  has_many :tutorials
+
   def role_name
     case self.role
     when "Customer"
