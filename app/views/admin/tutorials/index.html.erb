@@ -65,7 +65,9 @@
             <td>
               <div class="media">
                 <div class="media-body">
-                  <div class="pull-right badge baed-info">admin</div>
+                  <% if tutorial.user.present? %>
+                    <div class="pull-right badge baed-info"><%= tutorial.user.email %></div>
+                  <% end %>
                   <h4 class="media-heading"><%= tutorial.title %></h4>
                   <%= tutorial.resume %>
                 </div>
