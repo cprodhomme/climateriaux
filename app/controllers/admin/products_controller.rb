@@ -13,17 +13,18 @@ class Admin::ProductsController < Admin::DashboardController
 	end
 
 	def update
+    
 	end
 
 	def destroy
 		Product.where(slug: params[:slug]).first.destroy
-    redirect_to admin_users_path, notice: "L'utisateur a bien été supprimé"
+    redirect_to admin_products_path, notice: "Le produit a bien été supprimé"
 	end
 
 	private
 
-  def tutorial_params
-  	params.require(:product).permit(:name, :description)
+  def product_params
+  	params.require(:product).permit(:name, :description, :marque, :category, :active)
   end
 
 end
