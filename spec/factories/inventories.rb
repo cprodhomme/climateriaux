@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :product_merchant do
+  factory :inventory do
     
   end
 end
