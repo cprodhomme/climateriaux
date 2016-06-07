@@ -22,4 +22,5 @@
   menu();
   searchbar();
   slider();
+  $('.carousel').carousel()
 }());
