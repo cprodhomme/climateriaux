@@ -1,30 +1,34 @@
 <header class="container-fluid clearfix noselect">
   <nav class="navbar-custom navbar-fixed-top">
     <div class="">
-      <div class="navbar-header col-md-4">
+      <div class="navbar-header">
         <%= link_to root_path, class: 'navbar-brand' do %>
         <%= image_tag("logo.svg", :id => 'logo') %>
         <% end %>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
-      <form class="searchbox col-md-14">
-        <input type="search" placeholder="Rechercher un produit, un tutoriel, ..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
-        <button type="submit" class="searchbox-submit"><i class="fa fa-search"></i></button>
-        <span class="searchbox-icon"><i class="fa fa-search"></i></span>
-      </form>
-      <ul class="nav navbar-nav  col-md-6">
-        <li class="block-user">
-          <%= link_to root_path do %>
-          <i class="fa fa-user"></i> Mon compte
-          <% end %>
-        </li>
-        <li class="block-cart">
-          <%= render 'layouts/cart' %>
-        </li>                
-      </ul>
-    </div>
-  </nav>
-  <div class="menu-categories">
-    <!-- primary-categories -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <form class="searchbox">
+          <input type="search" placeholder="Rechercher un produit, un tutoriel, ..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+          <button type="submit" class="searchbox-submit"></button>
+          <span class="searchbox-icon"><i class="fa fa-search"></i></span>
+        </form>
+        <ul class="nav navbar-nav">
+          <li class="block-user">
+            <%= link_to root_path do %>
+            <i class="fa fa-user"></i> Mon compte
+            <% end %>
+          </li>
+          <li class="block-cart">
+            <%= render 'layouts/cart' %>
+          </li>                
+        </ul>
+
     <ul class="categories">
       <li class="primary-category peinture-colle">
         <a href="#">Peintures et colles</a>
@@ -267,5 +271,10 @@
         </div>
       </div>  
     </div>-->
-  </div>
+ 
 </header>
+      </div>
+    </div>
+  </nav>
+</header>
+  

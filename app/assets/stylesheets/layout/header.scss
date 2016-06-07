@@ -4,21 +4,56 @@ header {
     color: #fff;
   }
 
-  #logo {
-    height: 100%;
+  .navbar-fixed-top .navbar-collapse{
+    max-height: none;
   }
 
-  
+  #logo {
+      height: 100%;
+      padding:0 20px;
+    }
+
+  button{
+    margin:0 !important;
+    padding:17px !important;
+
+    .icon-bar{
+      background: #fff;
+    }
+  }
+
+  .navbar-collapse{
+    padding:0;
+    max-height: none;
+  }
 
   .nav {
     font-size: 16px;
     float: right;
 
-    li > a{
-      text-shadow: none;
 
-      i{
-        padding-right: 7px;
+     @media(max-width:769px){
+      width:100%;
+      margin:15px 0;
+    }
+
+    .block-user{
+      @media(min-width:769px){
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+    
+    li{
+      @media(max-width:769px){
+        width:100%;
+      }
+
+      > a{
+        text-shadow: none;
+
+        i{
+          padding-right: 7px;
+        }
       }
     }
   }
@@ -36,50 +71,61 @@ header {
     -o-transition: width 0.3s;
     transition: width 0.3s;
     border-left:1px solid rgba(255,255,255,0.1);
-    border-right:1px solid rgba(255,255,255,0.1);
-  }
 
-  .searchbox-input{
-    top:0;
-    left:0;
-    border:0;
-    outline:0;
-    width:100%;
-    height:50px;
-    margin:0;
-    padding:0px 20px 0px 55px;
-    font-size:16px;
-    background-color: $green;
-  }
+    @media(min-width:769px){
+        width:500px;
+    }
 
-  .searchbox-input::-webkit-input-placeholder {
-    color: #fff;
-  }
-  .searchbox-input:-moz-placeholder {
-    color: #fff;
-  }
-  .searchbox-input::-moz-placeholder {
-    color: #fff;
-  }
-  .searchbox-input:-ms-input-placeholder {
-    color: #fff;
-  }
+    @media(max-width:769px){
+        width:100%;
+        background:rgba(255,255,255,0.2)
+    }
 
-  .searchbox-icon, .searchbox-submit{
-    width:50px;
-    height:50px;
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    padding:0;
-    margin:0;
-    border:0;
-    outline:0;
-    line-height:50px;
-    text-align:center;
-    cursor:pointer;
-    background-color: $green;
+    .searchbox-input{
+        top:0;
+        left:0;
+        border:0;
+        outline:0;
+        width:100%;
+        height:50px;
+        margin:0;
+        padding:0px 20px 0px 55px;
+        font-size:16px;
+        background-color:transparent;
+    }
+
+    .searchbox-input::-webkit-input-placeholder {
+        color: #fff;
+    }
+
+    .searchbox-input:-moz-placeholder {
+        color: #fff;
+    }
+    
+    .searchbox-input::-moz-placeholder {
+        color: #fff;
+    }
+    
+    .searchbox-input:-ms-input-placeholder {
+        color: #fff;
+    }
+
+    .searchbox-icon, .searchbox-submit{
+      width:50px;
+      height:50px;
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+      padding:0;
+      margin:0;
+      border:0;
+      outline:0;
+      line-height:50px;
+      text-align:center;
+      cursor:pointer;
+      background-color:transparent;
+    }
   }
 
   .searchbox-open{
@@ -98,30 +144,27 @@ header {
     color: #d74b4b;
   }
 
-  .menu-categories {
-    background-color: $menu-background;
-    width: 100%;
-    max-width: 100%;
-    position: fixed;
-    top: 50px;
-    z-index: 900000;
-    left:0;
-    text-align: center;
-    box-shadow: $shadow;
-
-    a {
-      color: $text-color;
-    }
-  }
-
   .categories{
     padding: 0;
     margin: 0;
     display: inline-block;
+    background-color: $menu-background;
+    width: 100%;
+    text-align: center;
+
+    a {
+      color: $text-color;
+    }
 
     .primary-category{
       display: inline-block;
       padding:15px 0;
+
+      @media screen and (max-width: 769px){
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        text-align: left;
+      }
 
       a{
         padding:0 15px;
@@ -131,10 +174,11 @@ header {
         background:#fff;
       }
 
+
       >ul{
         display: none;
         position: absolute;
-        top: 52px;
+        top: 102px;
         background: #F2F0F0;
         padding: 20px;
         width: 201px;
@@ -147,7 +191,9 @@ header {
       &:hover{
         cursor: pointer;
         >ul{
-        display: block;
+          @media screen and (min-width: 769px){
+            display: block;
+          }
         }
       }
     }
