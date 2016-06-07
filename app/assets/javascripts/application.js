@@ -17,3 +17,10 @@
 //= require menu
 //= require searchbar
 //= require slider
+
+(function() {
+  menu();
+  searchbar();
+  slider();
+  $('.carousel').carousel()
+}());
