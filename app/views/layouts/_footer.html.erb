@@ -1,285 +1,189 @@
 <footer id="footer" class="container-fluid">
-  <div class="row footer-container">
-    <div class="col-md-offset-2 col-md-12 hidden-xs">
-      <div class="row">
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('peinture-colles') do %>
-              Peinture et Colles
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('finitions-decoratives') do %>
-              Finitions décoratives
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('peintures-ludiques') do %>
-              Peintures ludiques
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('peintures-naturelles') do %>
-              Peintures naturelles
-            <% end %>
-          </p> 
-        </div>
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('enduits') do %>
-              Enduits
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('charges-colorants-pour-enduits') do %>
-              Charges et colorants pour enduits
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('enduits-de-finitions') do %>
-              Enduits de finitions
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('enduits-exterieurs') do %>
-              Enduits exterieurs
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('enduits-interieurs') do %>
-              Enduits intérieurs
-            <% end %>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('gros-oeuvre') do %>
-              Gros œuvre
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('briques-blocs') do %>
-              Briques et blocs
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('charpentes') do %>
-              Charpentes
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('chaux-terres-argiles') do %>
-              Chaux, terres et argiles
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('Plaques et panneaux') do %>
-              plaques-panneaux
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('preparation-des-supports') do %>
-              Préparation des supports
-            <% end %>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('isolation') do %>
-              Isolation
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('isolation-humidite') do %>
-              Isolation à l'humidité
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('isolation-cloisons') do %>
-              Isolation des cloisons
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('isolation-combles') do %>
-              Isolation des combles
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('isolation-murs') do %>
-              Isolation des murs
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('isolation-sol') do %>
-              Isolation du sol
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('isolation-phonique') do %>
-              Isolation phonique
-            <% end %>
-          </p>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-8 hidden-xs">
+          <h3>Catégories</h3>
+            <ul>
+              <li>
+                <%= link_to category_path('peinture-colles') do %>
+                  Peinture et Colles
+                <% end %>
+              </li>
+              <li>
+                <%= link_to category_path('enduits') do %>
+                  Enduits
+                <% end %>
+              </li>
+              <li>
+              <%= link_to category_path('gros-oeuvre') do %>
+                Gros œuvre
+              <% end %>
+            </li>
+             <li>
+              <%= link_to category_path('isolation') do %>
+                Isolation
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('portes-fenetres') do %>
+                Portes et fenêtres
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('chauffage') do %>
+                Chauffage
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('production-energie-verte') do %>
+                Production d'énergie verte
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('systeme-economie-energie') do %>
+                Système d'économie d'énergie
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('bois') do %>
+                Pour le bois
+              <% end %>
+            </li>
+          </ul>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('portes-fenetres') do %>
-              Portes et fenêtres
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('fenetres') do %>
-              Fenêtres
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('portes') do %>
-              Portes
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('volets') do %>
-              Volets
-            <% end %>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('chauffage') do %>
-              Chauffage
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('chauffage-eau') do %>
-              Chauffage de l'eau
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('Chauffe-eaux solaires') do %>
-              chauffe-eaux-solaires
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('diffusion-chaleur') do %>
-              Diffusion de chaleur
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('energie-renouvelable') do %>
-              Energie renouvelable
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('poeles') do %>
-              Poêles
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('pompes-chaleur') do %>
-              Pompes à chaleur
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('Renouvellement-air') do %>
-              Renouvellement de l'air
-            <% end %>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('production-energie-verte') do %>
-              Production d'énergie verte
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('Batteries') do %>
-              batteries
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('eoliennes-domestiques') do %>
-              Eoliennes domestiques
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('onduleurs') do %>
-              Onduleurs
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('panneaux-solaires-photovoltaiques') do %>
-              Panneaux solaires photovoltaïques
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('regulateurs') do %>
-              Régulateurs
-            <% end %>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <h5>
-            <%= link_to category_path('systeme-economie-energie') do %>
-              Système d'économie d'énergie
-            <% end %>
-          </h5>
-          <p>
-            <%= link_to category_path('ampoules-basse-consommation') do %>
-              Ampoules basse consommation
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('programmateur-chauffe') do %>
-              Programmateur de chauffe
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('programmateur-eclairage') do %>
-              Programmateurs d'éclairage
-            <% end %>
-          </p>
-          <p>
-            <%= link_to category_path('thermostats') do %>
-              Thermostats
-            <% end %>
-          </p>
-        </div>
+      <div class="col-md-6 col-sm-8 hidden-xs">
+          <h3>Meilleurs tutorials</h3>
+            <ul>
+              <li>
+                <%= link_to category_path('peinture-colles') do %>
+                  perspiciatis unde
+                <% end %>
+              </li>
+              <li>
+                <%= link_to category_path('enduits') do %>
+                  perspiciatis unde
+                <% end %>
+              </li>
+              <li>
+              <%= link_to category_path('gros-oeuvre') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+             <li>
+              <%= link_to category_path('isolation') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('portes-fenetres') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('chauffage') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('production-energie-verte') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('systeme-economie-energie') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('bois') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+          </ul>
+      </div>
+      <div class="col-md-6 col-sm-8 hidden-xs">
+          <h3>Matériaux populaires</h3>
+            <ul>
+              <li>
+                <%= link_to category_path('peinture-colles') do %>
+                  perspiciatis unde
+                <% end %>
+              </li>
+              <li>
+                <%= link_to category_path('enduits') do %>
+                  perspiciatis unde
+                <% end %>
+              </li>
+              <li>
+              <%= link_to category_path('gros-oeuvre') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+             <li>
+              <%= link_to category_path('isolation') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('portes-fenetres') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('chauffage') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('production-energie-verte') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('systeme-economie-energie') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+            <li>
+              <%= link_to category_path('bois') do %>
+                perspiciatis unde
+              <% end %>
+            </li>
+          </ul>
+      </div>
+      <div class="newsletter col-md-6 col-sm-24">
+        <h3>Newsletter</h3>
+        <input type="text" name="email" id="newsletter-mail"  placeholder="Email">
+        <input type="submit" value="s'inscrire" id="" class="btn btn-default">
       </div>
     </div>
-    <div class="col-md-3 col-md-offset-1 hidden-xs">
-      <h5>
-        <%= link_to category_path('bois') do %>
-          Pour le bois
-        <% end %>
-      </h5>
-      <p>
-        <%= link_to category_path('colles-joints') do %>
-          Colles et joints
-        <% end %>
-      </p>
-      <p>
-        <%= link_to category_path('diluants') do %>
-          Diluants
-        <% end %>
-      </p>
-      <p>
-        <%= link_to category_path('huiles-cires-protectrices') do %>
-          Huiles et cires protectrices
-        <% end %>
-      </p>
-      <p>
-        <%= link_to category_path('preparation-protection-supports') do %>
-          Préparation et protection des supports
-        <% end %>
-      </p>
-      <p>
-        <%= link_to category_path('produits-bois') do %>
-          Produits pour le bois
-        <% end %>
-      </p>
-    </div> 
-    <div class="col-md-6 col-xs-24 footer-social">
+  </div>
+  <div class="footer-low">
+    <div class="container">
+      <div class="table-cell">
+        <%= image_tag("logo.svg", :id => 'logo') %>
+        <ul class="social-network pull-right">
+          <li> 
+            <a href="https://twitter.com/climateriaux" target="_blank" rel="nofollow" class="footer-social-twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://fr-fr.facebook.com/climateriaux/" target="_blank" rel="nofollow" class="footer-social-facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/climat%C3%A9riaux" target="_blank" rel="nofollow" class="footer-social-linkedin">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer> 
+    <!--<div class="col-md-6 col-xs-24 footer-social">
       <p class="bold">Suivez nous :</p>
       <a href="https://twitter.com/climateriaux" target="_blank" rel="nofollow" class="footer-social-twitter">
         <i class="fa fa-twitter"></i>
@@ -290,9 +194,9 @@
       <a href="https://www.linkedin.com/company/climat%C3%A9riaux" target="_blank" rel="nofollow" class="footer-social-linkedin">
         <i class="fa fa-linkedin"></i>
       </a>
-    </div>
-  </div>
-</footer>
+    </div>-->
+
+<!--
 <div class="footer-credits container-fluid">
   <div class="row">
     <div class="col-xs-24 col-md-offset-2 col-md-6 footer-logo">
@@ -304,4 +208,4 @@
     <div class="col-xs-24 col-md-6 footer-copyright">Copyright © 2016 - Climatériaux</div>
     </div>
   </div>
-</div>
+</div>-->

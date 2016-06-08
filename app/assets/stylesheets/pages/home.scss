@@ -123,8 +123,6 @@
   }
 
   ul {
-    padding:0;
-    list-style: none;
 
     li{
       height:160px;
@@ -251,6 +249,7 @@
 
 .certification {
   background-image:#fff;
+  border-top:1px solid rgba(0,0,0,0.05);
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center;
