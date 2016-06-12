@@ -46,12 +46,6 @@
           <span data-localize="sidebar.nav.WIDGETS">Commandes</span>
         <% end %>
       </li>
-      <li class="<%= 'active' if controller.controller_name == 'inventories' %>">
-        <%= link_to admin_inventories_path do %>
-          <em class="fa fa-cubes"></em>
-          <span data-localize="sidebar.nav.DOCUMENTATION">Inventaires</span>
-        <% end %>
-      </li>
       <li class="<%= 'active' if controller.controller_name == 'tutorials' %>">
         <%= link_to admin_tutorials_path do %>
           <em class="icon-book-open"></em>

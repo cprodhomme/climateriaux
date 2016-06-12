@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605192831) do
+ActiveRecord::Schema.define(version: 20160612190724) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -22,18 +22,6 @@ ActiveRecord::Schema.define(version: 20160605192831) do
     t.datetime "updated_at",                null: false
     t.string   "slug",        limit: 255
   end
-
-  create_table "inventories", force: :cascade do |t|
-    t.integer  "product_id",  limit: 4
-    t.integer  "merchant_id", limit: 4
-    t.integer  "stock",       limit: 4
-    t.decimal  "price",                 precision: 12, scale: 3
-    t.datetime "created_at",                                     null: false
-    t.datetime "updated_at",                                     null: false
-  end
-
-  add_index "inventories", ["merchant_id"], name: "index_inventories_on_merchant_id", using: :btree
-  add_index "inventories", ["product_id"], name: "index_inventories_on_product_id", using: :btree
 
   create_table "merchants", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -83,14 +71,6 @@ ActiveRecord::Schema.define(version: 20160605192831) do
   end
 
   add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
-
-  create_table "product_medias", force: :cascade do |t|
-    t.integer "product_id", limit: 4
-    t.string  "media",      limit: 255
-    t.integer "order",      limit: 4
-  end
-
-  add_index "product_medias", ["product_id"], name: "index_product_medias_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -148,13 +128,10 @@ ActiveRecord::Schema.define(version: 20160605192831) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "inventories", "merchants"
-  add_foreign_key "inventories", "products"
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "order_statuses"
   add_foreign_key "product_images", "products"
-  add_foreign_key "product_medias", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "technical_details", "products"
   add_foreign_key "tutorials", "users"

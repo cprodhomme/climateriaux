@@ -22,7 +22,6 @@ Rails.application.routes.draw do
     resources :tutorials, param: :slug
     resources :products, param: :slug
     resources :orders
-    resources :inventories
     resources :users
     resources :merchants
   end

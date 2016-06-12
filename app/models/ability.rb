@@ -8,7 +8,6 @@ class Ability
     if user.role == 'Admin'
       can :manage, :all
     elsif user.role == 'Merchant'
-      can :manage, :inventory
       can :index,  Tutorial
       can :new,    Tutorial
       can :manage, Order
