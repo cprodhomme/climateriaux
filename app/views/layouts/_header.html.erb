@@ -6,7 +6,7 @@
         <%= image_tag("logo.svg", :id => 'logo') %>
         <% end %>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -16,7 +16,9 @@
          <form class="searchbox">
           <input type="search" placeholder="Rechercher un produit, un tutoriel, ..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
           <button type="submit" class="searchbox-submit"></button>
-          <span class="searchbox-icon"><i class="fa fa-search"></i></span>
+          <span class="searchbox-icon">
+            <i class="fa fa-search"></i>
+          </span>
         </form>
         <ul class="nav navbar-nav">
           <li class="block-user">
@@ -28,252 +30,189 @@
             <%= render 'layouts/cart' %>
           </li>                
         </ul>
-
-    <ul class="categories">
-      <li class="primary-category peinture-colle">
-        <a href="#">Peintures et colles</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-      <li class="primary-category enduit">
-        <a href="#">Enduits</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-      <li class="primary-category gros-oeuvre">
-        <a href="#">Gros oeuvre</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-       <li class="primary-category gros-oeuvre">
-        <a href="#">Bois</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-      <li class="primary-category gros-oeuvre">
-        <a href="#">Portes & fenêtres</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-       <li class="primary-category gros-oeuvre">
-        <a href="#">Production d'énergie verte</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-      <li class="primary-category gros-oeuvre">
-        <a href="#">Gros oeuvres</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-      <li class="primary-category gros-oeuvre">
-        <a href="#">Chauffage</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-      <li class="primary-category gros-oeuvre">
-        <a href="#">Isolation</a>
-        <ul>
-          <li>
-            <a href="#">item1</a>
-          </li>
-          <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-         <li>
-           <a href="#">item1</a>
-         </li>
-       </ul>
-      </li>
-    </ul>
-    <!-- secondary-categories -->
-    <!--<div class="secondary-categories">
-      <div class="secondary-category peinture-colle">
-        <div class="current-category">
-          <i class="fa fa-chevron-left"></i>
-          <%= image_tag("icones/peinture-colle.png") %>
-          <span>Peinture et colles</span>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/peinture-colle/finition-decorative/">Finitions décoratives</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/peinture-colle/peinture-ludique/">Peintures ludiques</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/peinture-colle/peinture-naturelle/">Peintures naturelles</a>
-        </div>
       </div>
-      <div class="secondary-category enduit">
-        <div class="current-category">
-          <i class="fa fa-chevron-left"></i>
-          <%= image_tag("icones/enduit.png") %>
-          <span>Enduits</span>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/enduit/charge-colorant/">Charges et colorants pour enduits</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/enduit/enduit-finition/">Enduits de finitions</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/enduit/enduit-exterieur/">Enduits exterieurs</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/enduit/enduit-interieur/">Enduits intérieurs</a>
-        </div>
-      </div>
-      <div class="secondary-category gros-oeuvre">
-        <div class="current-category">
-          <i class="fa fa-chevron-left"></i>
-          <%= image_tag("icones/gros-oeuvre.png") %>
-          <span>Gros oeuvre</span>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/brique-bloc/">Briques et blocs</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/charpente/">Charpentes</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/chaux-terre-argile/">Chaux, terres et argiles</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/plaque-panneau/">Plaques et panneaux</a>
-        </div>
-        <div>
-          <a href="http://staging.climateriaux.fr/categorie-produit/gros-oeuvre/preparation-appret/">Préparation des supports</a>
-        </div>
-      </div>  
-    </div>-->
- 
-</header>
-      </div>
+      <ul class="categories">
+        <li class="primary-category peinture-colle">
+          <a href="#">Peintures et colles</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category enduit">
+          <a href="#">Enduits</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Gros oeuvre</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Bois</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Portes & fenêtres</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Production d'énergie verte</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Gros oeuvres</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Chauffage</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+        <li class="primary-category gros-oeuvre">
+          <a href="#">Isolation</a>
+          <ul>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+            <li>
+              <a href="#">item1</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
