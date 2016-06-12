@@ -38,7 +38,7 @@ class Admin::TutorialsController < Admin::DashboardController
 	private
 
   def tutorial_params
-  	params.require(:tutorial).permit(:title, :resume, :content).merge(user_id: current_user)
+  	params.require(:tutorial).permit(:title, :slug, :resume, :content).merge(user_id: current_user)
   end
 
 end

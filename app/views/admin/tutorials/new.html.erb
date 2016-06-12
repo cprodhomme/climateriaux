@@ -21,6 +21,14 @@
       </fieldset>
       <fieldset>
         <div class="form-group">
+          <%= f.label :slug, class: 'col-sm-2 control-label' %>
+          <div class="col-sm-10">
+            <%= f.text_field :slug, class: 'form-control', placeholder: "titre-de-mon-tuto" %>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="form-group">
           <%= f.label :resume, class: 'col-sm-2 control-label' %>
           <div class="col-sm-10">
             <%= f.text_area :resume, class: 'form-control note-editor note-editor-margin', placeholder: "Court résumé du tutoriel" %>
