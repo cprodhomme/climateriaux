@@ -14,13 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap/bootstrap.min
 //= require marketica
-//= require menu
-//= require searchbar
 //= require slider
 
 (function() {
-  menu();
-  searchbar();
   slider();
   $('.carousel').carousel()
 }());
