@@ -34,6 +34,14 @@ describe 'admin/tutorial', type: :feature do
       click_button "Enregistrer"
       expect(page).to have_content "Mon nouveau tutoriel"
     end
+
+    scenario "je peux editer un tutoriel" do
+      tutorial = create :tutorial, user_id: user
+      visit edit_admin_tutorial_path(slug: tutorial.slug)
+      fill_in :tutorial_title, with: "Mon nouveau titre"
+      click_button "Enregistrer"
+      expect(page).to have_content "Mon nouveau titre"
+    end
   end
 
   context "en tant que Merchant" do

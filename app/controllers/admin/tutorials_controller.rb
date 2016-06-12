@@ -24,10 +24,25 @@ class Admin::TutorialsController < Admin::DashboardController
 	end
 
 	def edit
-		@tutorial = Tutorial.where(slug: params[:slug], user: current_user).first
+    if current_user.role == 'Admin'
+      @tutorial = Tutorial.where(slug: params[:slug]).first
+    else
+		  @tutorial = Tutorial.where(slug: params[:slug], user: current_user).first
+    end
 	end
 
 	def update
+    if current_user.role == 'Admin'
+      @tutorial = Tutorial.where(slug: params[:slug]).first
+    else
+      @tutorial = Tutorial.where(slug: params[:slug], user: current_user).first
+    end
+
+    if @tutorial.update_attributes(tutorial_params)
+      redirect_to edit_admin_tutorial_path(slug: @tutorial.slug), notice: 'Tutoriel a bien été modifié'
+    else
+      render 'edit'
+    end
 	end
 
 	def destroy
