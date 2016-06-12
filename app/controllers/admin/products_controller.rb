@@ -2,14 +2,23 @@ class Admin::ProductsController < Admin::DashboardController
   load_and_authorize_resource
 
 	def index
-		@products = Product.all
+    if current_user.role == 'Admin'
+		  @products = Product.all
+    else
+      @products = Product.where(user_id: current_user)
+    end
 	end
 
 	def create
 	end
 
 	def edit
-		@product = Product.where(slug: params[:slug]).first
+    if current_user.role == 'Admin'
+		  @product = Product.where(slug: params[:slug]).first
+      puts @product
+    else
+      @product = Product.where(slug: params[:slug], user_id: current_user).first
+    end
 	end
 
 	def update
@@ -17,7 +26,11 @@ class Admin::ProductsController < Admin::DashboardController
 	end
 
 	def destroy
-		Product.where(slug: params[:slug]).first.destroy
+    if current_user.role == 'Admin'
+      Product.where(slug: params[:slug]).first.destroy
+    else 
+		  Product.where(slug: params[:slug], user_id: current_user).first.destroy
+    end
     redirect_to admin_products_path, notice: "Le produit a bien été supprimé"
 	end
 
