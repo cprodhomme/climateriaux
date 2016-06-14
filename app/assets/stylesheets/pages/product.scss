@@ -23,9 +23,7 @@
 }
 
 .product-title {
-  font-size: 26px;
-  margin-bottom: 32px;
-  color: $text-color;
+  margin: 10px 0;
 }
 
 .product-description {
@@ -34,10 +32,52 @@
   color: $grey-text;
 }
 
+.product-review{
+
+  .product-stars-container{
+    background: image_url('review.svg') no-repeat;
+    width: 140px;
+    height: 25px;
+    background-size: auto 100%;
+    position: relative;
+    margin-top:10px;
+   
+
+    .contentRating{
+      overflow: hidden;
+      height: 25px;
+      position: absolute;
+
+      .ratingvalue{
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: image_url('review-value.svg') no-repeat;
+        background-size: auto 100%;
+        width: 140px;
+      }
+    }
+  }
+}
+
+.product-amount{
+  input{
+    padding:15px;
+    border-radius:40px;
+    width:100%;
+  }
+}
+
 .select-customer, .select-product {
   @include white-block();
   padding: 30px 35px;
   margin-bottom: 50px;
+
+  .shipping-cost{
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .icon-customer-product, .icon-choose-product {

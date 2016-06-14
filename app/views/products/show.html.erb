@@ -18,38 +18,53 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 col-lg-9 col-md-offset-1 product-block">
+    <div class="col-md-7 col-md-offset-1 product-block">
       <% @images.each do |product_image| %>
         <%= image_tag 'image_produit.png' %>
         <%# image_tag product_image.image %>
       <% end %>
     </div>
-    <div class="col-md-7 col-md-offset-1">
-      <p class="product-marque"><%= @product.marque %></p>
-      <h1 class="product-title"><%= @product.name %></h1>
+    <div class="col-md-8 col-md-offset-1">
+      <p class="product-marque"><%= @product.marque %>ISOCOR</p>
+      <h3 class="product-title"><%= @product.name %></h3>
       <p class="product-description">
         <%= @product.description %>
+        Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L’énergie, nécessaire à l’expansion du liège… 
+        <a href="#">voir plus</a>
       </p>
+      <div class="product-review">
+        <span>avis client</span>
+        <div class="product-stars-container">
+          <div class="contentRating" style="width:90%">
+            <div class="ratingvalue"></div>
+          </div>
+        </div>
+        <span>9,2/10</span>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h4>ISOLATION PHONIQUE</h4>
+          <p>15 à 20 % de bruit en moins</p>
+        </div>
+        <div class="col-md-12">
+          <h4>ISOLATION PHONIQUE</h4>
+          <p>15 à 20 % de bruit en moins</p>
+        </div>
+      </div>
+      <div class="product-amount">
+        <h4>CALCULEZ LA QUANTITÉ JUSTE À ACHETER</h4>
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" placeholder="surface en m2">
+          </div>
+          <div class="col-md-12">
+            <input type="text" placeholder="Quantité estimé">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-5 col-lg-4 col-md-offset-1">
-      <%= form_for @order_item, remote: true do |f| %>
-        <div class="customer-product-block">
-          <span class="icon-customer-product"></span>
-          <span class="text-customer-product">Votre vendeur</span>
-          <div class="select-customer">
-            
-          </div>
-        </div>
-        <div class="choose-product-block">
-          <span class="icon-choose-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-          <span class="text-choose-product">Choisissez votre produit</span>
-          <div class="select-product">
-            <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-            <%= f.hidden_field :product_id, value: @product.id %>
-            <%= f.submit "Ajouter au panier", class: "add-to-cart" %>
-          </div>
-        </div>
-      <% end %>
+    <div class="col-md-5 col-md-offset-1">
+      <%= render partial: "products/price_bar" %>
     </div>
   </div>
   <div class="row">

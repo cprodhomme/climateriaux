@@ -1,0 +1,24 @@
+<%= form_for @order_item, remote: true do |f| %>
+<div class="choose-product-block">
+  <span class="icon-choose-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+  <span class="text-choose-product">Choisissez votre produit</span>
+  <div class="select-product">
+    <div class="shipping-cost">
+      <span>livraison</span>
+      <span class="pull-right text-right">12,90 € <br>(3 à 4 jours ouvrés)</span>
+    </div>
+    <div class="">
+      <span>Stock</span>
+      <span class="pull-right">disponible</span>
+    </div>
+    <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+    <%= f.hidden_field :product_id, value: @product.id %>
+    <%= f.submit "Ajouter au panier", class: "add-to-cart" %>
+  </div>
+</div>
+<div class="customer-product-block">
+  <span class="icon-customer-product"></span>
+  <span class="text-customer-product">Votre vendeur</span>
+  <div class="select-customer"></div>
+</div>
+<% end %>
