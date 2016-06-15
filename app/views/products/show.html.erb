@@ -19,7 +19,7 @@
   </div>
   <div class="row">
     <div class="col-md-7 col-md-offset-1 product-block">
-      <% @images.each do |product_image| %>
+      <% @product.product_images.each do |product_image| %>
         <%= image_tag 'image_produit.png' %>
         <%# image_tag product_image.image %>
       <% end %>
@@ -72,7 +72,7 @@
       <p class="title-detail-product">Détails techniques</p>
       <div class="content-detail-product">
         <div class="row">
-        <% @technical_details.each do |technical_detail| %>
+        <% @product.technical_details.each do |technical_detail| %>
           <% if technical_detail.detail.length > 50 %>
             <div class="col-md-24">
               <p class="title-detail"><%= technical_detail.title %></p>
