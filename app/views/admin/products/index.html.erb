@@ -34,7 +34,9 @@
         <tr>
           <td><%= product.id %></td>
           <td>
-            <%= image_tag product.product_images.first.image.url(:thumb), class: 'media-object img-responsive img-circle' %>
+            <% if product.product_images.present? %>
+              <%= image_tag product.product_images.first.image.url, class: 'media-object img-responsive img-circle' %>
+            <% end %>
           </td>
           <td><%= product.name %></td>
           <td><%= product.description.first(120) %>...</td>
