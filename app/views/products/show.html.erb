@@ -19,15 +19,7 @@
   </div>
   <div class="row">
     <div class="col-md-7 col-md-offset-1 product-block">
-<<<<<<< 034f9ea692fdd29f4cbf53ae1f0f467708c27ad3
-      <% @product.product_images.each do |product_image| %>
-        <%= image_tag 'image_produit.png' %>
-        <%= image_tag product_image.image.url(:web, :product) %>
-        <%# image_tag product_image.image %>
-      <% end %>
-=======
       <%= render partial: "products/bloc_product_photo" %>
->>>>>>> nouvelle font & inte page produit
     </div>
     <div class="col-md-8 col-md-offset-1">
       <div class="bloc-description">
