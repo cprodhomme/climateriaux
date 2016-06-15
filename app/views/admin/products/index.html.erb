@@ -28,7 +28,7 @@
         <% @products.each do |product| %>
          <tr>
             <td><%= product.id %></td>
-            <td></td>
+            <td><%= image_tag product.product_images.first.image.url(:thumb), class: 'media-object img-responsive img-circle' %></td>
             <td><%= product.name %></td>
             <td><%= product.description.first(120) %>...</td>
             <td class="text-center">
