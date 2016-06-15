@@ -1,4 +1,4 @@
 #!/usr/bin/env sh -ex
-
+brew install imagemagick
 bundle install
 bin/init_DB
