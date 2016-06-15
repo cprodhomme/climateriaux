@@ -41,6 +41,6 @@ class Admin::MerchantsController < Admin::DashboardController
   private
 
   def merchant_params
-    params.require(:merchant).permit(:name, :description)
+    params.require(:merchant).permit(:name, :description, :logo)
   end
 end
