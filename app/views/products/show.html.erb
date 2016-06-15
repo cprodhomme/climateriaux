@@ -19,46 +19,54 @@
   </div>
   <div class="row">
     <div class="col-md-7 col-md-offset-1 product-block">
+<<<<<<< 034f9ea692fdd29f4cbf53ae1f0f467708c27ad3
       <% @product.product_images.each do |product_image| %>
         <%= image_tag 'image_produit.png' %>
         <%= image_tag product_image.image.url(:web, :product) %>
         <%# image_tag product_image.image %>
       <% end %>
+=======
+      <%= render partial: "products/bloc_product_photo" %>
+>>>>>>> nouvelle font & inte page produit
     </div>
     <div class="col-md-8 col-md-offset-1">
-      <p class="product-marque"><%= @product.marque %>ISOCOR</p>
-      <h3 class="product-title"><%= @product.name %></h3>
-      <p class="product-description">
-        <%= @product.description %>
-        Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L’énergie, nécessaire à l’expansion du liège… 
-        <a href="#">voir plus</a>
-      </p>
-      <div class="product-review">
-        <span>avis client</span>
-        <div class="product-stars-container">
-          <div class="contentRating" style="width:90%">
-            <div class="ratingvalue"></div>
-          </div>
-        </div>
-        <span>9,2/10</span>
+      <div class="bloc-description">
+        <h4 class="product-marque text-uppercase"><%= @product.marque %>isocor</h4>
+        <h3 class="product-title"><%= @product.name %></h3>
+        <p class="product-description">
+          <%= @product.description %>
+          Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L’énergie, nécessaire à l’expansion du liège… 
+          <a href="#">voir plus</a>
+        </p>
       </div>
-      <div class="row">
+      <div class="product-review">
+        <h4>avis client</h4>
+        <div class="review">
+          <div class="product-stars-container pull-left">
+            <div class="contentRating" style="width:90%">
+              <div class="ratingvalue"></div>
+            </div>
+          </div>
+          <h4>9,2/10</h4>
+        </div>
+      </div>
+      <div class="row product-gain">
         <div class="col-md-12">
-          <h4>ISOLATION PHONIQUE</h4>
+          <h5>Isolation phonique</h5>
           <p>15 à 20 % de bruit en moins</p>
         </div>
         <div class="col-md-12">
-          <h4>ISOLATION PHONIQUE</h4>
-          <p>15 à 20 % de bruit en moins</p>
+          <h5>Isolation thermique</h5>
+          <p>17 à 23 % de chaleur gagnée</p>
         </div>
       </div>
       <div class="product-amount">
-        <h4>CALCULEZ LA QUANTITÉ JUSTE À ACHETER</h4>
+        <h5>Calculez la quantité juste à acheter</h5>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12 product-question">
             <input type="text" placeholder="surface en m2">
           </div>
-          <div class="col-md-12">
+          <div class="col-md-12 product-question">
             <input type="text" placeholder="Quantité estimé">
           </div>
         </div>
