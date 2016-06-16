@@ -35,7 +35,7 @@
           <td><%= product.id %></td>
           <td>
             <% if product.product_images.present? %>
-              <%= image_tag product.product_images.first.image.thumb.url, class: 'media-object img-responsive img-circle' %>
+              <%= image_tag product.product_images.first.image.thumb.url, class: 'media-object img-responsive img-rounded' %>
             <% end %>
           </td>
           <td><%= product.name %></td>
