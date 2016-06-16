@@ -78,8 +78,14 @@
 }
 
 .product-question{
-    margin-top:15px;
+    margin-top:30px;
   }
+
+.choose-product-block{
+  .price{
+    margin-top:30px;
+  }
+}
 
 .product-gain {
   padding:0 20px;
@@ -100,8 +106,8 @@
 
 .select-customer, .select-product {
   @include white-block();
-  padding: 30px 35px;
-  margin-bottom: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
 
   .shipping-cost{
     display: inline-block;

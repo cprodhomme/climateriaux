@@ -57,7 +57,7 @@ body{
     padding-top:50px;
   }
 
-  color:#1c1833;
+  color:$text-color;
 
   h1, h2, h3, h4, h5 {
     font-family: 'GT Walsheim', sans-serif;
@@ -95,6 +95,14 @@ body{
   p, a, span{
     font-size:16px;
     font-weight: 100;
+  }
+
+  p{
+    color: $grey-text
+  }
+
+  a{
+    color:$green;
   }
 
   ul{
