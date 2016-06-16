@@ -38,6 +38,12 @@ header {
       margin:15px 0;
     }
 
+    .block-cart, .block-user {
+      a {
+        color: #fff;
+      }
+    }
+
     .block-user{
       @media(min-width:769px){
         border-left: 1px solid rgba(255, 255, 255, 0.1);

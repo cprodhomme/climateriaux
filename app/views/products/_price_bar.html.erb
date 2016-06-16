@@ -1,7 +1,7 @@
 <%= form_for @order_item, remote: true do |f| %>
 <div class="choose-product-block">
   <span class="icon-choose-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-  <span class="text-choose-product">Choisissez votre produit</span>
+  <span class="text-choose-product">Le produit</span>
   <div class="select-product">
     <div class="shipping-cost">
       <span>livraison</span>
@@ -23,7 +23,7 @@
     </div>
     <div class="price">
       <span>prix</span>
-      <span class="pull-right">5,00€ /m2</span>
+      <span class="pull-right"><%= number_to_currency @product.price %> /m2</span>
     </div>
     <%= f.submit "Ajouter au panier", class: "add-to-cart" %>
   </div>

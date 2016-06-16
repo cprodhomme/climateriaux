@@ -1,50 +1,20 @@
-<!--<div class="">
-    <%= image_tag 'picture.png' %>
-    <%# image_tag product_image.image %>
-</div>
-<div class="">
-	<div class="row">
-		<div class="col-md-8">
-			<%= image_tag 'picture.png' %>
-		</div>
-		<div class="col-md-8">
-			<%= image_tag 'picture.png' %>
-		</div>
-		<div class="col-md-8">
-			<%= image_tag 'picture.png' %>
-		</div>
-	</div>
-</div>-->
-
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <%= image_tag 'picture.png' %>
-    </div>
-    <div class="item">
-      <%= image_tag 'picture.png' %>
-    </div>
-    <div class="item">
-      <%= image_tag 'picture.png' %>
-    </div>
+    <% @product.product_images.each_with_index do |product_image, index| %>
+      <div class="item <% if index == 0 %>active<% end %>">
+        <%= image_tag product_image.image.url(:product) %>
+      </div>
+    <% end %>
   </div>
   <ul>
   	<div class="row">
-	  	<div class="col-md-8">
-		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
-		    	 <%= image_tag 'picture.png' %>
-		    </li>
-		</div>
-		<div class="col-md-8">
-		    <li data-target="#carousel-example-generic" data-slide-to="1">
-		    	 <%= image_tag 'picture.png' %>
-		    </li>
-		</div>
-		<div class="col-md-8">
-		    <li data-target="#carousel-example-generic" data-slide-to="2">
-		    	 <%= image_tag 'picture.png' %>
-		    </li>
-		</div>
-	</div>
+      <% @product.product_images.each_with_index do |product_image, index| %>
+        <div class="col-md-8">
+          <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" <% if index == 0 %>class="active"<% end %>>
+          	 <%= image_tag product_image.image.url(:product) %>
+          </li>
+        </div>
+      <% end %>
+  	</div>
   </ul>
 </div>
