@@ -1,6 +1,6 @@
 <section class="jumbotron">
   <div class="container">
-    <h1>Baseline</h1>
+    <h1>Tout pour votre projet, au même endroit</h1>
     <%= form_for search_path, url: search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
       <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Recherche' %>
       <%= submit_tag "", name: nil, :class => 'btn btn-default search-button' %>
@@ -22,18 +22,18 @@
 </section>
 <section class="materials-home">
   <div class="container">
-    <h2 class="home-title-section">Matériaux de sources vérifiés</h2>
+    <h2 class="home-title-section">Nos matériaux de sources vérifiées</h2>
     <div class="grey-bar-title"></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non turpis vitae magna commodo sodales. Aenean vitae dignissim urna, et tincidunt magna. Pellentesque facilisis sem ac felis mollis, eget luctus odio facilisis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Donec risus mauris,</p> 
+    <p>Tous les matériaux en vente sur Climateriaux son sélectionnés sur différents critères de façon à minimiser leur impact carbone. Nous pré-sélectionnons pour vous les marchants les plus proches de votre lieu de livraison de façon à réduire le transport. Nos partenaires s'engagent à respecter des normes écologiques strictes pour la production de leurs produits et la gestion de leur infrastructure. Enfin nous priorisons les produit biosourcés aux produits classiques pour vous fournir les meilleurs produits, en accord avec l'environement.</p>
   </div>
   <%= image_tag("materials.svg") %>
 </section>
 <section class="tutoriels-home container-fluid text-center">
   <div class="row">
     <div class="col-md-24">
-      <h2 class="home-title-section">Tutoriels</h2>
+      <h2 class="home-title-section">Nos tutoriels pratiques</h2>
       <div class="grey-bar-title"></div>
-      <p class="home-p-section">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p class="home-p-section">Nous vous concoctons régulièrement de nouveaux tutoriels pour vous accompagner dans la plannification de vos projets, le choix de vos produits, la réalisation de vos traveaux, ainsi que l'entretient de vos matériaux.</p>
     </div>
   </div>
   <div class="row">
@@ -45,12 +45,12 @@
           </div>
         <% end %>
       </div>
-      <%= link_to "Tous les tutoriels", tutorials_path, class: 'btn-default' %>
+      <%= link_to "Tous nos tutoriels", tutorials_path, class: 'btn-default' %>
     </div>
   </div>
 </section>
 <section class="howItWork-home text-center">
-  
+
     <h2 class="home-title-section">Comment ça marche</h2>
     <div class="grey-bar-title"></div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -66,8 +66,8 @@
               <%= image_tag("ccm1.png") %>
             </div>
             <div class="item-description col-md-10">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor hendrerit est id auctor. Cras quis sagittis arcu. Pellentesque vitae blandit diam. Mauris lacinia tincidunt purus, quis posuere metus. Donec tincidunt lacus vel est </p>
+              <h3>Tout ce dont vous avez besoin, au même endroit</h3>
+              <p>Nous travaillons à maintenir un catalogue de produits et de marchands le plus fourni et diversifié possible. Tout ce dont vous avez besoin se trouve sur Climateriaux, plannifiez tous vos achats au même endroit et retrouver clairement le suivi de votre budget.<br>Tous les produits sont rangés par nos soins dans les catégories les plus adaptés de façon à vous faire gagner du temps, et vous permettre de trouver facilement ce dont vous avez besoin.</p>
             </div>
           </div>
         </div>
@@ -77,8 +77,8 @@
               <%= image_tag("ccm1.png") %>
             </div>
             <div class="item-description col-md-10">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor hendrerit est id auctor. Cras quis sagittis arcu. Pellentesque vitae blandit diam. Mauris lacinia tincidunt purus, quis posuere metus. Donec tincidunt lacus vel est </p>
+              <h3>Une communauté d'entreaide et de conseil</h3>
+              <p>Climateraiux n'est pas seulement un marché, c'est aussi un lieu d'échange sur lequel vous pouvez discuter de vos travaux, trouver des conseil avisés, et demander de l'aide à tout moment. Nous mettons en avant les échanges communautaires, car c'est en retrouvant des gens comme vous et aux expérience similaires que votre projet gagnera en maturité.<br><br>Retrouvez la plateforme d'entraide sur : <a href="#">communaute.climateriaux.fr</a></p>
             </div>
           </div>
         </div>
@@ -88,21 +88,21 @@
               <%= image_tag("ccm1.png") %>
             </div>
             <div class="item-description col-md-10">
-              <h3>Lorem ipsum</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor hendrerit est id auctor. Cras quis sagittis arcu. Pellentesque vitae blandit diam. Mauris lacinia tincidunt purus, quis posuere metus. Donec tincidunt lacus vel est </p>
+              <h3>Des outils pour calculer et comprendre</h3>
+              <p>Parce qu'on a toujours besoin d'un petit coup de pouce, Climateriaux vous propose un ensemble d'outils d'aide et de calculs comme pour vous éclairer dans les taches les plus complexes : <br> <ul><li>Estimation des économies d'énergie apportées par votre projet</li><li>Calcul des déductions d'impots</li><li>Démarches à mettre en place pour profiter de subventions</li></ul></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+
 </section>
 <section class="articles-home container-fluid text-center">
   <div class="row">
     <div class="col-md-24">
-      <h2 class="home-title-section">Articles</h2>
+      <h2 class="home-title-section">Notre vision</h2>
       <div class="grey-bar-title"></div>
-      <p class="home-p-section">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p class="home-p-section">Nous nous exprimons aussi sur divers sujets d'actualité axés sur l'écologie et le développement durable. Découvrez les billets de blog Climateriaux.</p>
     </div>
   </div>
   <div id="owl-articles" class="owl-carousel row">
@@ -132,18 +132,18 @@
     <div class="row">
       <div class="rassurance col-md-8 col-sm-24">
         <%= image_tag("paypal.svg") %>
-        <h3>Paiement sécurisé assuré par Paypal</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+        <h3>Paiement bancaire sécurisé</h3>
+        <p>Tous nos systèmes de paiement sont chiffrés et certifiés par des banques françaises</p>
       </div>
       <div class="rassurance col-md-8 col-sm-24">
         <%= image_tag("truck.svg") %>
         <h3>Livraison à l’adresse de votre choix</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+        <p>Définissez une adresse de livraison et trouvez les marchands les plus proches pour vos produits</p>
       </div>
       <div class="rassurance col-md-8 col-sm-24">
         <%= image_tag("return.svg") %>
-        <h3>Retour gratuit sous 15 jours</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+        <h3>Retour sous 10 jours</h3>
+        <p>Pas convaincu de votre commande ? Tous les produits peuvent être retournés pendant une durée de 15 jours</p>
       </div>
     </div>
   </div>

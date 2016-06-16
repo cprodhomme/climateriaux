@@ -38,7 +38,6 @@ describe 'Dashboard', type: :feature do
     scenario "je ne peux pas accéder au Back-office" do
       visit admin_path
       expect(page).to_not have_content "Dashboard"
-      expect(page).to have_content "Matériaux de sources vérifiés"
     end
   end
 

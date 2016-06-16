@@ -23,7 +23,7 @@
               </div>
               <div class="form-group">
                 <%= f.label :logo %>
-                <%= image_tag @merchant.logo.url, class: 'media-object img-responsive' %>
+                <%= image_tag @merchant.logo.medium.url, class: 'media-object img-responsive' %>
                 <%= f.file_field :logo, class: 'form-control' %>
               </div>
               <%= link_to "Retour", admin_merchants_path, class: 'btn mb-sm btn-danger' %>
