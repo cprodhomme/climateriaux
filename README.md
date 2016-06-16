@@ -27,8 +27,10 @@ des économies énergétiques et financières.
 - SASS (scss)
 - Jquery (Owl Carousel)
 - Bootstrap
+- Bower
 - Heroku
 - circleCI
+- Amazon S3
 
 ##Normes
 [Voir wiki pour plus de détails](https://github.com/cle61/climateriaux/wiki/Normes)
