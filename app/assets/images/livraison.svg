@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="37px" viewBox="0 0 52 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>livraison</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="17.8435374" y="7.95454545" width="28.2176871" height="23.357438" rx="1.6"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="28.2176871" height="23.357438" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M44.8163265,14.0692499 C44.8163265,13.1816572 45.5262717,12.4621212 46.4195442,12.4621212 L56.0770544,12.4621212 C56.9624871,12.4621212 57.9032436,13.1371896 58.1844673,13.9886222 C58.1844673,13.9886222 61,22.5129267 61,22.5129267 C61,22.5129267 61,29.7185407 61,29.7185407 C61,30.5985748 60.2837259,31.3119835 59.4039562,31.3119835 L44.8163265,31.3119835 L44.8163265,14.0692499 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.1836735" height="18.8498623" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Produit" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-131.000000, -876.000000)" id="éléments-rassurance">
+            <g transform="translate(80.000000, 863.000000)">
+                <g id="livraison" transform="translate(42.000000, 14.000000)">
+                    <use id="Rectangle-199" stroke="#68C258" mask="url(#mask-2)" stroke-width="1.6" fill="#E9F6E6" xlink:href="#path-1"></use>
+                    <ellipse id="Oval-96" stroke="#68C258" stroke-width="0.8" cx="50.9671053" cy="1.19318182" rx="1.20394737" ry="1.19318182"></ellipse>
+                    <path d="M56.9868421,7.15909091 C57.4301233,7.15909091 57.7894737,6.80295378 57.7894737,6.36363636 C57.7894737,5.92431895 57.4301233,5.56818182 56.9868421,5.56818182 C56.5435609,5.56818182 56.1842105,5.92431895 56.1842105,6.36363636 C56.1842105,6.80295378 56.5435609,7.15909091 56.9868421,7.15909091 Z" id="Oval-96-Copy-2" fill="#68C258"></path>
+                    <ellipse id="Oval-96-Copy" stroke="#68C258" stroke-width="0.8" cx="10.8355263" cy="9.94318182" rx="1.20394737" ry="1.19318182"></ellipse>
+                    <use id="Rectangle-199-Copy" stroke="#68C258" mask="url(#mask-4)" stroke-width="1.6" fill="#FFFFFF" xlink:href="#path-3"></use>
+                    <path d="M58.2966425,16.4690775 L51.9365095,16.4690775 C50.7015316,16.4690775 49.7003843,17.4575735 49.7003843,18.6960979 L49.7003843,18.6960979 C49.7003843,19.9260472 50.7030819,20.9231182 51.9359845,20.9231182 L59.7737224,20.9231182" id="Path-451" stroke="#68C258" stroke-width="0.8" fill="#E9F6E6"></path>
+                    <path d="M60.5522096,24.8211384 C60.5522096,24.8211384 59.9168978,24.8211384 59.1414446,24.8211384 L58.1156239,24.8211384 C57.3364799,24.8211384 56.7048589,25.4441538 56.7048589,26.2247536 L56.7048589,26.2247536 C56.7048589,26.9999489 57.3379351,27.6283689 58.09922,27.6283689 L60.7565466,27.6283689" id="Path-452" stroke="#68C258" stroke-width="0.8"></path>
+                    <ellipse id="Oval-242" stroke="#68C258" stroke-width="0.8" stroke-linecap="round" fill="#FFFFFF" cx="51.4557823" cy="30.9022039" rx="4.14965986" ry="4.09779614"></ellipse>
+                    <ellipse id="Oval-242-Copy" stroke="#68C258" stroke-width="0.8" stroke-linecap="round" fill="#FFFFFF" cx="26.1428571" cy="30.9022039" rx="4.14965986" ry="4.09779614"></ellipse>
+                    <path id="Path-453" stroke="#68C258" stroke-width="0.8" stroke-linecap="round"></path>
+                    <path id="Path-453-Copy" stroke="#68C258" stroke-width="0.8" stroke-linecap="round"></path>
+                    <path id="Path-453-Copy-2" stroke="#68C258" stroke-width="0.8" stroke-linecap="round"></path>
+                    <path id="Path-481" stroke="#68C258" stroke-width="0.8" stroke-linecap="round"></path>
+                    <path id="Path-481-Copy" stroke="#68C258" stroke-width="0.8" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

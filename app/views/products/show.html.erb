@@ -18,53 +18,87 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-7 col-md-offset-1 product-block">
-      <%= render partial: "products/bloc_product_photo" %>
-    </div>
-    <div class="col-md-8 col-md-offset-1">
-      <div class="bloc-description">
-        <h4 class="product-marque text-uppercase"><%= @product.marque %>isocor</h4>
-        <h3 class="product-title"><%= @product.name %></h3>
-        <p class="product-description">
-          <%= @product.description %>
-          Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L’énergie, nécessaire à l’expansion du liège… 
-          <a href="#">voir plus</a>
-        </p>
+    <div>
+      <div class="col-md-7 col-md-offset-1 product-block">
+        <%= render partial: "products/bloc_product_photo" %>
       </div>
-      <div class="product-review">
-        <h4>avis client</h4>
-        <div class="review">
-          <div class="product-stars-container pull-left">
-            <div class="contentRating" style="width:90%">
-              <div class="ratingvalue"></div>
+      <div class="col-md-8 col-md-offset-1">
+        <div class="bloc-description">
+          <h4 class="product-marque text-uppercase"><%= @product.marque %>isocor</h4>
+          <h3 class="product-title"><%= @product.name %></h3>
+          <p class="product-description">
+            <%= @product.description %>
+            Liège naturel expansé pur conditionné en panneau rigide. Isolant thermique et phonique, le liège est obtenu à partir du chêne liège, réduit en granulés puis expansé à la vapeur. L’énergie, nécessaire à l’expansion du liège… 
+            <a href="#">voir plus</a>
+          </p>
+        </div>
+        <div class="product-review">
+          <h4>avis client</h4>
+          <div class="review">
+            <div class="product-stars-container pull-left">
+              <div class="contentRating" style="width:90%">
+                <div class="ratingvalue"></div>
+              </div>
+            </div>
+            <h4>9,2/10</h4>
+          </div>
+        </div>
+        <div class="row product-gain">
+          <div class="col-md-12">
+            <h5>Isolation phonique</h5>
+            <p>15 à 20 % de bruit en moins</p>
+          </div>
+          <div class="col-md-12">
+            <h5>Isolation thermique</h5>
+            <p>17 à 23 % de chaleur gagnée</p>
+          </div>
+        </div>
+        <div class="product-amount">
+          <h5>Calculez la quantité juste à acheter</h5>
+          <div class="row">
+            <div class="col-md-12 product-question">
+              <input type="text" placeholder="surface en m2">
+            </div>
+            <div class="col-md-12 product-question">
+              <input type="text" placeholder="Quantité estimé">
             </div>
           </div>
-          <h4>9,2/10</h4>
         </div>
-      </div>
-      <div class="row product-gain">
-        <div class="col-md-12">
-          <h5>Isolation phonique</h5>
-          <p>15 à 20 % de bruit en moins</p>
-        </div>
-        <div class="col-md-12">
-          <h5>Isolation thermique</h5>
-          <p>17 à 23 % de chaleur gagnée</p>
-        </div>
-      </div>
-      <div class="product-amount">
-        <h5>Calculez la quantité juste à acheter</h5>
         <div class="row">
-          <div class="col-md-12 product-question">
-            <input type="text" placeholder="surface en m2">
+          <div class="col-md-12">
+            <a href="#">Détails techniques</a>
           </div>
-          <div class="col-md-12 product-question">
-            <input type="text" placeholder="Quantité estimé">
+          <div class="col-md-12">
+            <a href="#">Conseils d'utilisation</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-16 col-md-offset-1 product-block reassurance-bar">
+        <div class="row">
+          <div class="col-md-8">
+            <%= image_tag 'livraison.svg' %>
+            <span class="pull-left">livraison rapide</span>
+          </div>
+          <div class="col-md-8">
+            <figure>
+              <%= image_tag 'echange.svg' %>
+              <figcaption>
+                <span class="pull-left">Échange sous 15 jours</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-md-8">
+            <figure>
+              <%= image_tag 'echange.svg' %>
+              <figcaption>
+                <span class="pull-left">paiement sécurisé</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-5 col-md-offset-1">
+    <div class="col-md-5 col-md-offset-1 price-bar">
       <%= render partial: "products/price_bar" %>
     </div>
   </div>
