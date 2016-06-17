@@ -6,8 +6,12 @@ class Product < ActiveRecord::Base
   
   default_scope { where(active: true) }
 
-  accepts_nested_attributes_for :product_images, :allow_destroy => true
-  accepts_nested_attributes_for :technical_details, :allow_destroy => true
+  accepts_nested_attributes_for :product_images, 
+                                reject_if: :all_blank,
+                                allow_destroy: true
+  accepts_nested_attributes_for :technical_details, 
+                                reject_if: :all_blank,
+                                allow_destroy: true
 
   validates :name, :slug, presence: true
 end

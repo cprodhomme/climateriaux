@@ -114,52 +114,12 @@
             <strong>Details</strong>
           </div>
         </div>
-        <% @product.product_images.each do |product_image| %>
-          <%= f.fields_for :product_images, product_image do |pi| %>
-            <div class="row mb-lg pb-lg bb">
-              <div class="col-xs-6 col-sm-3">
-                <a href="#" title="Product 1">
-                  <img src="<%= image_path('angle/bg7.jpg') %>" alt="Product 1" class="img-responsive">
-                  <%= image_tag pi.image.url(:medium), class: 'img-responsive' %>
-                </a>
-              </div>
-              <div class="col-xs-6 col-sm-9">
-                <fieldset>
-                  <div class="form-group">
-                    <input type="text" placeholder="Brief description.." class="form-control">
-                    <%= pi.label :image %>
-                    <%= pi.file_field :image %>
-                  </div>
-                </fieldset>
-                <p>
-                  <strong>Picture type</strong>
-                </p>
-                <div class="radio c-radio c-radio-nofont">
-                  <label>
-                    <input type="radio" name="prod1-pic" value="option1" checked="">
-                    <span></span>Primary
-                  </label>
-                </div>
-                <div class="radio c-radio c-radio-nofont">
-                  <label>
-                    <input type="radio" name="prod1-pic" value="option2">
-                    <span></span>Thumbnail
-                  </label>
-                </div>
-                <div class="radio c-radio c-radio-nofont">
-                  <label>
-                    <input type="radio" name="prod1-pic" value="option3">
-                    <span></span>Gallery
-                  </label>
-                </div>
-                <div class="text-right">
-                  <button type="button" class="btn btn-sm btn-danger">
-                  <em class="fa fa-times-circle fa-fw"></em>Remove</button>
-                </div>
-              </div>
-            </div>
+        <div>
+          <%= f.fields_for :product_images do |product_image| %>
+            <%= render 'product_image_fields', f: product_image %>
+            <%= link_to_add_association 'Ajouter une image', f, :product_images, { class: 'btn btn-sm btn-primary' } %>
           <% end %>
-        <% end %>
+        </div>
       </div>
       <fieldset>
         <div class="form-group">

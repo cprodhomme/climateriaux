@@ -9,6 +9,11 @@ class Admin::ProductsController < Admin::DashboardController
     end
 	end
 
+  def new
+    @product = Product.new
+    @product.product_images.build
+  end
+
 	def create
     @product = Product.new(product_params)
     if @product.save
@@ -22,14 +27,23 @@ class Admin::ProductsController < Admin::DashboardController
 	def edit
     if current_user.role == 'Admin'
 		  @product = Product.where(slug: params[:slug]).first
-      puts @product
     else
       @product = Product.where(slug: params[:slug], user_id: current_user).first
     end
 	end
 
 	def update
-    
+    if current_user.role == 'Admin'
+      @product = Product.where(slug: params[:slug]).first
+    else
+      @product = Product.where(slug: params[:slug], user: current_user).first
+    end
+
+    if @product.update_attributes(product_params)
+      redirect_to edit_admin_product_path(slug: @product.slug), notice: 'Votre produit a bien été modifié'
+    else
+      render 'edit'
+    end
 	end
 
 	def destroy
@@ -46,7 +60,7 @@ class Admin::ProductsController < Admin::DashboardController
   def product_params
   	params.require(:product).permit(:name, :description, :slug, :price, :marque, 
                                     :quantity, :category, :active,
-                                    :product_images_attributes => [:id, :image])
+                                    :product_images_attributes => [:id, :image, :_destroy])
   end
 
 end

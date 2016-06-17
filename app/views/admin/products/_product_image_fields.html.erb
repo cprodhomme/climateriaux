@@ -1,0 +1,15 @@
+<div class="row mb-lg pb-lg bb wrapper-product-image">
+  <div class="col-xs-6 col-sm-3">
+    <%= image_tag f.object.image.url(:medium), class: 'img-responsive' %>
+  </div>
+  <div class="col-xs-6 col-sm-9">
+    <fieldset>
+      <div class="form-group">
+        <%= f.file_field :image %>
+      </div>
+    </fieldset>
+    <div class="text-right">
+      <%= link_to_remove_association "Supprimer l'image", f, { wrapper_class: 'wrapper-product-image', class: 'btn btn-sm btn-danger' } %>
+    </div>
+  </div>
+</div>

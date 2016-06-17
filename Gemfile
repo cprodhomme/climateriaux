@@ -23,7 +23,7 @@ gem 'fog'
 gem 'binding_of_caller'
 
 gem 'kaminari'
-
+gem "cocoon"
 gem 'cancancan'
 
 gem 'devise-i18n'

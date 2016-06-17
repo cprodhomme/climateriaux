@@ -36,5 +36,13 @@ describe 'admin/product', type: :feature do
       click_button "Enregistrer"
       expect(page).to have_content "Parpaing"
     end
+
+    scenario "je peux editer un produit" do
+      product = create :product, user_id: user
+      visit edit_admin_product_path(slug: product.slug)
+      fill_in :product_name, with: "Mon nouveau titre"
+      click_button "Enregistrer"
+      expect(page).to have_content "Mon nouveau titre"
+    end
   end
 end
