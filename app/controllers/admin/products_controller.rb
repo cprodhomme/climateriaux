@@ -44,7 +44,9 @@ class Admin::ProductsController < Admin::DashboardController
 	private
 
   def product_params
-  	params.require(:product).permit(:name, :description, :slug, :price, :marque, :quantity, :category, :active)
+  	params.require(:product).permit(:name, :description, :slug, :price, :marque, 
+                                    :quantity, :category, :active,
+                                    :product_images_attributes => [:id, :image])
   end
 
 end
