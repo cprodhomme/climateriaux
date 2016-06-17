@@ -23,5 +23,18 @@ describe 'admin/product', type: :feature do
       page.find("#delete-product-#{product_1.id}").click
       expect(page).to_not have_content "produit 1"
     end
+
+    scenario "je peux ajouter un produit" do
+      visit new_admin_product_path
+      fill_in :product_name, with: "Parpaing"
+      fill_in :product_slug, with: "parpaing"
+      fill_in :product_description, with: "Un stock de parpaing d'un metre cube"
+      fill_in :product_marque, with: "parpa"
+      fill_in :product_price, with: 75.50
+      fill_in :product_quantity, with: 10
+      select "oui", :from => "product[active]"
+      click_button "Enregistrer"
+      expect(page).to have_content "Parpaing"
+    end
   end
 end

@@ -1,6 +1,6 @@
 <h3>Création d'un nouveau produit</h3>
 
-<%= form_for @product, url: {action: "create"} do |f| %>
+<%= form_for @product, url: {action: "create"}, html: {class: 'panel'} do |f| %>
   <% if @product.errors.any? %>
     <ul>
       <% @product.errors.full_messages.each do |msg| %>
@@ -72,12 +72,9 @@
         </fieldset>
         <fieldset>
           <div class="form-group">
-            <label class="col-md-2 control-label">Activé:</label>
+            <%= f.label :active, class: 'col-sm-2 control-label' %>
             <div class="col-md-10">
-              <select class="form-control">
-                <option value="1">oui</option>
-                <option value="0">non</option>
-              </select>
+              <%= f.select :active, [['oui', true], ['non', false]], {}, { :class => "form-control" } %>
             </div>
           </div>
         </fieldset>
