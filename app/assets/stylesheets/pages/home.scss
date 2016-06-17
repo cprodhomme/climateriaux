@@ -120,6 +120,10 @@
 
   svg{
     margin-top:-150px;
+
+    a:hover{
+      opacity: 0.8;
+    }
   }
 
   ul {
@@ -196,7 +200,7 @@
         margin-left: 0;
         padding-left: 0;
         list-style: none;
-        text-align: right; 
+        text-align: right;
         bottom:150px;
     }
   }
@@ -257,7 +261,7 @@
 
   .rassurance{
     padding:30px 20px;
-    
+
   }
 
   h3{
