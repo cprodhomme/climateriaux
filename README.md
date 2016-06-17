@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/cle61/climateriaux/tree/develop.svg?style=svg)](https://circleci.com/gh/cle61/climateriaux/tree/develop)
+[![CircleCI](https://circleci.com/gh/cle61/climateriaux/tree/develop.svg?style=svg&circle-token=7e3381c9d1b8cf4833c29001db6ad10503008c8a)](https://circleci.com/gh/cle61/climateriaux/tree/develop)
 
 # Climatériaux
 
