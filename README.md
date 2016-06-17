@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/cle61/climateriaux/tree/develop.svg?style=svg)](https://circleci.com/gh/cle61/climateriaux/tree/develop)
+
 # Climatériaux
 
 Climatériaux est une marketplace spécialisée en matériaux à but écologique, 
