@@ -4,20 +4,20 @@
   <span class="text-choose-product">Le produit</span>
   <div class="select-product">
     <div class="shipping-cost">
-      <span>livraison</span>
-      <span class="pull-right text-right">12,90 € <br>(3 à 4 jours ouvrés)</span>
+      <span>Livraison</span>
+      <span class="pull-right text-right">3 à 4 jours ouvrés</span>
     </div>
     <div class="">
-      <span>Stock</span>
-      <span class="pull-right">disponible</span>
+      <span>Disponibilité</span>
+      <span class="pull-right">En Stock</span>
     </div>
     <div class="product-question">
-      <span>quantité</span>
+      <span>Quantité</span>
       <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
       <%= f.hidden_field :product_id, value: @product.id %>
     </div>
     <div class="price">
-      <span>prix</span>
+      <span>Prix <small>TTC</small></span>
       <span class="pull-right"><%= number_to_currency @product.price %> /m2</span>
     </div>
     <%= f.submit "Ajouter au panier", class: "add-to-cart" %>
