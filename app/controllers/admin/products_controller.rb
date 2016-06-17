@@ -10,6 +10,13 @@ class Admin::ProductsController < Admin::DashboardController
 	end
 
 	def create
+    @product = Product.new(product_params)
+    if @product.save
+      flash[:success] = "produit ajouté avec succès !"
+      redirect_to admin_products_path
+    else
+      render 'new'
+    end
 	end
 
 	def edit
@@ -37,7 +44,7 @@ class Admin::ProductsController < Admin::DashboardController
 	private
 
   def product_params
-  	params.require(:product).permit(:name, :description, :marque, :category, :active)
+  	params.require(:product).permit(:name, :description, :slug, :price, :marque, :quantity, :category, :active)
   end
 
 end

@@ -9,11 +9,5 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :product_images, :allow_destroy => true
   accepts_nested_attributes_for :technical_details, :allow_destroy => true
 
-  validates :name, presence: true
-
-  private
-
-  def define_slug
-
-  end
+  validates :name, :slug, presence: true
 end
