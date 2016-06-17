@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Tout pour votre projet, au même endroit</h1>
     <%= form_for search_path, url: search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
-      <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Recherche' %>
+      <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Rechercher sur Climateriaux' %>
       <%= submit_tag "", name: nil, :class => 'btn btn-default search-button' %>
     <% end %>
   </div>
@@ -123,7 +123,7 @@
   </div>
   <div class="row">
     <div class="col-md-24">
-      <a href="http://blog.climateriaux.fr" class="btn-default">Tous les articles</a>
+      <a href="http://blog.climateriaux.fr" class="btn-default">Le Blog Climateriaux</a>
     </div>
   </div>
 </section>
