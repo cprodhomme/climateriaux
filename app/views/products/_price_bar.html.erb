@@ -1,7 +1,9 @@
 <%= form_for @order_item, remote: true do |f| %>
 <div class="choose-product-block">
-  <span class="icon-choose-product"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-  <span class="text-choose-product">Le produit</span>
+  <div class="bloc-title">
+    <span class="icon-choose-product"></span>
+    <h3>Le produit</h3>
+  </div>
   <div class="select-product">
     <div class="shipping-cost">
       <span>Livraison</span>
@@ -13,7 +15,7 @@
     </div>
     <div class="product-question">
       <span>Quantité</span>
-      <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+      <%= f.number_field :quantity, value: 1, class: "form-control input-default", min: 1 %>
       <%= f.hidden_field :product_id, value: @product.id %>
     </div>
     <div class="price">
@@ -24,8 +26,10 @@
   </div>
 </div>
 <div class="customer-product-block">
-  <span class="icon-customer-product"></span>
-  <span class="text-customer-product">Votre vendeur</span>
+  <div class="bloc-title">
+    <span class="icon-customer-product"></span>
+    <h3>Votre vendeur</h3>
+  </div>
   <div class="select-customer">
     <img class="img-customer">
     <h4>Smartagro</h4>

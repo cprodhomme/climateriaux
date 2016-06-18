@@ -142,6 +142,7 @@ body{
     width: 100%;
     border: 1px solid rgba(27,24,51,0.15);
     @include border-radius($radius);
+    box-shadow:none;
 }
 
 
