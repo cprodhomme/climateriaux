@@ -138,7 +138,10 @@ body{
         INPUT
 **********************/
 .input-default{
-  
+    padding:15px;
+    width: 100%;
+    border: 1px solid rgba(27,24,51,0.15);
+    @include border-radius($radius);
 }
 
 

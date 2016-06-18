@@ -1,0 +1,35 @@
+<div class="bloc-product-review">
+  <div class="row">
+    <div class="col-md-7 col-md-offset-1">
+      <h3>Avis des clients</h3>
+      <div class="review-count">
+        <span>9,2 / 10</span>
+        <span>(14 avis)</span>
+      </div>
+      <div class="">
+        <form action="upload.php" method="POST">
+          <div class="product-notation">
+            <p>Je note</p>
+            <div class="product-stars-container pull-left">
+              <div class="contentRating" style="width:90%">
+                <div class="ratingvalue"></div>
+              </div>
+            </div>
+          </div>
+          <div class="product-comments">
+            <p>J’écris un commentaire</p>
+            <input type="text" name="title" class="input-default" placeholder="Donnez un titre à votre commentaire*"> 
+            <textarea id="add_comment" class="input-default" placeholder="Écrivez votre commentaire*" aria-required="true" aria-label="Ajouter un commentaire "></textarea>
+          </div>
+          <div class="drag-and-drop">
+            <input type="file" multiple>
+            <p>Drag your files here or click in this area.</p>
+          </div>
+          <button class="btn-default" type="submit">Upload</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-14 col-md-offset-1">
+    </div>
+  </div>
+</div>
