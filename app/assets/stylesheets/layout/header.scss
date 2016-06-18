@@ -9,10 +9,17 @@ header {
     box-shadow:$shadow;
   }
 
-  #logo {
-      height: 100%;
-      padding:0 20px;
+  .navbar-brand{
+
+    padding:18px 5px;
+    height:100%;
+
+    #logo {
+        height: 100%;
+        padding:0 60px 0 20px;
+
     }
+  }
 
   button{
     margin:0 !important;
@@ -26,6 +33,7 @@ header {
   .navbar-collapse{
     padding:0;
     max-height: none;
+    padding:8px 0;
   }
 
   .nav {
@@ -44,11 +52,6 @@ header {
       }
     }
 
-    .block-user{
-      @media(min-width:769px){
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-      }
-    }
     
     li{
       @media(max-width:769px){
@@ -71,12 +74,10 @@ header {
     height:50px;
     float:left;
     overflow:hidden;
-    color: #fff;
-    -webkit-transition: width 0.3s;
-    -moz-transition: width 0.3s;
-    -ms-transition: width 0.3s;
-    -o-transition: width 0.3s;
-    transition: width 0.3s;
+    color:$text-color;
+    background:#fff;
+    @include transition(0.3s);
+    @include border-radius(25px);
     border-left:1px solid rgba(255,255,255,0.1);
 
     @media(min-width:769px){
@@ -99,22 +100,6 @@ header {
         padding:0px 20px 0px 55px;
         font-size:16px;
         background-color:transparent;
-    }
-
-    .searchbox-input::-webkit-input-placeholder {
-        color: #fff;
-    }
-
-    .searchbox-input:-moz-placeholder {
-        color: #fff;
-    }
-    
-    .searchbox-input::-moz-placeholder {
-        color: #fff;
-    }
-    
-    .searchbox-input:-ms-input-placeholder {
-        color: #fff;
     }
 
     .searchbox-icon, .searchbox-submit{

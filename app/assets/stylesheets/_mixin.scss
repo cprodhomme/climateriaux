@@ -12,6 +12,13 @@
           box-shadow: $shadow;
 }
 
+@mixin transition($transition) {
+  -webkit-box-transition: $transition;
+     -moz-box-transition: $transition;
+      -ms-box-transition: $transition;
+          box-transition: $transition;
+}
+
 @mixin white-block() {
   background-color: #fff;
   @include box-shadow($shadow);

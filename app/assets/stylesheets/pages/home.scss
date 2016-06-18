@@ -16,9 +16,10 @@
 }
 
 .jumbotron{
-  padding-top:120px;
+  padding-top:155px;
   margin: 0;
-  height: 75vh;
+  height: 80vh;
+  min-height: 600px;
   background-image: image_url('slider.jpg');
   background-size: cover;
   filter: blur(2px);
@@ -27,8 +28,9 @@
     text-align: center;
 
     h1{
-      margin: 0;
+      margin: auto;
       color:#fff;
+      width:685px;
     }
 
     .search-bar{
@@ -169,16 +171,29 @@
   padding: 70px 0;
   background: $grey-background;
 
+  p{
+    max-width:1150px;
+    margin: auto;
+  }
+
   #owl-tutoriels {
     padding: 40px 0 50px 0;
   }
 }
 
 .howItWork-home{
-  height: 500px;
+  height: 545px;
   background: $green-gradient;
   color:#fff;
   padding:40px 100px 0 100px;
+
+  p, a{
+    color:#fff;
+  }
+
+  p{
+    margin-top:20px;
+  }
 
   .carousel{
     .item{
@@ -192,22 +207,20 @@
       }
     }
     .carousel-indicators {
-        position: absolute;
-        bottom: 10px;
-        right: 0;
-        z-index: 15;
-        width: auto;
-        margin-left: 0;
-        padding-left: 0;
-        list-style: none;
-        text-align: right;
-        bottom:150px;
+      position: absolute;
+      left: 78%;
+      width: 50px;
+      margin-left: 0;
+      padding-left: 0;
+      list-style: none;
+      bottom: 100px;
+      display: inline-block;
     }
   }
 }
 
 .articles-home {
-  padding: 70px 0;
+  padding: 100px 0 70px 0;
   background-color: $grey-background;
 
   #owl-articles {
@@ -262,6 +275,10 @@
   .rassurance{
     padding:30px 20px;
 
+  }
+
+  img{
+    height:70px;
   }
 
   h3{
