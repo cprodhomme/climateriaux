@@ -11,7 +11,11 @@
     </div>
     <div class="">
       <span>Disponibilité</span>
-      <span class="pull-right">En Stock</span>
+      <% if @product.quantity > 0 %>
+        <span class="pull-right">En Stock</span>
+      <% else %>
+        <span class="pull-right">Rupture de stock</span>
+      <% end %>
     </div>
     <div class="product-question">
       <span>Quantité</span>
@@ -32,8 +36,8 @@
   </div>
   <div class="select-customer">
     <div class="bloc-title">
-      <%= image_tag 'logo_merchant.png' %>
-      <h4>Smartagro</h4>
+      <%= image_tag @product.merchant.logo.url(:thumb) %>
+      <h4><%= @product.merchant.name %></h4>
     </div>
     <span>96 % de satisfaits (230 sur 240 clients)</span>
     <p>« Livraison rapide et produit conforme. Je recommande ! » John Doe, 03/02/16</p>
