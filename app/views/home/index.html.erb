@@ -3,7 +3,9 @@
     <h1>Tout pour votre projet, au même endroit</h1>
     <%= form_for search_path, url: search_path, :html => {:class => 'search-bar'}, method: :get do |f| %>
       <%= text_field_tag :search, params[:search], :class => 'search-field', placeholder: 'Rechercher sur Climateriaux' %>
-      <%= submit_tag "", name: nil, :class => 'btn btn-default search-button' %>
+      <%= button_tag(type: 'submit', class: "btn btn-default search-button") do %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+      <% end %>
     <% end %>
   </div>
 </section>
