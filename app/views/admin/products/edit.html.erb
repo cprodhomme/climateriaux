@@ -80,6 +80,14 @@
         </fieldset>
         <fieldset>
           <div class="form-group">
+            <%= f.label :merchant_id, class: 'col-sm-2 control-label' %>
+            <div class="col-md-10">
+              <%= f.select :merchant_id, @merchants.collect {|m| [ m.name, m.id ] }, {}, { :class => "form-control" } %>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="form-group">
             <%= f.label :active, class: 'col-sm-2 control-label' %>
             <div class="col-md-10">
               <%= f.select :active, [['oui', true], ['non', false]], {}, { :class => "form-control" } %>

@@ -13,9 +13,10 @@ class Admin::ProductsController < Admin::DashboardController
     @product = Product.new
     @product.product_images.build
     @categories = Category.all
+    @merchants = Merchant.all
   end
 
-	def create
+  def create
     @product = Product.new(product_params)
     if @product.save
       flash[:success] = "produit ajouté avec succès !"
@@ -23,14 +24,16 @@ class Admin::ProductsController < Admin::DashboardController
     else
       render 'new'
     end
-	end
+  end
 
-	def edit
+  def edit
     if current_user.role == 'Admin'
-		  @product = Product.where(slug: params[:slug]).first
+      @product = Product.where(slug: params[:slug]).first
     else
       @product = Product.where(slug: params[:slug], user_id: current_user).first
     end
+    @categories = Category.all
+    @merchants = Merchant.all
   end
 
 	def update

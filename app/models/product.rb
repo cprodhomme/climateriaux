@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :category
+  belongs_to :user
+  belongs_to :merchant
   has_many :order_items
   has_many :product_images
   has_many :technical_details
