@@ -1,21 +1,12 @@
-<div class="one-product-block">
-  <%= form_for @order_item, remote: true do |f| %>
-  <div class="row">
-    <div class="col-xs-14">
-      <%= link_to product_path(product.slug) do %>
+<%= link_to product_path(product.slug) do %>
+  <div class="one-product-block">
+    <div class="row">
+      <div class="col-xs-24 text-center">
         <h4><%= product.name %></h4>
-      <% end %>
-    </div>
-    <div class="col-xs-10">  
-      <h4 class="text-right">
-        Prix unitaire : <span style="color: green"><%= number_to_currency product.price %></span>
-      </h4>
-      <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
-      <%= f.hidden_field :product_id, value: product.id %>
+        <% if product.product_images.present? %>
+          <%= image_tag product.product_images.first.image.url(:medium) %>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <%= f.submit "Ajouter au panier", class: "add-to-cart" %>
-  </div>
-  <% end %>
-</div>
+<% end %>
