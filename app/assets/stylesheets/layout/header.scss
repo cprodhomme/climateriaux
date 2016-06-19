@@ -164,23 +164,6 @@ header {
 
       &:hover{
         background:#fff;
-      }
-
-
-      >ul{
-        display: none;
-        position: absolute;
-        top: 100px;
-        background: #F2F0F0;
-        padding: 20px;
-        width: 201px;
-        text-align: left;
-        list-style: none;
-        background: #fff;
-        line-height: 30px;
-      }
-
-      &:hover{
         cursor: pointer;
         >ul{
           @media screen and (min-width: 769px){
@@ -189,45 +172,24 @@ header {
         }
       }
     }
-  }
 
-  .secondary-category div{
-    border-bottom: 1px solid #aaa;
-    font-size: 18px;
-    line-height: 18px;
-    cursor: pointer;
-    position: relative;
-
-    &:hover, &:active {
-      background-color: $menu-background-hover;
-    }
-  }
-
-  .secondary-category {
-    display: none;
-
-    div {
+    .secondary-category {
+      display: none;
+      position: absolute;
+      top: 116px;
+      background: #F2F0F0;
       padding: 20px;
+      text-align: left;
+      list-style: none;
+      background: #fff;
+      line-height: 30px;
 
-      i {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translate(0px, -50%);
-      }
-
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50px;
-        transform: translate(0px, -50%);
-      }
-
-      span {
-
+      li a {
+        padding: 5px 10px;
       }
     }
   }
+
 
   .current-category span {
     padding-left: 70px;
