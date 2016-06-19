@@ -25,6 +25,8 @@ describe 'admin/product', type: :feature do
     end
 
     scenario "je peux ajouter un produit" do
+      create :merchant
+      create :category
       visit new_admin_product_path
       fill_in :product_name, with: "Parpaing"
       fill_in :product_slug, with: "parpaing"
@@ -33,6 +35,8 @@ describe 'admin/product', type: :feature do
       fill_in :product_price, with: 75.50
       fill_in :product_quantity, with: 10
       select "oui", :from => "product[active]"
+      select "Ma categorie", :from => "product[category_id]"
+      select "Smartagro", :from => "product[merchant_id]"
       click_button "Enregistrer"
       expect(page).to have_content "Parpaing"
     end

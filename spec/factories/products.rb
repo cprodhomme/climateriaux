@@ -5,6 +5,7 @@ FactoryGirl.define do
     slug "mon-produit"
     price "9.99"
     active true
-    category nil
+    category
+    merchant
   end
 end

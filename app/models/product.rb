@@ -15,5 +15,5 @@ class Product < ActiveRecord::Base
                                 reject_if: :all_blank,
                                 allow_destroy: true
 
-  validates :name, :slug, presence: true
+  validates :name, :slug, :merchant, :category, presence: true
 end
