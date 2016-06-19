@@ -72,6 +72,14 @@
         </fieldset>
         <fieldset>
           <div class="form-group">
+            <%= f.label :category_id, class: 'col-sm-2 control-label' %>
+            <div class="col-md-10">
+              <%= f.select :category_id, @categories.collect {|c| [ c.name, c.id ] }, {}, { :class => "form-control" } %>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="form-group">
             <%= f.label :active, class: 'col-sm-2 control-label' %>
             <div class="col-md-10">
               <%= f.select :active, [['oui', true], ['non', false]], {}, { :class => "form-control" } %>

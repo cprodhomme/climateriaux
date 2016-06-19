@@ -12,6 +12,7 @@ class Admin::ProductsController < Admin::DashboardController
   def new
     @product = Product.new
     @product.product_images.build
+    @categories = Category.all
   end
 
 	def create
@@ -30,7 +31,8 @@ class Admin::ProductsController < Admin::DashboardController
     else
       @product = Product.where(slug: params[:slug], user_id: current_user).first
     end
-	end
+    @categories = Category.all
+  end
 
 	def update
     if current_user.role == 'Admin'
@@ -59,7 +61,7 @@ class Admin::ProductsController < Admin::DashboardController
 
   def product_params
   	params.require(:product).permit(:name, :description, :slug, :price, :marque, 
-                                    :quantity, :category, :active,
+                                    :quantity, :category_id, :active,
                                     :product_images_attributes => [:id, :image, :_destroy])
   end
 
