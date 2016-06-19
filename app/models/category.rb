@@ -4,9 +4,9 @@ class Category < ActiveRecord::Base
 
   accepts_nested_attributes_for :subcategories
 
-  def self.all_product
-    products = Product.where(category_id: @category)
-    subcategories = Category.where(parent_id: @category)
+  def self.all_product category
+    products = Product.where(category_id: category)
+    subcategories = self.where(parent_id: category)
     subcategories.each do |subcategory|
       subproducts = Product.where(category_id: subcategory)
       if subproducts.present?
