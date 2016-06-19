@@ -13,7 +13,6 @@ class Admin::ProductsController < Admin::DashboardController
     @product = Product.new
     @product.product_images.build
     @categories = Category.all
-    @merchants = Merchant.all
   end
 
 	def create
@@ -32,7 +31,6 @@ class Admin::ProductsController < Admin::DashboardController
     else
       @product = Product.where(slug: params[:slug], user_id: current_user).first
     end
-    @merchants = Merchant.all
   end
 
 	def update
