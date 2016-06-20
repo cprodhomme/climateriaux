@@ -2,7 +2,16 @@
 #footer {
   background: $blue-gradient;
   color: #fff;
-  padding: 70px 0 0 0;
+  padding: 45px 0 0 0;
+
+  p, a{
+    color:#fff;
+    font-size: 14px;
+  }
+
+  h3{
+    margin-bottom: 30px;
+  }
 
   @media screen and (max-width: 769px){
       padding-top:30px
@@ -63,6 +72,7 @@
         background:#fff;
         margin-top:10px;
         color:$text-color;
+        font-size: 14px;
       }
     }
   }
@@ -82,11 +92,16 @@
       height:100%;
 
       .table-cell{
-
         display: table-cell;
         vertical-align: middle;
 
+        #logo{
+          margin-right: 40px;
+        }
+
         ul{
+
+        display: inline-block;
 
         @media screen and (max-width: 769px){
           display: block;
