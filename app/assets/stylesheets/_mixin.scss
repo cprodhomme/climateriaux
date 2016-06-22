@@ -13,10 +13,10 @@
 }
 
 @mixin transition($transition) {
-  -webkit-box-transition: $transition;
-     -moz-box-transition: $transition;
-      -ms-box-transition: $transition;
-          box-transition: $transition;
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
 }
 
 @mixin white-block() {

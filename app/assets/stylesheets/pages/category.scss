@@ -1,5 +1,30 @@
 .page-category {
   background: $grey-background-2;
+  padding:0;
+
+  .img-category{
+  	background-image: image_url('slider.jpg');
+  	background-size: cover;
+  	height: 20vh;
+  	min-height: 300px;
+  	text-align: center;
+  	display: table;
+  	width:100%;
+
+  	.display-tablCell{
+  		display:table-cell;
+  		vertical-align: middle;
+
+	  	h1{
+	  		color:#fff;
+	  		margin:0;
+	  	}
+	}
+  }
+
+  .category-sidebar{
+  	background:#fff;
+  }
 
   .breadcrumb {
     margin-top: 20px;

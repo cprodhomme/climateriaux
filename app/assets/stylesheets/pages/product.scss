@@ -268,8 +268,14 @@
 
     .comments-answer{
 
+      margin-top: 20px;
+
       span{
         padding-top:12px;
+
+        &:nth-child(2){
+          margin:0 10px;
+        }
       }
 
        .answer-yes, .answer-no{
@@ -280,6 +286,12 @@
         border: 1px solid $green;
         @include border-radius(25px);
         color:$green;
+        @include transition(0.3s);
+
+        &:hover{
+          background:$green;
+          color:#fff;
+        }
       }
     }
   }
@@ -293,6 +305,7 @@
   height: 25px;
   background-size: auto 100%;
   position: relative;
+  margin-bottom: 20px;
 
 
   .contentRating{
