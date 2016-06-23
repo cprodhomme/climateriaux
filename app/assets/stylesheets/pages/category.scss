@@ -19,7 +19,7 @@
 	  		color:#fff;
 	  		margin:0;
 	  	}
-	}
+	  }
   }
 
   .category-sidebar{
@@ -38,14 +38,29 @@
   .breadcrumb {
     margin-top: 20px;
   }
-}
 
-.one-product-block {
-  @include white-block();
-  padding: 20px 30px;
-  color:$text-color;
+  .one-product-block {
+    @include white-block();
+    padding: 20px 30px;
+    margin-bottom:10px;
+    color:$text-color;
 
-  .product-stars-container{
-    margin-top: 20px;
+    .product-stars-container{
+      margin-top: 20px;
+    }
   }
+
+  .bloc_tutorial{
+    background-image: image_url('img_tuto_category.png');
+    background-size:cover;
+    width: 100%;
+    height:550px;
+    padding:50px;
+    color:#fff;
+
+    h2{
+      margin-bottom:50px;
+    }
+  } 
 }
+

@@ -26,10 +26,12 @@
       <%= render partial: "categories/sidebar" %>
     </div>
     <div class="col-xs-24 col-md-17 col-md-offset-1">
-      <% @products.each do |product| %>
-        <div class="col-md-6 col-xs-24">
-          <%= render "product_row", product: product, order_item: @order_item %>
-        </div>
+      <% (0..6).each do |i| %>
+        <% @products.each do |product| %>
+          <div class="col-md-6 col-xs-24">
+            <%= render "product_row", product: product, order_item: @order_item %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
@@ -51,6 +53,27 @@
             </li>
           </ul>
         </nav>
+      </div>
+    </div>
+  </div>
+  <div class="bloc_tutorial">
+    <div class="row">
+      <h2 class="text-center">Tutoriels associés</h2>
+      <div class="col-md-6">
+        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <span>Rénover ses volets en bois</span>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <span>Rénover ses volets en bois</span>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <span>Rénover ses volets en bois</span>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <span>Rénover ses volets en bois</span>
       </div>
     </div>
   </div>
