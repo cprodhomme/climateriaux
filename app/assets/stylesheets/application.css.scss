@@ -145,6 +145,16 @@ body{
     @include border-radius($radius);
     box-shadow:none;
 }
+input[type="checkbox"] {
+  vertical-align: middle;
+  margin: 0;
+}
+
+label{
+  font-weight: 100;
+  margin:0 0 0 15px;
+  vertical-align: middle;
+}
 
 
 /*********************
@@ -155,9 +165,5 @@ body{
   border: none;
 }
 
-.box{
-  background-color:#fff;
-  @include border-radius($radius);
-  @include box-shadow($shadow);
-}
+  
 

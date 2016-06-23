@@ -1,11 +1,20 @@
 <%= link_to product_path(product.slug) do %>
   <div class="one-product-block">
     <div class="row">
-      <div class="col-xs-24 text-center">
-        <h4><%= product.name %></h4>
+      <div class="col-xs-24">
+        <h3><%= product.name %></h3>
         <% if product.product_images.present? %>
           <%= image_tag product.product_images.first.image.url(:medium) %>
         <% end %>
+        <div class="products-price">
+          <p>à partir de</p>
+          <span>6€80</span>
+        </div>
+        <div class="product-stars-container pull-left">
+          <div class="contentRating" style="width:90%">
+            <div class="ratingvalue"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

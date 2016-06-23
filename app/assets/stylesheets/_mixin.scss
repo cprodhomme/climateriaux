@@ -21,6 +21,7 @@
 
 @mixin white-block() {
   background-color: #fff;
+  padding:20px;
   @include box-shadow($shadow);
   @include border-radius($radius);
 }

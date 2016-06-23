@@ -24,6 +24,15 @@
 
   .category-sidebar{
   	background:#fff;
+    @include white-block();
+
+    h3{
+      margin-bottom: 20px;
+    }
+
+    .field{
+      margin-bottom: 10px;
+    }
   }
 
   .breadcrumb {
@@ -34,4 +43,9 @@
 .one-product-block {
   @include white-block();
   padding: 20px 30px;
+  color:$text-color;
+
+  .product-stars-container{
+    margin-top: 20px;
+  }
 }
