@@ -1,6 +1,31 @@
 .shopping-cart{
+  padding-top:60px;
   .well{
     @include white-block();
     background: #fff !important;
+    border:0;
+
+    img{
+      height:73px;
+    }
+
+    .cart-products{
+      border-top:1px solid #EFEFF1;
+      margin-top: 30px;
+
+      .display-table{
+        height:73px;
+        display: table;
+
+        .display-tableCell{
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+
+      input{
+        width:70px;
+      }
+    }
   }
 }
