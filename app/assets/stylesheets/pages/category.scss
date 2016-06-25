@@ -3,7 +3,7 @@
   padding:0;
 
   .img-category{
-  	background-image: image_url('slider.jpg');
+  	background:linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%), image_url('category/peinture.jpg');
   	background-size: cover;
   	height: 20vh;
   	min-height: 300px;
@@ -14,6 +14,23 @@
   	.display-tablCell{
   		display:table-cell;
   		vertical-align: middle;
+
+      .container{
+        margin-top: 40px;
+
+        span{
+          color:#fff;
+          padding:20px 30px;
+          border:1px solid #fff;
+          @include border-radius(3px);
+          @include transition(0.3s);
+
+          &:hover{
+            background:$green;
+             border:1px solid $green;
+          }
+        }
+      }
 
 	  	h1{
 	  		color:#fff;
