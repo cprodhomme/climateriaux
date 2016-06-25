@@ -1,61 +1,90 @@
-<div class="well">
-  <div class="row">
-    <div class="col-xs-3 display-table">
-      <span>Produit</span>
-    </div>
-    <div class="col-xs-8 display-table">
-      <span>Description</span>
-    </div>
-    <div class="col-xs-13 display-table">
+<div class="row">
+  <div class="col-md-16 col-md-offset-1">
+    <div class="well">
       <div class="row">
-        <div class="col-xs-8">
-          <span>Qté</span>
+        <div class="col-xs-3 display-table">
+          <span>Produit</span>
         </div>
-        <div class="col-xs-8">
-          <span>Montant</span>
+        <div class="col-xs-8 display-table">
+          <span>Description</span>
         </div>
-        <div class="col-xs-8">
-          <span>Supprimer</span>
+        <div class="col-xs-13 display-table">
+          <div class="row">
+            <div class="col-xs-8">
+              <span>Qté</span>
+            </div>
+            <div class="col-xs-8">
+              <span>Montant</span>
+            </div>
+            <div class="col-xs-8">
+              <span>Supprimer</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="row cart-products">
+        <div class="col-xs-3 display-table">
+          <div class="display-tableCell">
+            <% if product.product_images.present? %>
+              <%= image_tag product.product_images.first.image.url(:medium) %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-xs-8 display-table">
+          <div class="display-tableCell">
+            <%= link_to product_path(product.slug) do %>
+              <h3><%= product.name %></h3>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-xs-13 display-table">
+          <div class="display-tableCell">
+            <%= form_for order_item, remote: true do |f| %>
+              <div class="row">
+                <div class="col-xs-8">
+                  <%= f.number_field :quantity, value: order_item.quantity.to_i, class: "form-control input-default", min: 1 %>
+                  <%= f.hidden_field :product_id, value: product.id %>
+                </div>
+                <div class="col-xs-8">
+                  <span><%= number_to_currency order_item.total_price %></span>
+                </div>
+                <div class="col-xs-8">
+                  <div class="btn-group">
+                    <%= link_to "Supprimer", order_item, { data: { confirm: "Êtes-vous sur de vouloir supprimer le produit '#{order_item.product.name}' de votre panier ?" }, method: :delete, remote: true, class: "" } %>
+                  </div>
+                </div>
+              </div>
+              <!--<h4 class="text-right">Prix unitaire: <span style="color: green"><%= number_to_currency order_item.unit_price %></span></h4>-->
+            <% end %>
+          </div>
+        </div>
+        
       </div>
     </div>
   </div>
-  <div class="row cart-products">
-    <div class="col-xs-3 display-table">
-      <div class="display-tableCell">
-        <% if product.product_images.present? %>
-          <%= image_tag product.product_images.first.image.url(:medium) %>
-        <% end %>
+  <div class="col-md-5 col-md-offset-1">
+      <div class="sidebar-cart">
+        <h3>Récapitulatif</h3>
+        <div class="sidebar-item">
+          <span><%= product.name %></span>
+          <span class="pull-right"><%= number_to_currency order_item.total_price %></span>
+        </div>
+        <div class="sidebar-item">
+          <span>Nombre d’articles</span>
+          <span class="pull-right">2</span>
+        </div>
+        <div class="sidebar-item">
+          <span>Sous-total</span>
+          <span class="pull-right"><%= number_to_currency order_item.total_price %></span>
+        </div>
+        <div class="sidebar-item">
+          <span>Livraison</span>
+          <span class="pull-right"><%= number_to_currency order_item.total_price %></span>
+        </div>
+        <div class="sidebar-item total-item">
+          <span>Total</span>
+          <span class="pull-right"><%= number_to_currency order_item.total_price %></span>
+        </div>
       </div>
-    </div>
-    <div class="col-xs-8 display-table">
-      <div class="display-tableCell">
-        <%= link_to product_path(product.slug) do %>
-          <h3><%= product.name %></h3>
-        <% end %>
-      </div>
-    </div>
-    <div class="col-xs-13 display-table">
-      <div class="display-tableCell">
-        <%= form_for order_item, remote: true do |f| %>
-          <div class="row">
-            <div class="col-xs-8">
-              <%= f.number_field :quantity, value: order_item.quantity.to_i, class: "form-control input-default", min: 1 %>
-              <%= f.hidden_field :product_id, value: product.id %>
-            </div>
-            <div class="col-xs-8">
-              <h4 class="">Prix total : <span style="color: green"><%= number_to_currency order_item.total_price %></span></h4>
-            </div>
-            <div class="col-xs-8">
-              <div class="btn-group">
-                <%= link_to "Supprimer", order_item, { data: { confirm: "Êtes-vous sur de vouloir supprimer le produit '#{order_item.product.name}' de votre panier ?" }, method: :delete, remote: true, class: "" } %>
-              </div>
-            </div>
-          </div>
-          <!--<h4 class="text-right">Prix unitaire: <span style="color: green"><%= number_to_currency order_item.unit_price %></span></h4>-->
-        <% end %>
-      </div>
-    </div>
-    
   </div>
 </div>
