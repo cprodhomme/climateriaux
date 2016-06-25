@@ -49,7 +49,7 @@
         BODY
 **********************/
 body{
-  padding-top:80px;
+  padding-top:106px;
   font-size:16px;
   font-weight: 100;
   font-family: 'GT Walsheim', sans-serif;
@@ -145,6 +145,7 @@ body{
     @include border-radius($radius);
     box-shadow:none;
 }
+
 input[type="checkbox"] {
   vertical-align: middle;
   margin: 0;
@@ -155,6 +156,70 @@ label{
   margin:0 0 0 15px;
   vertical-align: middle;
 }
+
+input[type="range"] {
+      position: relative;
+    }
+
+/*********************
+    INPUT TYPE RANGE
+**********************/
+
+input[type="range"]:after,
+input[type="range"]:before {
+    position: absolute;
+    top: 1em;
+    color: #aaa;
+}
+input[type="range"]:before {
+    left:0em;
+    content: attr(min);
+}
+input[type="range"]:after {
+    right: 0em;
+    content: attr(max);
+}
+
+/**** Chrome ****/
+
+input[type=range]{
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #E8E8EB;
+    border: none;
+    border-radius: 3px;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border:1px solid #9694A0;
+    margin-top: -6px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #E8E8EB;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #000;
+}
+
+
+
+
 
 
 /*********************

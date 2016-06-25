@@ -1,33 +1,5 @@
 <div class="container-fluid page-category">
-  <div class="img-category">
-    <div class="display-tablCell">
-      <h1>Peintures & colles</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="#">
-              <span>Tous les produits</span>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#">
-              <span>peintures naturelles</span>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#">
-              <span>Finitions décoratives</span>
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#">
-              <span>peintures ludiques</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render partial: "categories/header_img" %>
   <div class="row">
     <div class="col-md-23 col-md-offset-1">
       <ol class="breadcrumb">
@@ -80,25 +52,26 @@
       </div>
     </div>
   </div>
-  <div class="bloc_tutorial">
-    <div class="row">
-      <h2 class="text-center">Tutoriels associés</h2>
-      <div class="col-md-6">
-        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-        <span>Rénover ses volets en bois</span>
-      </div>
-      <div class="col-md-6">
-        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-        <span>Rénover ses volets en bois</span>
-      </div>
-      <div class="col-md-6">
-        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-        <span>Rénover ses volets en bois</span>
-      </div>
-      <div class="col-md-6">
-        <iframe src="https://player.vimeo.com/video/132372651" width="640" height="260" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-        <span>Rénover ses volets en bois</span>
+  <%= render partial: "categories/bloc_tutoriels" %>
+  <section class="certification">
+    <div class="container">
+      <div class="row">
+        <div class="rassurance col-md-8 col-sm-24">
+          <%= image_tag("paypal.svg") %>
+          <h3>Paiement bancaire sécurisé</h3>
+          <p>Tous nos systèmes de paiement sont chiffrés et certifiés par des banques françaises</p>
+        </div>
+        <div class="rassurance col-md-8 col-sm-24">
+          <%= image_tag 'livraison.svg' %>
+          <h3>Livraison à l’adresse de votre choix</h3>
+          <p>Définissez une adresse de livraison et trouvez les marchands les plus proches pour vos produits</p>
+        </div>
+        <div class="rassurance col-md-8 col-sm-24">
+          <%= image_tag 'echange.svg' %>
+          <h3>Retour sous 10 jours</h3>
+          <p>Pas convaincu de votre commande ? Tous les produits peuvent être retournés pendant une durée de 15 jours</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
