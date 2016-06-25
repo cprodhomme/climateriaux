@@ -32,6 +32,7 @@
 @import "pages/search";
 @import "pages/login";
 @import "pages/tutorial";
+@import "pages/cart";
 
 
 
@@ -53,6 +54,7 @@ body{
   font-size:16px;
   font-weight: 100;
   font-family: 'GT Walsheim', sans-serif;
+  background:$grey-background;
 
   @media screen and (max-width: 769px){
     padding-top:50px;
@@ -230,5 +232,14 @@ input[type=range]:focus::-ms-fill-upper {
   border: none;
 }
 
+
+/*********************
+    FIL D'ARIANE
+**********************/
+
+.breadcrumb{
+  background:none;
+  padding:0;
+}
   
 

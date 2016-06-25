@@ -1,9 +1,12 @@
 <div class="well">
 
   <div class="row">
+    <% if product.product_images.present? %>
+      <%= image_tag product.product_images.first.image.url(:medium) %>
+    <% end %>
     <div class="col-xs-14">
       <%= link_to product_path(product.slug) do %>
-        <h4><%= product.name %></h4>
+        <h3><%= product.name %></h3>
       <% end %>
     </div>
     <div class="col-xs-10">

@@ -2,10 +2,10 @@
   <div class="one-product-block">
     <div class="row">
       <div class="col-xs-24">
-        <h3><%= product.name %></h3>
         <% if product.product_images.present? %>
           <%= image_tag product.product_images.first.image.url(:medium) %>
         <% end %>
+        <h3><%= product.name %></h3>
         <div class="products-price">
           <p>à partir de</p>
           <span>6€80</span>

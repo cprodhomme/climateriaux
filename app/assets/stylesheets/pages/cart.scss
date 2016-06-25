@@ -1,0 +1,6 @@
+.shopping-cart{
+  .well{
+    @include white-block();
+    background: #fff !important;
+  }
+}
