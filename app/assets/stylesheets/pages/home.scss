@@ -183,10 +183,18 @@
 }
 
 .howItWork-home{
-  height: 545px;
   background: $green-gradient;
   color:#fff;
   padding:40px 100px 0 100px;
+
+  h2{
+    margin-top:0;
+  }
+
+  .grey-bar-title{
+    background:#fff;
+    margin: 20px auto 30px auto;
+  }
 
   p, a{
     color:#fff;
@@ -208,13 +216,14 @@
       }
     }
     .carousel-indicators {
-      position: absolute;
-      left: 78%;
+      position: relative;
+      left: auto;
       width: 50px;
       margin-left: 0;
       padding-left: 0;
+      margin-bottom: 30px;
       list-style: none;
-      bottom: 100px;
+      bottom: auto;
       display: inline-block;
     }
   }
