@@ -1,11 +1,54 @@
-/* Weather Icons */
+@font-face {
+  font-family: 'GT Walsheim';
+  src: font-url('GTWalsheim/GTWalsheimProRegular.eot');
+  src: font-url('GTWalsheim/GTWalsheimProRegular.eot?#iefix') format('embedded-opentype'),
+    font-url('GTWalsheim/GTWalsheimProRegular.woff') format('woff'),
+    font-url('GTWalsheim/GTWalsheimProRegular.ttf') format('truetype'),
+    font-url('GTWalsheim/GTWalsheimProRegular.svg#GTWalsheimProRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
-    font-family: 'GT Walsheim';
-    src: font-url('GT-Walsheim-Bold.otf') format('otf'),
-         font-url('GT-Walsheim-Light.otf') format('otf'),
-         font-url('GT-Walsheim-medium.otf') format('otf'),
-         font-url('GT-Walsheim-Regular.ttf') format('ttf'),
-         font-url('GT-Walsheim-Thin.ttf') format('ttf');
-        
+  font-family: 'GT Walsheim';
+  src: font-url('GTWalsheim/GTWalsheimProThin.eot');
+  src: font-url('GTWalsheim/GTWalsheimProThin.eot?#iefix') format('embedded-opentype'),
+    font-url('GTWalsheim/GTWalsheimProThin.woff') format('woff'),
+    font-url('GTWalsheim/GTWalsheimProThin.ttf') format('truetype'),
+    font-url('GTWalsheim/GTWalsheimProThin.svg#GTWalsheimProThin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: font-url('GTWalsheim/GTWalsheimBold.eot');
+  src: font-url('GTWalsheim/GTWalsheimBold.eot?#iefix') format('embedded-opentype'),
+    font-url('GTWalsheim/GTWalsheimBold.woff') format('woff'),
+    font-url('GTWalsheim/GTWalsheimBold.ttf') format('truetype'),
+    font-url('GTWalsheim/GTWalsheimBold.svg#GTWalsheimBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: font-url('GTWalsheim/GTWalsheim-Medium.eot');
+  src: font-url('GTWalsheim/GTWalsheim-Medium.eot?#iefix') format('embedded-opentype'),
+    font-url('GTWalsheim/GTWalsheim-Medium.woff') format('woff'),
+    font-url('GTWalsheim/GTWalsheim-Medium.ttf') format('truetype'),
+    font-url('GTWalsheim/GTWalsheim-Medium.svg#GTWalsheim-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: font-url('GTWalsheim/GTWalsheimLight.eot');
+  src: font-url('GTWalsheim/GTWalsheimLight.eot?#iefix') format('embedded-opentype'),
+    font-url('GTWalsheim/GTWalsheimLight.woff') format('woff'),
+    font-url('GTWalsheim/GTWalsheimLight.ttf') format('truetype'),
+    font-url('GTWalsheim/GTWalsheimLight.svg#GTWalsheimLight') format('svg');
+  font-weight: 300;
+  font-style: normal;
 }
