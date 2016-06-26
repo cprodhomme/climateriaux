@@ -208,6 +208,7 @@
     .item{
       img{
         float: left;
+        @include box-shadow($shadow);
       }
 
       .item-description{
