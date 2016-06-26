@@ -241,5 +241,29 @@ input[type=range]:focus::-ms-fill-upper {
   background:none;
   padding:0;
 }
+
+/*********************
+    PAGINATION
+**********************/
+
+.pagination{
+  li{
+    a{
+      padding: 6px 14px;
+    }
+    &.active{
+      a{
+        background:$green;
+        border:1px solid $green;
+      }
+    }
+    &.disabled{
+      a{
+        border: 1px solid rgba(27,24,51,0.15);
+      }
+    }
+  }
+}
+
   
 

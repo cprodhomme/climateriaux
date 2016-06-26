@@ -1,10 +1,13 @@
 <div class="container-fluid page-tutorial">
+  <h1>Nos tutorials</h1>
   <div class="row">
-		<% @tutorials.each do |tutorial| %>
-	  	<div class="col-md-8 tutorial-item">
-				<%= render "shared/tutorial_block", tutorial: tutorial %>
-			</div>
-		<% end %>
+    <div class="col-md-22 col-md-offset-1">
+  		<% @tutorials.each do |tutorial| %>
+  	  	<div class="col-md-8 tutorial-item">
+  				<%= render "shared/tutorial_block", tutorial: tutorial %>
+  			</div>
+  		<% end %>
+    </div>
 	</div>
   <div class="row">
     <div class="col-xs-24 col-md-22 col-md-offset-1">

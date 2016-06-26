@@ -4,7 +4,12 @@
 
 .page-tutorial {
 	padding: 70px 0;
-  background: $grey-background;
+  	background: $grey-background;
+
+  	h1{
+  		text-align: center;
+  		margin:0 0 60px 0;
+  	}
 }
 
 .tutoriel {
@@ -38,6 +43,13 @@
 	  bottom: -27px;
 	  display: table;
 	  background: #fff;
+	  @include transition(0.3s);
+
+	  &:hover{
+	  	background:$green;
+	  	border-color:$green;
+	  	color:#fff;
+	  }
 
 	  span{
 	    display: table-cell;
