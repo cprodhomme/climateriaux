@@ -22,11 +22,18 @@
       <%= render partial: "categories/sidebar" %>
     </div>
     <div class="col-xs-24 col-md-16 col-md-offset-1">
-      <% (0..6).each do |i| %>
-        <% @products.each do |product| %>
-          <div class="col-md-8 col-xs-24">
-            <%= render "product_row", product: product, order_item: @order_item %>
+      <% nbr_product = 0 %>
+      <% @products.each do |product| %>
+        <% nbr_product += 1 %>
+        <% if nbr_product == 1 %>
+          <div class="row">
+        <% end %>
+        <div class="col-md-8 col-xs-24">
+          <%= render "product_row", product: product, order_item: @order_item %>
+        </div>
+        <% if nbr_product == 3 %>
           </div>
+          <% nbr_product = 0 %>
         <% end %>
       <% end %>
     </div>
