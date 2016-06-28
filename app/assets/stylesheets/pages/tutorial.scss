@@ -65,3 +65,277 @@
 	  }
 	}
 }
+
+
+.page-tutorialv2{
+/* -------------
+
+TITLE 
+
+------------- */
+
+.title-search{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.title-search h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.title-search .search-bar{
+    width: 400px;
+    border: solid 1px #dddde1;
+    padding: 15px 15px;
+    border-radius: 50px;
+    outline: none;
+    margin-right: 20px;
+}
+	
+	/********* NOUVELLE PAGE TUTO *********/
+
+	/* -------------
+
+	FILTERS
+
+	------------- */
+
+	.filters{
+	    background: #f8f8f9;
+	    width: 15vw;
+	    padding: 20px 20px;
+	    margin-left: 5vw;
+	    margin-right: 5vw;
+	    border-radius: 5px;
+	    float: left;
+	}
+	.filters h2{
+	    text-transform: uppercase;
+	    margin-bottom: 15px;
+	}
+	.filters label{
+	    display: block;
+	    margin-bottom: 10px;
+	}
+
+	/* -------------
+
+	RIGHT PART WRAPPER
+
+	------------- */
+
+	.right-part-wrapper{
+	    float: left;
+	    width: 65vw;
+	    height: 1430px;
+	}
+
+	/* -------------
+
+	DOSSIER MOIS
+
+	------------- */
+
+	.dossier-mois{
+	    background-color: blue;
+	}
+	.dossier-mois-left{
+	    padding-top: 86px;
+	    padding-bottom: 86px;
+	    float:left;
+	    width: 55%;
+	    text-align: center;
+	    background-image: url(img/img_theme_mois.png);
+	    background: blue;
+	}
+	.dossier-mois-left button{
+	    width: 150px;
+	    padding: 10px 10px;
+	    border-radius: 50px;
+	    outline: none;
+	    border: none;
+	    background-color: #68C258;
+	    color: #ffffff;
+	}
+	.dossier-mois-left h1{
+	    text-transform: uppercase;
+	    margin-bottom: 10px;
+	    color: #ffffff;
+	}
+	.dossier-mois-left h2{
+	    margin-bottom: 20px;
+	    color: #ffffff;
+	}
+	.dossier-mois-right{
+	    float: left;
+	    width: 45%;
+	    padding-top: 25px;
+	    padding-bottom: 20px;
+	    background-color: #f8f8f9;
+	    font-size: 14px;
+	    line-height: 1.3;
+	}
+	.dossier-mois-right img{
+	    margin-right: 10px;
+	    margin-left: 40px;
+	}
+	.dossier-mois-right p{
+	    display: inline-block;
+	    width: 200px;
+	    vertical-align: top;
+	    margin-top: 10px;
+	}
+
+	/* -------------
+
+	SECTION
+
+	------------- */
+
+	.section-title{
+	    border-left: solid 1px #dddde1;
+	    border-right: solid 1px #dddde1;
+	}
+	.section-title p{
+	    display: inline-block;
+	    margin-top: 15px;
+	    margin-bottom: 15px;
+	}
+	.section-title p:first-child{
+	    text-transform: uppercase;
+	    font-size: 10px;
+	    margin-left: 10px;
+	}
+	.section-title p:last-child{
+	    font-size: 12px;
+	    margin-right: 10px;
+	}
+
+	/* -------------
+
+	TOP DOSSIERS
+
+	------------- */
+
+	.top-dossiers div{
+	    float: left;
+	    width: 22vw;
+	    background: yellow;
+	    padding-top: 30px;
+	    padding-bottom: 20px;
+	}
+	.top-dossiers div:last-child{
+	    width: 21vw;
+	}
+	.top-dossiers p{
+	    margin-left: 20px;
+	}
+
+	/* -------------
+
+	TOP VIDÉOS
+
+	------------- */
+	.top-videos{
+	    clear: both;
+	}
+	.top-videos-title{
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	}
+	.top-videos-title h1, .top-videos-title p{
+	    display: inline-block;
+	}
+	.top-videos-title h1{
+	    text-transform: uppercase;
+	    font-size: 14px;
+	}
+	.top-videos-title p{
+	    right: 0;
+	    font-size: 12px;
+	}
+	.green-rectangle{
+	    width: 30px;
+	    height: 5px;
+	    background: #68C258;
+	}
+	.grey-line{
+	    border-bottom: solid 1px #dddde1;
+	    margin-bottom: -3px;
+	}
+	.top-videos-videos{
+	    float: left;
+	    width: 180px;
+	    margin-right: 25px;
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	}
+	.top-videos-videos .preview{
+	    margin-bottom: 10px;
+	    margin-right: 5px;
+	    width: 180px;
+	}
+	.top-videos-videos h1{
+	    font-size: 14px;
+	    margin-bottom: 10px;
+	    line-height: 1.4;
+	}
+	.top-videos-videos p{
+	    display: inline-block;
+	    vertical-align: top;
+	    font-size: 12px;
+	    color: rgba(28,24,51,0.45);
+	    margin-top: 6px;
+	    margin-bottom: 10px;
+	    line-height: 1.4;
+	}
+	.top-articles p{
+	    font-size: 14px;
+	}
+	.top-articles h1{
+	    margin-bottom: 0;
+	}
+	.top-articles-title{
+	    border-top: solid 1px #dddde1;
+	}
+
+	/* -------------
+
+	COMMUNAUTÉ
+
+	------------- */
+
+	.community{
+	    clear:both;
+	    width: 100vw;
+	    background: yellow;
+	    text-align: center;
+	    padding: 70px 0 70px 0;
+	}
+	.community p{
+	    font-size: 24px;
+	    margin-bottom: 10px;
+	}
+	.community h1{
+	    font-size: 16px;
+	    text-transform: uppercase;
+	    margin-top: 20px;
+	    margin-bottom: 30px;
+	}
+	.community button{
+	    width: 220px;
+	    height: 45px;
+	    outline: none;
+	    border: none;
+	    border-radius: 45px;
+	    background-color: #66C258;
+	    color: #ffffff;
+	    font-size: 12px;
+	}
+	button:hover{
+	    cursor: pointer;
+	}
+}
+
