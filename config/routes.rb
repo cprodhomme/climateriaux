@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resource  :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
   resources :tutorials, param: :slug, only: [:index, :show]
+  resources :help, only: [:index]
   get 'search', to: 'search#search'
 
   namespace :admin do
