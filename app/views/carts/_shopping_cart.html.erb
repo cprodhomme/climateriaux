@@ -12,7 +12,51 @@
     Il n'y a aucun produit dans votre panier. <%= link_to 'Retour sur la home', root_path %>
   </p>
 <% else %>
-  <% @order_items.each do |order_item| %>
-    <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
-  <% end %>
+  <div class="row">
+    <div class="col-md-16 col-md-offset-1">
+      <div class="well">
+        <div class="row">
+          <div class="col-xs-3 display-table">
+            <span>Produit</span>
+          </div>
+          <div class="col-xs-8 display-table">
+            <span>Description</span>
+          </div>
+          <div class="col-xs-13 display-table">
+            <div class="row">
+              <div class="col-xs-8">
+                <span>Qté</span>
+              </div>
+              <div class="col-xs-8">
+                <span>Montant</span>
+              </div>
+              <div class="col-xs-8">
+                <span>Supprimer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% @order_items.each do |order_item| %>
+          <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-5 col-md-offset-1">
+      <div class="sidebar-cart">
+        <h3>Récapitulatif</h3>
+        <div class="sidebar-item">
+          <span>Nombre d’articles</span>
+          <span class="pull-right">2</span>
+        </div>
+        <div class="sidebar-item">
+          <span>Livraison</span>
+          <span class="pull-right"></span>
+        </div>
+        <div class="sidebar-item total-item">
+          <span>Total</span>
+          <span class="pull-right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
