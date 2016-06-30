@@ -1,0 +1,62 @@
+.page_help{
+	text-align:center;
+	background:#fff;
+	#search{
+		width:700px;
+		text-align: center;
+		@include border-radius(25px);
+		margin-bottom: 40px;
+	}
+
+	.field{
+		display: inline-block;
+		margin-left:30px;
+	}
+
+	.list-section{
+
+		.img-top-help{
+			background:image_url('help_top.svg');
+			height: 185px;
+			background-size:100%;
+			background-repeat:no-repeat;
+		}
+
+		.img-bottom-help{
+			background:image_url('help_bottom.svg');
+			height: 108px;
+			background-size:100%;
+			background-repeat:no-repeat;
+		}
+
+		.link-list{
+			background:#f8f8f8;
+			padding:30px 0 60px;
+			text-align: left;
+
+			ul{
+				margin-top:30px;
+			}
+
+		}
+	}
+
+	.community{
+		h3, p{
+			color:#fff;
+		}
+
+		background:$green;
+		padding:40px;
+
+		.btn-default{
+			background:#fff;
+			color:$green;
+
+			&:hover, &:active{
+				background:#fff;
+				colot:$green;
+			}
+		}
+	}
+}
