@@ -46,15 +46,15 @@
         <h3>Récapitulatif</h3>
         <div class="sidebar-item">
           <span>Nombre d’articles</span>
-          <span class="pull-right">2</span>
+          <span class="pull-right"><%= @order_items.count %></span>
         </div>
         <div class="sidebar-item">
           <span>Livraison</span>
-          <span class="pull-right"></span>
+          <span class="pull-right">10,50 €</span>
         </div>
         <div class="sidebar-item total-item">
           <span>Total</span>
-          <span class="pull-right"></span>
+          <span class="pull-right"><%= @total%> €</span>
         </div>
       </div>
     </div>
