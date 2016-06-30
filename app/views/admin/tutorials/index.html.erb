@@ -75,6 +75,9 @@
             </td>
             <% if can? :edit, Tutorial %>
               <td class="text-center">
+                <%= link_to tutorial_path(tutorial.slug), class: 'btn btn-sm btn-default' do %>
+                  <em class="fa fa-search"></em>
+                <% end %>
                 <%= link_to edit_admin_tutorial_path(tutorial.slug), class: 'btn btn-sm btn-default' do %>
                   <em class="icon-pencil"></em>
                 <% end %>
