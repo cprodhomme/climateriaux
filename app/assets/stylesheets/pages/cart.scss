@@ -29,6 +29,26 @@
     }
   }
 
+  .cart-process{
+    margin-bottom:30px;
+    .cart-process-numbers{
+        display: inline-block;
+        background:$green;
+        color: #fff;
+        width:20px;
+        height: 20px;
+        text-align: center;
+        @include border-radius(10px);
+        font-size: 12px;
+        padding-top:1px;
+    }
+
+    h3{
+      display: inline-block;
+      margin-top: 2px;
+    }
+  }
+
   .sidebar-cart{
     @include white-block();
 
