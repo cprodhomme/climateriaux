@@ -42,219 +42,214 @@
       <label><input type="checkbox" value="articles_checkbox">Articles</label>
   </div>
 
-  <!-- Filters -->
+<!-- Filters -->
 
-  <div class="filters">
-      <h2>thèmes</h2>
-      <label><input type="checkbox" value="theme1_checkbox">Isolation</label>
-      <label><input type="checkbox" value="theme2_checkbox">Chauffage</label>
-      <label><input type="checkbox" value="theme3_checkbox">Peinture</label>
-      <label><input type="checkbox" value="theme4_checkbox">Terrasse</label>
-      <label><input type="checkbox" value="theme5_checkbox">Toits et combles</label>
-      <label><input type="checkbox" value="theme6_checkbox">Jardin</label>
-      <label><input type="checkbox" value="theme7_checkbox">Énergie verte</label>
-  </div>
+<div class="filters">
+    <h2>thèmes</h2>
+    <label><input type="checkbox" value="theme1_checkbox">Isolation</label>
+    <label><input type="checkbox" value="theme2_checkbox">Chauffage</label>
+    <label><input type="checkbox" value="theme3_checkbox">Peinture</label>
+    <label><input type="checkbox" value="theme4_checkbox">Terrasse</label>
+    <label><input type="checkbox" value="theme5_checkbox">Toits et combles</label>
+    <label><input type="checkbox" value="theme6_checkbox">Jardin</label>
+    <label><input type="checkbox" value="theme7_checkbox">Énergie verte</label>
+</div>
 
-  <!-- Right part -->
+<!-- Right part -->
 
-  <div class="right-part-wrapper"> <!-- Right part wrapper -->
+<div class="right-part-wrapper"> <!-- Right part wrapper -->
 
-      <div> <!-- Dossiers -->
-          
-          <div class="dossier-mois"> <!-- Dossier du mois -->
-              <div class="dossier-mois-left"> <!-- Dossier du mois left -->
-                  <h1>Le dossier du mois</h1>
-                  <h2>L'isolation des murs</h2>
-                  <button>Voir</button>
-              </div>
-              <div class="dossier-mois-right"> <!-- Dossier du mois right -->
-                  <div> <!-- Video 1 -->
-                      <%= image_tag("img_preview_01.png") %>
-                      <p>3 techniques pour l'isolation thermique</p>
-                  </div>
-                  <div> <!-- Video 2 -->
-                      <%= image_tag("img_preview_01.png") %>
-                      <p>Comment isoler des murs intérieurs avec de la laine de verre ?</p>
-                  </div>
-                  <div> <!-- Video 3 -->
-                      <%= image_tag("img_preview_01.png") %>
-                      <p>Isoler les murs extérieurs par l'intérieur</p>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="section-title"> <!-- Top des dossiers header -->
-              <p>Top des dossiers</p>
-              <p><a href="#">Tous nos dossiers</a></p>
-          </div>
-          
-          <div class="top-dossiers"> <!-- Top des dossiers -->
-              <div>
-                  <p>Du bois pour la maison</p>
-                  <img>
-              </div>
-              <div>
-                  <p>Maison écolo : débuter</p>
-                  <img>
-              </div>
-              <div>
-                  <p>Portes &amp; Fenêtres</p>
-                  <img>
-              </div>
-          </div>
-          
-          <div class="top-videos"> <!-- Top vidéos -->
-              <div class="top-videos-title"> <!-- Top vidéos title -->
-                  <h1>Top vidéos</h1>
-                  <a href=""><p>Toutes nos vidéos</p></a>
-              </div>
-              <div class="grey-line"></div><div class="green-rectangle"></div> <!-- Separate -->
-              <div class="top-videos-videos"> <!-- Video 1 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Rénover ses volets en bois</h1>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png")  %>
-                      <p>5:45</p>
-                      <p>Vues : 132</p>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 2 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Comment reboucher le bois ?</h1>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png") %>
-                      <p>2:34</p>
-                      <p>Vues : 127</p>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 3 -->
-                  <div>
-                      <img src="img/img_tuto_01.png" srcset="img/img_tuto_01.png 1x, img/img_tuto_01@2x.png 2x" class="preview">
-                  </div>
-                  <h1>Installer un sol chauffant basse température</h1>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png") %>
-                      <p>8:09</p>
-                      <p>Vues : 165</p>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 4 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Comment entretenir une terrasse en bois ?</h1>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png") %>
-                      <p>7:23</p>
-                      <p>Vues : 97</p>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="top-videos top-articles"> <!-- Top articles -->
-              <div class="top-videos-title top-articles-title"> <!-- Top articles title -->
-                  <h1>Top articles</h1>
-                  <a href=""><p>Tous nos articles</p></a>
-              </div>
-              <div class="grey-line"></div><div class="green-rectangle"></div> <!-- Separate -->
-              <div class="top-videos-videos"> <!-- Video 1 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Une maison tout en bois</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
-                  <div> <!-- Stats -->
-                     <%= image_tag("ic_fav.png") %>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 2 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Traiter les moisissures et taches d'humidité</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png") %>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 3 -->
-                  <div>
-                     <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Comment poser un plafond sur ossature bois ?</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png") %>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 4 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Comment entretenir une terrasse en bois ?</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
-                  <div> <!-- Stats -->
-                       <%= image_tag("ic_fav.png") %>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="top-videos"> <!-- Dernières vues -->
-              <div class="top-videos-title top-articles-title"> <!-- Dernières vues title -->
-                  <h1>Mes dernières vues</h1>
-                  <a href=""><p>Mon historique</p></a>
-              </div>
-              <div class="grey-line"></div><div class="green-rectangle"></div> <!-- Separate -->
-              <div class="top-videos-videos"> <!-- Video 1 -->
-                  <div>
-                      <%= image_tag("img_tuto_01.png") %>
-                  </div>
-                  <h1>Rénover ses volets en bois</h1>
-                  <div> <!-- Stats -->
-                      <%= image_tag("ic_fav.png") %>
-                      <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
-                      <p>5:45</p>
-                      <p>Vues : 132</p>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 2 -->
-                  <div>
-                      <img src="img/img_tuto_01.png" srcset="img/img_tuto_01.png 1x, img/img_tuto_01@2x.png 2x" class="preview">
-                  </div>
-                  <h1>Comment reboucher le bois ?</h1>
-                  <div> <!-- Stats -->
-                      <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
-                      <p>2:34</p>
-                      <p>Vues : 127</p>
-                  </div>
-              </div>
-              <div class="top-videos-videos"> <!-- Video 3 -->
-                  <div>
-                      <img src="img/img_tuto_01.png" srcset="img/img_tuto_01.png 1x, img/img_tuto_01@2x.png 2x" class="preview">
-                  </div>
-                  <h1>Installer un sol chauffant basse température</h1>
-                  <div> <!-- Stats -->
-                      <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
-                      <p>8:09</p>
-                      <p>Vues : 165</p>
-                  </div>
-              </div>
-          </div>
-      
-      </div>
+    <div> <!-- Dossiers -->
+        
+        <div class="dossier-mois"> <!-- Dossier du mois -->
+            <div class="dossier-mois-left"> <!-- Dossier du mois left -->
+                <h1>Le dossier du mois</h1>
+                <h2>L'isolation des murs</h2>
+                <button>Voir</button>
+            </div>
+            <div class="dossier-mois-right"> <!-- Dossier du mois right -->
+                <div> <!-- Video 1 -->
+                    <img src="img/img_tuto_12.png">
+                    <p>3 techniques pour l'isolation thermique</p>
+                </div>
+                <div> <!-- Video 2 -->
+                    <img src="img/img_tuto_13.png">
+                    <p>Comment isoler des murs intérieurs avec de la laine de verre ?</p>
+                </div>
+                <div> <!-- Video 3 -->
+                    <img src="img/img_tuto_14.png">
+                    <p>Isoler les murs extérieurs par l'intérieur</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title"> <!-- Top des dossiers header -->
+            <p>Top des dossiers</p>
+            <p><a href="#">Tous nos dossiers</a></p>
+        </div>
+        
+        <div class="top-dossiers"> <!-- Top des dossiers -->
+            <div class="dossier1">
+                <p>Du bois pour la maison</p>
+            </div>
+            <div class="dossier2">
+                <p>Maison écolo : débuter</p>
+            </div>
+            <div class="dossier3">
+                <p>Portes &amp; Fenêtres</p>
+            </div>
+        </div>
+        
+        <div class="top-videos"> <!-- Top vidéos -->
+            <div class="top-videos-title"> <!-- Top vidéos title -->
+                <h1>Top vidéos</h1>
+                <a href=""><p>Toutes nos vidéos</p></a>
+            </div>
+            <div class="grey-line"></div><div class="green-rectangle"></div> <!-- Separate -->
+            <div class="top-videos-videos"> <!-- Video 1 -->
+                <div>
+                    <img src="img/img_tuto_01.png" srcset="img/img_tuto_01.png 1x, img/img_tuto_01@2x.png 2x" class="preview">
+                </div>
+                <h1>Rénover ses volets en bois</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>5:45 | </p>
+                    <p>Vues : 132</p>
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 2 -->
+                <div>
+                    <img src="img/img_tuto_02.png" srcset="img/img_tuto_02.png 1x, img/img_tuto_02@2x.png 2x" class="preview">
+                </div>
+                <h1>Comment reboucher le bois ?</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>2:34 | </p>
+                    <p>Vues : 127</p>
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 3 -->
+                <div>
+                    <img src="img/img_tuto_03.png" srcset="img/img_tuto_03.png 1x, img/img_tuto_03@2x.png 2x" class="preview">
+                </div>
+                <h1>Installer un sol chauffant basse température</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>8:09 | </p>
+                    <p>Vues : 165</p>
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 4 -->
+                <div>
+                    <img src="img/img_tuto_04.png" srcset="img/img_tuto_04.png 1x, img/img_tuto_04@2x.png 2x" class="preview">
+                </div>
+                <h1>Comment entretenir une terrasse en bois ?</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>7:23 | </p>
+                    <p>Vues : 97</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="top-videos top-articles"> <!-- Top articles -->
+            <div class="top-videos-title top-articles-title"> <!-- Top articles title -->
+                <h1>Top articles</h1>
+                <a href=""><p>Tous nos articles</p></a>
+            </div>
+            <div class="grey-line"></div><div class="green-rectangle"></div> <!-- Separate -->
+            <div class="top-videos-videos"> <!-- Video 1 -->
+                <div>
+                    <img src="img/img_tuto_05.png" srcset="img/img_tuto_05.png 1x, img/img_tuto_05@2x.png 2x" class="preview">
+                </div>
+                <h1>Une maison tout en bois</h1>
+                <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 2 -->
+                <div>
+                    <img src="img/img_tuto_06.png" srcset="img/img_tuto_06.png 1x, img/img_tuto_06@2x.png 2x" class="preview">
+                </div>
+                <h1>Traiter les moisissures et taches d'humidité</h1>
+                <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 3 -->
+                <div>
+                    <img src="img/img_tuto_07.png" srcset="img/img_tuto_07.png 1x, img/img_tuto_07@2x.png 2x" class="preview">
+                </div>
+                <h1>Comment poser un plafond sur ossature bois ?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 4 -->
+                <div>
+                    <img src="img/img_tuto_08.png" srcset="img/img_tuto_08.png 1x, img/img_tuto_08@2x.png 2x" class="preview">
+                </div>
+                <h1>Comment entretenir une terrasse en bois ?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur rosae... <a href="#">Lire</a></p>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                </div>
+            </div>
+        </div>
+        
+        <div class="top-videos"> <!-- Dernières vues -->
+            <div class="top-videos-title top-articles-title"> <!-- Dernières vues title -->
+                <h1>Mes dernières vues</h1>
+                <a href=""><p>Mon historique</p></a>
+            </div>
+            <div class="grey-line"></div><div class="green-rectangle"></div> <!-- Separate -->
+            <div class="top-videos-videos"> <!-- Video 1 -->
+                <div>
+                    <img src="img/img_tuto_09.png" srcset="img/img_tuto_09.png 1x, img/img_tuto_09@2x.png 2x" class="preview">
+                </div>
+                <h1>Rénover ses volets en bois</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>5:45 | </p>
+                    <p>Vues : 132</p>
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 2 -->
+                <div>
+                    <img src="img/img_tuto_10.png" srcset="img/img_tuto_10.png 1x, img/img_tuto_10@2x.png 2x" class="preview">
+                </div>
+                <h1>Comment reboucher le bois ?</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>2:34 | </p>
+                    <p>Vues : 127</p>
+                </div>
+            </div>
+            <div class="top-videos-videos"> <!-- Video 3 -->
+                <div>
+                    <img src="img/img_tuto_11.png" srcset="img/img_tuto_11.png 1x, img/img_tuto_11@2x.png 2x" class="preview">
+                </div>
+                <h1>Installer un sol chauffant basse température</h1>
+                <div> <!-- Stats -->
+                    <img src="img/ic_fav.png" srcset="img/ic_fav.png 1x, img/ic_fav@2x.png 2x">
+                    <p>8:09 | </p>
+                    <p>Vues : 165</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
 
-  </div>
+</div>
 
-  <!-- Communauté Climatériaux -->
+<!-- Communauté Climatériaux -->
 
-  <div class="community">
-      <p>Nos tutoriels ne vous suffisent pas ?</p>
-      <p>Demandez aux membres de la communauté Climatériaux !</p>
-      <h1>Conseils, services, location de matériel</h1>
-      <button>Accéder à l'espace</button>
-  </div>
+<div class="community">
+    <p>Nos tutoriels ne vous suffisent pas ?</p>
+    <p>Demandez aux membres de la communauté Climatériaux !</p>
+    <h1>Conseils, services, location de matériel</h1>
+    <button>Accéder à l'espace</button>
 </div>
