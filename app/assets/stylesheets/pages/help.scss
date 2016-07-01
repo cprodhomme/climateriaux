@@ -21,18 +21,8 @@
 
 	.list-section{
 
-		.img-top-help{
-			background:image_url('help_top.svg');
-			height: 185px;
-			background-size:100%;
-			background-repeat:no-repeat;
-		}
-
-		.img-bottom-help{
-			background:image_url('help_bottom.svg');
-			height: 108px;
-			background-size:100%;
-			background-repeat:no-repeat;
+		img{
+			width:100%;
 		}
 
 		.link-list{
