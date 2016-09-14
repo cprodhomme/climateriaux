@@ -1,4 +1,5 @@
-[![CircleCI](https://circleci.com/gh/cle61/climateriaux/tree/develop.svg?style=svg&circle-token=7e3381c9d1b8cf4833c29001db6ad10503008c8a)](https://circleci.com/gh/cle61/climateriaux/tree/develop)
+[![CircleCI](https://circleci.com/gh/cle61/climateriaux/tree/develop.svg?style=shield&circle-token=7e3381c9d1b8cf4833c29001db6ad10503008c8a)](https://circleci.com/gh/cle61/climateriaux/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/cle61/climateriaux.svg)](https://gemnasium.com/github.com/cle61/climateriaux)
+
 
 # Climatériaux
 
